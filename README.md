@@ -6,10 +6,6 @@
 <b>Why is it recommended to use extensions? </b>
 Extensions are similar to Tampermonkey scripts, but they provide a better experience and can achieve some planned features that Tampermonkey scripts have many limitations with.
 <hr>
-<h3>🎁 The following script is very useful and is recommended to everyone</h3>
-<b>Online shopping assistant & Automatically query coupons & Save money</b>
-<a href="https://greasyfork.org/en/scripts/512700">https://greasyfork.org/en/scripts/512700</a>
-<hr>
 <h3>👏🏼If you're interested in this script or have any good opinions or suggestions, you can join our Telegram group Or FaceBook.</h3>
 <h4><a href="https://t.me/+fRJSR4eLjlU4NDJl">🔥Telegram group</a></h4>
 <h4><a href="https://www.facebook.com/profile.php?id=61566265797339">🔥facebook</a></h4>
