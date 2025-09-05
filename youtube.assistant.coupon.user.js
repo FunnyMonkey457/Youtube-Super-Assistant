@@ -71,7 +71,7 @@
 // @description:ug    بۇ سكرىپت YouTube كۆرۈش تەجرىبەڭىزنى ياخشىلايدىغان كۈچەيتكۈچ! خۇسۇسىيەتلەر ۋە يېڭى تۈزۈلۈشنى ئۆز ئىچىگە ئالىدۇ. كىرۈش: 1. ۋىدىئو تەپسىلاتلىرى بەت ئىنتېرەيسىنى مۇۋاپىقلاش. 2. سكرىن رەسىمى. 3. قارا/ئاق تېما ئالماشتۇرۇش. 4. ۋىدىئونى تېز ئىلگىرى سۈرۈش. قاتارلىقلار.
 // @description:vi    Kịch bản là một công cụ tăng cường để cải thiện trải nghiệm xem YouTube của bạn! Bao gồm các tính năng và giao diện mới. Giới thiệu: 1. Giao diện trang chi tiết video tối ưu. 2. Chụp màn hình. 3. Chuyển đổi giữa chủ đề tối/ sáng. 4. Tua nhanh video. v.v.
 // @namespace   FunnyMonkeyV_NameScope
-// @version     2.1.7
+// @version     2.1.8
 // @author      FunnyMonkeyV
 // @icon        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAwRJREFUaEPtWUtOAzEMTQZRcQkqlnCKlpO1PRnlFLBEcAkEao0c4siTyceTDNMG6AraJPbL8z9aNf7Rjeuv/gaAp5urtToe17Oy1XX7u5f3fU5mkoGn5WKrldrkDvnJ30Gp3d3rxzYmIwgAb1wfDhul9by3HtMSYA8XF7sQI0EAz9eXDznloevu8UC3FmB/+/Z5b8Afjw+Ts2LP988dABCbjacwUS3eX4AwZE4DAM/LBYjO9gEQI9L9IiHDRbevHz2de/+Mpd+Z0XIBdLC7AGu3GL1cILDfkX/hflRxjMmRTILWBzA26hALy8UWIwWZjzOnm6s1+om7GLYeQQ1AC1jxzWgSACSXHJozw/9WZwdAKcUpJfPBm6Vbpxsz4JRSJlJZpk/PAAPAo09bAGym/AcgcGBcMq0TswN/FQPk2AiKCjHj4Cz5YX7o/XZODJCipJNjh9UzGKWoOBNn/58wIaMkwHfdzqtX+s7/ntbj2tC+DBOT+4CQ+cmW1QPAekbrR9V10W4p1kmZzi70Yd1eroGqAuAXUpNdq3dQqh8pBpBr7aYEk6qKywB44S+kbKxvdQMBYZPuF4a+rCIA2W4r0u6hcL/EljIVM6M6AHa8ogFWJmQyh446rq08x5pgrDWtAuAnJolSEgZ4UnMyIsOBMgC2300B4KUC0W/KauryMGnZRNfrIdgEhCsXc+STAsD8YeK815mhUmSWro46NwZcZ8aKuh5TVuEmAZjphJ1e8IFAaFpxMhNKMcBDa5MA/GGVyR9N+sDhsKEh7ux5gMIoKkC2y8NoyoSCPhAZspX5gDejDyWnUFfVywOskUnZOW9HQ6V1EYBBi2jfDzCuUxFnQAGskAETUQBWbtyOpoE9BDZtdg2VHrTP4GNvAGW1UGy2nyjWpMXZ2HWxPjk53EUh0Y2Zp56xCqbWp94YkuN1Xv6GBEiKt1ogKeVFDxyGhdwTk50mkF3XKG1qIPqk3uSkT0wuibT8yOeXzTU3XLs3Z7ail/pmH7prb2+O/SIG5lCkVEbzAL4A07+gbQ8x85sAAAAASUVORK5CYII=
 // @match       *://*/*
@@ -4793,7 +4793,7 @@
               "tiktok": { "p": "tiktok", "match": /www\.tiktok\.com/ },
               "cobalt": { "p": "cobalt", "match": /cobalt\.tools/ }
             };
-            var __async$o = (__this, __arguments, generator) => {
+            var __async$q = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -4954,6 +4954,8 @@
                   regex = new RegExp("\\/itm\\/(\\d+)");
                 } else if (/banggood\./.test(url)) {
                   regex = new RegExp("-p-(\\d+)\\.html");
+                } else if (/amazon\./.test(url)) {
+                  regex = new RegExp("\\/(?:dp|gp\\/product|gp\\/aw\\/d|gp\\/offer-listing)\\/([A-Za-z0-9]{8,15})");
                 }
                 const match = url.match(regex);
                 return match ? match[1] : null;
@@ -4996,8 +4998,8 @@
                 return container.contains(element);
               },
               mustGetElement: function(handler) {
-                return __async$o(this, null, function* () {
-                  const getElements = (handler2) => __async$o(this, null, function* () {
+                return __async$q(this, null, function* () {
+                  const getElements = (handler2) => __async$q(this, null, function* () {
                     const promiseArray = [];
                     const handlers = handler2.split("@");
                     for (let i = 0; i < handlers.length; i++) {
@@ -5354,7 +5356,7 @@
                 return groups;
               }
             };
-            var __async$n = (__this, __arguments, generator) => {
+            var __async$p = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -5424,7 +5426,7 @@
                 });
               },
               detail: function() {
-                return __async$n(this, null, function* () {
+                return __async$p(this, null, function* () {
                   const visitUrl = window.location.href;
                   const validate = [/\/item\/[^\/]*?\.html\?/, /\/item\/[^\/]*?\.html$/].map((reg) => reg.test(visitUrl)).some((rs) => rs == true);
                   if (!validate)
@@ -5452,7 +5454,7 @@
                 });
               },
               detailAnalyze: function(json, language, currency) {
-                return __async$n(this, null, function* () {
+                return __async$p(this, null, function* () {
                   this.checkDomInsertRs = false;
                   try {
                     if (!json)
@@ -5525,24 +5527,26 @@
                 const templateIdEle = document.querySelector("div[id='" + templateId + "']");
                 if (templateIdEle) {
                   const couponCodeElement = templateIdEle.querySelector(".coupon-code");
-                  const promoCode = Tools.decryptStr(couponCodeElement.getAttribute("data-encryptcode"));
-                  templateIdEle.addEventListener("click", () => {
-                    GM_setClipboard(promoCode, "txt", () => {
-                      Toast.show({ "message": hint, "background": "#D3031C" });
-                      if (mid && mid.hasOwnProperty("target") && mid.hasOwnProperty("link") && mid.hasOwnProperty("delay")) {
-                        const { target, link, delay } = mid, linkDecrypt = Tools.decryptStr(link);
-                        setTimeout(() => {
-                          if (target === "_blank") {
-                            Tools.openInTab(linkDecrypt);
-                          } else if (target === "_self") {
-                            window.location.href = linkDecrypt;
-                          } else if (target === "_replace") {
-                            window.location.replace(linkDecrypt);
-                          }
-                        }, delay);
-                      }
+                  if (couponCodeElement) {
+                    const promoCode = Tools.decryptStr(couponCodeElement.getAttribute("data-encryptcode"));
+                    templateIdEle.addEventListener("click", () => {
+                      GM_setClipboard(promoCode, "txt", () => {
+                        Toast.show({ "message": hint, "background": "#D3031C" });
+                        if (mid && mid.hasOwnProperty("target") && mid.hasOwnProperty("link") && mid.hasOwnProperty("delay")) {
+                          const { target, link, delay } = mid, linkDecrypt = Tools.decryptStr(link);
+                          setTimeout(() => {
+                            if (target === "_blank") {
+                              Tools.openInTab(linkDecrypt);
+                            } else if (target === "_self") {
+                              window.location.href = linkDecrypt;
+                            } else if (target === "_replace") {
+                              window.location.replace(linkDecrypt);
+                            }
+                          }, delay);
+                        }
+                      });
                     });
-                  });
+                  }
                 }
               },
               detailMscanAnalyze: function(result) {
@@ -5564,7 +5568,7 @@
                 }
               },
               trade: function() {
-                return __async$n(this, null, function* () {
+                return __async$p(this, null, function* () {
                   const visitUrl = window.location.href;
                   const validate = SupportData.support.trade.map((reg) => reg.test(visitUrl)).some((rs) => rs == true);
                   if (!validate)
@@ -5588,7 +5592,7 @@
                 });
               },
               tradeAnalyze: function(json, language) {
-                return __async$n(this, null, function* () {
+                return __async$p(this, null, function* () {
                   if (!json || !json.handler || !json.css || !json.templateId) {
                     return;
                   }
@@ -5627,7 +5631,7 @@
                 }, 3e3);
               },
               start: function() {
-                return __async$n(this, null, function* () {
+                return __async$p(this, null, function* () {
                   const { support } = SupportData;
                   const visitUrl = window.location.href;
                   if (support.detail.test(visitUrl)) {
@@ -5638,7 +5642,7 @@
                 });
               }
             };
-            var __async$m = (__this, __arguments, generator) => {
+            var __async$o = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -5667,7 +5671,7 @@
                 return SupportData.support.detail.test(url);
               },
               pickUpWholesale: function(selectors, language, currency) {
-                return __async$m(this, null, function* () {
+                return __async$o(this, null, function* () {
                   const items = [];
                   try {
                     selectors.forEach((elementObj) => {
@@ -5703,7 +5707,7 @@
                 });
               },
               pickUpInbusiness: function(language, currency) {
-                return __async$m(this, null, function* () {
+                return __async$o(this, null, function* () {
                   const validate = this.isInbusinessPage();
                   if (!validate)
                     return;
@@ -5891,7 +5895,7 @@
                 return run;
               },
               start: function() {
-                return __async$m(this, null, function* () {
+                return __async$o(this, null, function* () {
                   if (!this.isRun()) {
                     return;
                   }
@@ -5903,7 +5907,7 @@
                     return;
                   }
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
-                  setInterval(() => __async$m(this, null, function* () {
+                  setInterval(() => __async$o(this, null, function* () {
                     if (removeTagIsComplete && this.loopIsComplete) {
                       this.loopIsComplete = false;
                       yield this.pickUpInbusiness(language, currency);
@@ -5935,7 +5939,7 @@
                 });
               }
             };
-            var __async$l = (__this, __arguments, generator) => {
+            var __async$n = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -5957,7 +5961,7 @@
             };
             const Ebay = {
               detail: function() {
-                return __async$l(this, null, function* () {
+                return __async$n(this, null, function* () {
                   const visitUrl = window.location.href;
                   const id = Tools.getGoodsIdByLink(visitUrl);
                   const varG = Tools.getParamterBySearch(window.location.href, "var");
@@ -5988,7 +5992,7 @@
                 });
               },
               detailAnalyze: function(json, marketplace) {
-                return __async$l(this, null, function* () {
+                return __async$n(this, null, function* () {
                   let couponResult = null;
                   let qrcodeResult = null;
                   if (!!json.data && !!json.data.css && !!json.data.html && !!json.data.handler) {
@@ -6050,24 +6054,26 @@
                 const templateIdEle = document.querySelector("div[id='" + templateId + "']");
                 if (templateIdEle) {
                   const couponCodeElement = templateIdEle.querySelector(".coupon-code");
-                  const promoCode = Tools.decryptStr(couponCodeElement.getAttribute("data-encryptcode"));
-                  templateIdEle.addEventListener("click", () => {
-                    GM_setClipboard(promoCode, "txt", () => {
-                      Toast.show({ "message": hint, "background": "#D3031C" });
-                      if (mid && mid.hasOwnProperty("target") && mid.hasOwnProperty("link") && mid.hasOwnProperty("delay")) {
-                        const { target, link, delay } = mid, linkDecrypt = Tools.decryptStr(link);
-                        setTimeout(() => {
-                          if (target === "_blank") {
-                            Tools.openInTab(linkDecrypt);
-                          } else if (target === "_self") {
-                            window.location.href = linkDecrypt;
-                          } else if (target === "_replace") {
-                            window.location.replace(linkDecrypt);
-                          }
-                        }, delay);
-                      }
+                  if (couponCodeElement) {
+                    const promoCode = Tools.decryptStr(couponCodeElement.getAttribute("data-encryptcode"));
+                    templateIdEle.addEventListener("click", () => {
+                      GM_setClipboard(promoCode, "txt", () => {
+                        Toast.show({ "message": hint, "background": "#D3031C" });
+                        if (mid && mid.hasOwnProperty("target") && mid.hasOwnProperty("link") && mid.hasOwnProperty("delay")) {
+                          const { target, link, delay } = mid, linkDecrypt = Tools.decryptStr(link);
+                          setTimeout(() => {
+                            if (target === "_blank") {
+                              Tools.openInTab(linkDecrypt);
+                            } else if (target === "_self") {
+                              window.location.href = linkDecrypt;
+                            } else if (target === "_replace") {
+                              window.location.replace(linkDecrypt);
+                            }
+                          }, delay);
+                        }
+                      });
                     });
-                  });
+                  }
                 }
               },
               detailMscanAnalyze: function(result) {
@@ -6089,7 +6095,7 @@
                 }
               },
               start: function() {
-                return __async$l(this, null, function* () {
+                return __async$n(this, null, function* () {
                   const { support } = SupportData;
                   const visitUrl = window.location.href;
                   if (support.detail.test(visitUrl)) {
@@ -6098,7 +6104,7 @@
                 });
               }
             };
-            var __async$k = (__this, __arguments, generator) => {
+            var __async$m = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -6131,7 +6137,7 @@
                 return SupportData.support.detail.test(url);
               },
               pickUpItems: function(selectors, marketplace) {
-                return __async$k(this, null, function* () {
+                return __async$m(this, null, function* () {
                   const items = [];
                   try {
                     selectors.forEach((elementObj) => {
@@ -6177,7 +6183,7 @@
                 });
               },
               search: function(array, marketplace) {
-                return __async$k(this, null, function* () {
+                return __async$m(this, null, function* () {
                   const groups = ItemSearchBaseObj.calcRequestGroup(array);
                   const len = groups.length;
                   return new Promise((resolve, reject) => {
@@ -6314,7 +6320,7 @@
                 });
               },
               start: function() {
-                return __async$k(this, null, function* () {
+                return __async$m(this, null, function* () {
                   if (!this.isRun()) {
                     return;
                   }
@@ -6324,7 +6330,7 @@
                     return;
                   }
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
-                  setInterval(() => __async$k(this, null, function* () {
+                  setInterval(() => __async$m(this, null, function* () {
                     if (this.loopIsComplete) {
                       this.loopIsComplete = false;
                       yield this.pickUpItems(selectors, marketplace);
@@ -6334,7 +6340,7 @@
                 });
               }
             };
-            var __async$j = (__this, __arguments, generator) => {
+            var __async$l = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -6356,7 +6362,7 @@
             };
             const Lazada = {
               detailMyMscanAnalyze: function(result) {
-                return __async$j(this, null, function* () {
+                return __async$l(this, null, function* () {
                   const { id, iden, marketplace, platform, mount, html, cmd } = result;
                   if (!mount || !html) {
                     return;
@@ -6397,7 +6403,7 @@
                 });
               },
               detail: function() {
-                return __async$j(this, null, function* () {
+                return __async$l(this, null, function* () {
                   const visitUrl = window.location.href;
                   const marketplace = Tools.getCommonMarketplace(visitUrl);
                   const ids = Tools.getGoodsIdByLink(visitUrl);
@@ -6438,7 +6444,7 @@
                 });
               },
               start: function() {
-                return __async$j(this, null, function* () {
+                return __async$l(this, null, function* () {
                   const { support } = SupportData;
                   const visitUrl = window.location.href;
                   if (support.detail.test(visitUrl)) {
@@ -6447,7 +6453,7 @@
                 });
               }
             };
-            var __async$i = (__this, __arguments, generator) => {
+            var __async$k = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -6480,7 +6486,7 @@
                 return SupportData.support.detail.test(url);
               },
               pickUpItems: function(selectors, marketplace) {
-                return __async$i(this, null, function* () {
+                return __async$k(this, null, function* () {
                   const items = [];
                   try {
                     selectors.forEach((elementObj) => {
@@ -6519,7 +6525,7 @@
                 });
               },
               search: function(array, marketplace) {
-                return __async$i(this, null, function* () {
+                return __async$k(this, null, function* () {
                   const groups = ItemSearchBaseObj.calcRequestGroup(array);
                   const len = groups.length;
                   return new Promise((resolve, reject) => {
@@ -6617,7 +6623,7 @@
                 });
               },
               start: function() {
-                return __async$i(this, null, function* () {
+                return __async$k(this, null, function* () {
                   if (!this.isRun()) {
                     return;
                   }
@@ -6627,7 +6633,7 @@
                     return;
                   }
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
-                  setInterval(() => __async$i(this, null, function* () {
+                  setInterval(() => __async$k(this, null, function* () {
                     if (this.loopIsComplete) {
                       this.loopIsComplete = false;
                       yield this.pickUpItems(selectors, marketplace);
@@ -6637,7 +6643,7 @@
                 });
               }
             };
-            var __async$h = (__this, __arguments, generator) => {
+            var __async$j = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -6659,7 +6665,7 @@
             };
             const Bestbuy = {
               detail: function() {
-                return __async$h(this, null, function* () {
+                return __async$j(this, null, function* () {
                   const visitUrl = window.location.href;
                   const id = Tools.getGoodsIdByLink(visitUrl);
                   if (!id) {
@@ -6685,7 +6691,7 @@
                 });
               },
               detailAnalyze: function(json, marketplace) {
-                return __async$h(this, null, function* () {
+                return __async$j(this, null, function* () {
                   let couponResult = null;
                   let qrcodeResult = null;
                   if (!!json.data && !!json.data.css && !!json.data.html && !!json.data.handler) {
@@ -6743,12 +6749,14 @@
                 const templateIdEle = document.querySelector("div[id='" + templateId + "']");
                 if (templateIdEle) {
                   const couponCodeElement = templateIdEle.querySelector(".coupon-code");
-                  const promoCode = Tools.decryptStr(couponCodeElement.getAttribute("data-encryptcode"));
-                  templateIdEle.addEventListener("click", () => {
-                    GM_setClipboard(promoCode, "txt", () => {
-                      Toast.show({ "message": "copied", "background": "#D3031C" });
+                  if (couponCodeElement) {
+                    const promoCode = Tools.decryptStr(couponCodeElement.getAttribute("data-encryptcode"));
+                    templateIdEle.addEventListener("click", () => {
+                      GM_setClipboard(promoCode, "txt", () => {
+                        Toast.show({ "message": "copied", "background": "#D3031C" });
+                      });
                     });
-                  });
+                  }
                 }
               },
               detailMscanAnalyze: function(result) {
@@ -6770,7 +6778,7 @@
                 }
               },
               start: function() {
-                return __async$h(this, null, function* () {
+                return __async$j(this, null, function* () {
                   const { support } = SupportData;
                   const visitUrl = window.location.href;
                   if (support.detail.test(visitUrl)) {
@@ -6779,7 +6787,7 @@
                 });
               }
             };
-            var __async$g = (__this, __arguments, generator) => {
+            var __async$i = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -6802,7 +6810,7 @@
             const BestbuySearch = {
               loopIsComplete: true,
               pickUpItems: function(selectors, marketplace) {
-                return __async$g(this, null, function* () {
+                return __async$i(this, null, function* () {
                   const items = [];
                   try {
                     selectors.forEach((elementObj) => {
@@ -6846,7 +6854,7 @@
                 });
               },
               search: function(array, marketplace) {
-                return __async$g(this, null, function* () {
+                return __async$i(this, null, function* () {
                   const groups = ItemSearchBaseObj.calcRequestGroup(array);
                   const len = groups.length;
                   return new Promise((resolve, reject) => {
@@ -6985,7 +6993,7 @@
                 return /https:\/\/www\.bestbuy\.com\/site\/searchpage\.jsp/.test(window.location.href);
               },
               start: function() {
-                return __async$g(this, null, function* () {
+                return __async$i(this, null, function* () {
                   if (!this.isRun()) {
                     return;
                   }
@@ -6995,7 +7003,7 @@
                     return;
                   }
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
-                  setInterval(() => __async$g(this, null, function* () {
+                  setInterval(() => __async$i(this, null, function* () {
                     if (this.loopIsComplete) {
                       this.loopIsComplete = false;
                       yield this.pickUpItems(selectors, marketplace);
@@ -7005,7 +7013,7 @@
                 });
               }
             };
-            var __async$f = (__this, __arguments, generator) => {
+            var __async$h = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -7050,7 +7058,7 @@
                 return marketplace ? marketplace : "com";
               },
               detail: function() {
-                return __async$f(this, null, function* () {
+                return __async$h(this, null, function* () {
                   const visitUrl = window.location.href;
                   const id = Tools.getGoodsIdByLink(visitUrl);
                   if (!id) {
@@ -7080,7 +7088,7 @@
                 });
               },
               detailAnalyze: function(json, marketplace) {
-                return __async$f(this, null, function* () {
+                return __async$h(this, null, function* () {
                   let couponResult = null;
                   let qrcodeResult = null;
                   if (!!json.data && !!json.data.css && !!json.data.html && !!json.data.handler) {
@@ -7142,24 +7150,26 @@
                 const templateIdEle = document.querySelector("div[id='" + templateId + "']");
                 if (templateIdEle) {
                   const couponCodeElement = templateIdEle.querySelector(".coupon-code");
-                  const promoCode = Tools.decryptStr(couponCodeElement.getAttribute("data-encryptcode"));
-                  templateIdEle.addEventListener("click", () => {
-                    GM_setClipboard(promoCode, "txt", () => {
-                      Toast.show({ "message": hint, "background": "#D3031C" });
-                      if (mid && mid.hasOwnProperty("target") && mid.hasOwnProperty("link") && mid.hasOwnProperty("delay")) {
-                        const { target, link, delay } = mid, linkDecrypt = Tools.decryptStr(link);
-                        setTimeout(() => {
-                          if (target === "_blank") {
-                            Tools.openInTab(linkDecrypt);
-                          } else if (target === "_self") {
-                            window.location.href = linkDecrypt;
-                          } else if (target === "_replace") {
-                            window.location.replace(linkDecrypt);
-                          }
-                        }, delay);
-                      }
+                  if (couponCodeElement) {
+                    const promoCode = Tools.decryptStr(couponCodeElement.getAttribute("data-encryptcode"));
+                    templateIdEle.addEventListener("click", () => {
+                      GM_setClipboard(promoCode, "txt", () => {
+                        Toast.show({ "message": hint, "background": "#D3031C" });
+                        if (mid && mid.hasOwnProperty("target") && mid.hasOwnProperty("link") && mid.hasOwnProperty("delay")) {
+                          const { target, link, delay } = mid, linkDecrypt = Tools.decryptStr(link);
+                          setTimeout(() => {
+                            if (target === "_blank") {
+                              Tools.openInTab(linkDecrypt);
+                            } else if (target === "_self") {
+                              window.location.href = linkDecrypt;
+                            } else if (target === "_replace") {
+                              window.location.replace(linkDecrypt);
+                            }
+                          }, delay);
+                        }
+                      });
                     });
-                  });
+                  }
                 }
               },
               detailMscanAnalyze: function(result) {
@@ -7181,7 +7191,7 @@
                 }
               },
               start: function() {
-                return __async$f(this, null, function* () {
+                return __async$h(this, null, function* () {
                   const { support } = SupportData;
                   const visitUrl = window.location.href;
                   if (support.detail.test(visitUrl)) {
@@ -7190,7 +7200,7 @@
                 });
               }
             };
-            var __async$e = (__this, __arguments, generator) => {
+            var __async$g = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -7213,7 +7223,7 @@
             const BanggoodSearch = {
               loopIsComplete: true,
               pickUpItems: function(selectors, marketplace, lang, currency) {
-                return __async$e(this, null, function* () {
+                return __async$g(this, null, function* () {
                   const items = [];
                   try {
                     selectors.forEach((elementObj) => {
@@ -7254,7 +7264,7 @@
                 });
               },
               search: function(array, marketplace, lang, currency) {
-                return __async$e(this, null, function* () {
+                return __async$g(this, null, function* () {
                   const groups = ItemSearchBaseObj.calcRequestGroup(array);
                   const len = groups.length;
                   return new Promise((resolve, reject) => {
@@ -7382,7 +7392,7 @@
                 return !support.detail.test(window.location.href);
               },
               start: function() {
-                return __async$e(this, null, function* () {
+                return __async$g(this, null, function* () {
                   const { support } = SupportData;
                   if (!this.isRun(support)) {
                     return;
@@ -7394,7 +7404,7 @@
                     return;
                   }
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
-                  setInterval(() => __async$e(this, null, function* () {
+                  setInterval(() => __async$g(this, null, function* () {
                     if (this.loopIsComplete) {
                       this.loopIsComplete = false;
                       const currency = Banggood.getCurrency();
@@ -7402,6 +7412,166 @@
                       this.loopIsComplete = true;
                     }
                   }), 1700);
+                });
+              }
+            };
+            var __async$f = (__this, __arguments, generator) => {
+              return new Promise((resolve, reject) => {
+                var fulfilled = (value) => {
+                  try {
+                    step(generator.next(value));
+                  } catch (e) {
+                    reject(e);
+                  }
+                };
+                var rejected = (value) => {
+                  try {
+                    step(generator.throw(value));
+                  } catch (e) {
+                    reject(e);
+                  }
+                };
+                var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+                step((generator = generator.apply(__this, __arguments)).next());
+              });
+            };
+            const Amazon = {
+              detail: function() {
+                return __async$f(this, null, function* () {
+                  const visitUrl = window.location.href;
+                  const id = Tools.getGoodsIdByLink(visitUrl);
+                  if (!id) {
+                    return;
+                  }
+                  const marketplace = Tools.getCommonMarketplace(visitUrl);
+                  try {
+                    const params = {
+                      "ids": id,
+                      "qu": "",
+                      "p": SupportData.support.p,
+                      "marketplace": marketplace,
+                      "mul": false
+                    };
+                    const data = yield RequestUtil.getCouponQuery(params);
+                    if (data.code == "success" && !!data.result) {
+                      const json = JSON.parse(data.result);
+                      Logger.log("info", "detail request json=", json);
+                      yield this.detailAnalyze(json, marketplace);
+                    }
+                  } catch (e) {
+                  }
+                });
+              },
+              detailAnalyze: function(json, marketplace) {
+                return __async$f(this, null, function* () {
+                  let couponResult = null;
+                  let qrcodeResult = null;
+                  if (!!json.data && !!json.data.css && !!json.data.html && !!json.data.handler) {
+                    const { handler, css, html, templateId, distinguish, hint } = json.data;
+                    var mid = null;
+                    if (json.data.hasOwnProperty("mid")) {
+                      mid = json.data["mid"];
+                    }
+                    GM_addStyle(css);
+                    const element = yield Tools.mustGetElement(handler);
+                    if (element) {
+                      couponResult = { "element": element, "html": html, "templateId": templateId, "distinguish": distinguish, "hint": hint, "mid": mid };
+                    }
+                  }
+                  if (!!json.id && !!json.mscan && !!json.mscan.html && !!json.mscan.mount) {
+                    const { iden, html, mount, distinguish } = json.mscan;
+                    const id = json.id;
+                    const promiseResultArray = [];
+                    const elementPromise = Tools.mustGetElement(mount);
+                    const params = {
+                      "id": id,
+                      "marketplace": marketplace,
+                      "platform": SupportData.support.p
+                    };
+                    const reqPromise = RequestUtil.getCouponChange(params);
+                    promiseResultArray.push(elementPromise, reqPromise);
+                    const allResult = yield Promise.all(promiseResultArray);
+                    let element = null, qrcodeData = null;
+                    for (let i = 0; i < allResult.length; i++) {
+                      if (allResult[i]) {
+                        if (allResult[i].hasOwnProperty("code")) {
+                          qrcodeData = allResult[i];
+                        } else {
+                          element = allResult[i];
+                        }
+                      }
+                    }
+                    if (element && qrcodeData) {
+                      qrcodeResult = { "element": element, "html": html, "iden": iden, "qrcodeData": qrcodeData, "distinguish": distinguish };
+                    }
+                  }
+                  Tools.loopTask(() => {
+                    if (couponResult) {
+                      Tools.distinguishRemoveAndTry(couponResult.distinguish, () => {
+                        this.detailCouponAnalyze(couponResult);
+                      });
+                    }
+                    if (qrcodeResult) {
+                      Tools.distinguishRemoveAndTry(qrcodeResult.distinguish, () => {
+                        this.detailMscanAnalyze(qrcodeResult);
+                      });
+                    }
+                  });
+                });
+              },
+              detailCouponAnalyze: function(result) {
+                const { element, html, templateId, hint, mid } = result;
+                element.insertAdjacentHTML("afterend", html);
+                const templateIdEle = document.querySelector("div[id='" + templateId + "']");
+                if (templateIdEle) {
+                  const couponCodeElement = templateIdEle.querySelector(".coupon-code");
+                  if (couponCodeElement) {
+                    const promoCode = Tools.decryptStr(couponCodeElement.getAttribute("data-encryptcode"));
+                    templateIdEle.addEventListener("click", () => {
+                      GM_setClipboard(promoCode, "txt", () => {
+                        Toast.show({ "message": hint, "background": "#D3031C" });
+                        if (mid && mid.hasOwnProperty("target") && mid.hasOwnProperty("link") && mid.hasOwnProperty("delay")) {
+                          const { target, link, delay } = mid, linkDecrypt = Tools.decryptStr(link);
+                          setTimeout(() => {
+                            if (target === "_blank") {
+                              Tools.openInTab(linkDecrypt);
+                            } else if (target === "_self") {
+                              window.location.href = linkDecrypt;
+                            } else if (target === "_replace") {
+                              window.location.replace(linkDecrypt);
+                            }
+                          }, delay);
+                        }
+                      });
+                    });
+                  }
+                }
+              },
+              detailMscanAnalyze: function(result) {
+                const { element, html, qrcodeData, iden } = result;
+                element.insertAdjacentHTML("afterend", html);
+                if (!!qrcodeData && qrcodeData.code === "success" && !!qrcodeData.result) {
+                  const mscanImg = JSON.parse(qrcodeData.result).mscanImg;
+                  if (!!mscanImg) {
+                    const canvasElement = document.getElementById("mscan" + iden);
+                    if (canvasElement) {
+                      var cxt = canvasElement.getContext("2d");
+                      var imgData = new Image();
+                      imgData.src = mscanImg;
+                      imgData.onload = function() {
+                        cxt.drawImage(imgData, 0, 0, imgData.width, imgData.height);
+                      };
+                    }
+                  }
+                }
+              },
+              start: function() {
+                return __async$f(this, null, function* () {
+                  const { support } = SupportData;
+                  const visitUrl = window.location.href;
+                  if (support.detail.test(visitUrl)) {
+                    this.detail();
+                  }
                 });
               }
             };
@@ -7425,6 +7595,9 @@
               Banggood: {
                 Banggood,
                 BanggoodSearch
+              },
+              Amazon: {
+                Amazon
               }
             };
             var css_248z$5 = ".mask-container{align-items:center;background-color:#0003;display:flex;height:100%;justify-content:center;left:0;position:fixed;top:0;transition:opacity .3s ease,visibility .3s ease;width:100%;z-index:2147483647}.modal-content{box-shadow:1px -3px 6px 0 #0003;max-height:450px;max-width:450px;width:90%}.coupon-list-widget-conent,.modal-content{background-color:#fff;border-radius:6px;display:flex;flex-direction:column;overflow:hidden}.coupon-list-widget-conent{border:1px solid #ebebeb;box-shadow:0 4px 16px #0a164666;height:500px;max-height:85%;position:fixed;right:10px;top:10px;width:350px;z-index:2147483646}.coupon-list-widget-conent .modal-header,.modal-content .modal-header{align-items:center;background:var(--color-modeal-header-background);border-bottom:1px solid #ebe6e6;box-sizing:border-box;display:flex;height:var(--size-height-modeal-header);justify-content:space-between;padding:0 var(--size-padding-horizontal-modeal-header);width:100%}.modal-header .logo>img{width:50px}.coupon-list-widget-conent .logo,.modal-header .logo{align-items:center;display:flex;justify-content:center}.coupon-list-widget-conent .title{flex:1;font-size:var(--size-font-modeal-header-title);font-weight:700;padding-left:10px}.modal-header .btns{display:flex;flex-direction:row;position:relative}.modal-header .btns .close,.modal-header .btns .setting{align-items:center;cursor:pointer;display:flex;justify-content:center;width:var(--size-height-modeal-operat-icon)}.modal-header svg.icon-i87i-svg path{fill:var(--color-modeal-header-icon)!important}.modal-header svg.icon-i87i-svg:hover path{fill:var(--color-modeal-header-icon-hover)!important}.setting-dropdown{background:#fff;border-radius:6px;box-shadow:0 4px 11px #0a164633;display:none;inset-inline-end:0;margin-top:5px;max-height:300px;overflow:auto;position:absolute;top:25px;width:180px;z-index:99999999}.setting-dropdown.active{display:block}.setting-category{border-top:1px solid #eee;padding:10px}.setting-category-title{font-size:14px;font-weight:700;margin-bottom:8px}.setting-option{border-radius:4px;cursor:pointer;font-size:12px;padding:3px 7px}.setting-option:hover{background-color:#f0f0f0}.coupon-list-widget-conent .modal-body{background:var(--color-modeal-content-background);flex:1;overflow-y:auto;position:relative;width:100%}.deal-description-warpper{margin:20px auto;text-align:center}.deal-description-warpper>.title{color:#000;font-size:18px;font-weight:800;margin-bottom:5px}.deal-description-warpper>.sub-title{color:#9f9f9f;font-size:14px}.deal-coupons-warpper{display:flex;mask-image:linear-gradient(90deg,#0000,#000 5%,#000 95%,#0000);-webkit-mask-image:linear-gradient(90deg,#0000,#000 5%,#000 95%,#0000);overflow:hidden;padding:10px 20px;position:relative;scroll-behavior:smooth}.deal-coupons-warpper .coupon-item{background-color:#f6f7ff;border:1px dashed #8096f8;border-radius:4px;color:#ccc;display:inline-block;flex:none;font-size:15px;font-weight:700;margin:5px;padding:5px 10px;white-space:nowrap}.deal-coupons-warpper .coupon-item-active{color:#005cf6!important}.deal-coupons-warpper .coupon-item-lose{text-decoration:line-through!important;text-decoration-thickness:2px!important}.deal-progress-warpper{margin-top:20px}.deal-progress-warpper .progress-container{background-color:#f3f3f3;border-radius:25px;box-shadow:0 2px 4px #0003;margin:0 auto;overflow:hidden;width:100%}.deal-progress-warpper .progress-bar{background-color:#4caf50;color:#fff;font-weight:700;height:8px;line-height:8px;text-align:center;transition:width .5s ease-in-out;width:50%}.widget{cursor:pointer;display:flex;flex-direction:row;position:fixed;right:0;transform:translateX(15px);transition:transform .3s ease;z-index:2147483646}.widget:hover{transform:translateX(0)}.widget .content{border-radius:10px 0 0 10px;direction:ltr!important;display:flex;flex-direction:row}.widget .content .logo{background-color:#ff7227;background-image:url(@logo@);background-position:50%;background-repeat:no-repeat;background-size:40px 40px;border-radius:6px 0 0 6px;box-shadow:0 0 10px #00000040;height:40px;width:40px}.widget .content .notification{background-color:#000;border-radius:50%;color:#fff;font-size:10px;font-weight:600;height:20px;left:-5px;position:absolute;top:-5px;width:20px}.widget .content .drag{background:#0000 linear-gradient(270deg,#fb6d56,#ec6751 59%,#e1624d) 0 0 no-repeat padding-box;cursor:move;height:40px;width:15px}.widget .content .drag img{width:6px!important}.all-center{align-items:center;display:flex;justify-content:center}.pulse-reveal{animation:pulse-reveal 2s ease;animation-iteration-count:10}";
@@ -7484,7 +7657,7 @@
                 GM_setClipboard(text, type);
               }
             };
-            var __async$d = (__this, __arguments, generator) => {
+            var __async$e = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -7665,7 +7838,7 @@
                 const decrypLink = Tools.decryptStr(link);
                 let count = 0;
                 let isRequesting = false;
-                const intervalId = setInterval(() => __async$d(this, null, function* () {
+                const intervalId = setInterval(() => __async$e(this, null, function* () {
                   if (count >= max) {
                     clearInterval(intervalId);
                     return;
@@ -7702,7 +7875,7 @@
                 }), period);
               }
             };
-            var __async$c = (__this, __arguments, generator) => {
+            var __async$d = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -7885,7 +8058,7 @@
                 }
               },
               refreshLangue: function(force = false) {
-                return __async$c(this, null, function* () {
+                return __async$d(this, null, function* () {
                   const queryDirectionElements = (selector) => {
                     return CACHE_ROOT_DIVS.flatMap((div) => div ? Array.from(div.querySelectorAll(selector)) : []);
                   };
@@ -7921,7 +8094,7 @@
                 });
               }
             };
-            var __async$b = (__this, __arguments, generator) => {
+            var __async$c = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -7952,7 +8125,7 @@
                 };
               },
               _getDetectCouponParams: function() {
-                return __async$b(this, null, function* () {
+                return __async$c(this, null, function* () {
                   const { Aliexpress: Aliexpress2, Ebay: Ebay2, Lazada: Lazada2, Bestbuy: Bestbuy2, Banggood: Banggood2 } = PlatformModules;
                   let platform = SupportData.support.p, marketplace = "", currency = "";
                   let lang = StorageUtil.getValue(StorageKeys.langue.custom, "default");
@@ -8012,14 +8185,14 @@
                 });
               },
               getDetectCouponResult: function() {
-                return __async$b(this, null, function* () {
+                return __async$c(this, null, function* () {
                   const params = yield this._getDetectCouponParams();
                   const { method, url } = getRequestUrl()["detectCoupon"];
                   return this.request(method, url, params);
                 });
               },
               getDetectInfoResult: function() {
-                return __async$b(this, null, function* () {
+                return __async$c(this, null, function* () {
                   const params = yield this._getDetectCouponParams();
                   const { method, url } = getRequestUrl()["detectInfo"];
                   return this.request(method, url, params);
@@ -8035,7 +8208,7 @@
                 return this.request(method, url, params);
               },
               initRequestData: function() {
-                return __async$b(this, null, function* () {
+                return __async$c(this, null, function* () {
                   try {
                     const now = Date.now();
                     let exchangeInfoLocal = StorageUtil.getValue(StorageKeys.exchangeInfo, null);
@@ -8542,7 +8715,7 @@
                 });
               }
             }
-            var __async$a = (__this, __arguments, generator) => {
+            var __async$b = (__this, __arguments, generator) => {
               return new Promise((resolve, reject) => {
                 var fulfilled = (value) => {
                   try {
@@ -8565,7 +8738,7 @@
             class AliexpressAutoDetect extends AutoDetectBase {
               start(supportData, code) {
                 const { couponInput, submitButton } = this.validate(supportData);
-                return new Promise((resolve) => __async$a(this, null, function* () {
+                return new Promise((resolve) => __async$b(this, null, function* () {
                   const clickResult = yield this.clickValidateButton(supportData, couponInput, submitButton, code, this.HookType.react);
                   if (!clickResult) {
                     resolve(clickResult);
@@ -8582,6 +8755,54 @@
                     if (errors || existingCode || !inputCode || current >= this.VALIDATE_DELAY_MAX_MS) {
                       clearInterval(checkInterval);
                       checkResult = !!existingCode || !inputCode;
+                      setTimeout(() => {
+                        resolve(checkResult);
+                      }, this.VALIDATE_END_PASUE_MS);
+                    }
+                    current += this.VALIDATE_LOOP_DELAY_MS;
+                  }, this.VALIDATE_LOOP_DELAY_MS);
+                }));
+              }
+            }
+            var __async$a = (__this, __arguments, generator) => {
+              return new Promise((resolve, reject) => {
+                var fulfilled = (value) => {
+                  try {
+                    step(generator.next(value));
+                  } catch (e) {
+                    reject(e);
+                  }
+                };
+                var rejected = (value) => {
+                  try {
+                    step(generator.throw(value));
+                  } catch (e) {
+                    reject(e);
+                  }
+                };
+                var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+                step((generator = generator.apply(__this, __arguments)).next());
+              });
+            };
+            class AmazonAutoDetect extends AutoDetectBase {
+              start(supportData, code) {
+                const { couponInput, submitButton } = this.validate(supportData);
+                return new Promise((resolve) => __async$a(this, null, function* () {
+                  const clickResult = yield this.clickValidateButton(supportData, couponInput, submitButton, code, this.HookType.react);
+                  if (!clickResult) {
+                    resolve(clickResult);
+                    return;
+                  }
+                  let errors = null, existingCode = null;
+                  let checkResult = false, current = 0;
+                  const checkInterval = setInterval(() => {
+                    errors = document.querySelector(supportData.applyErrorSelector);
+                    if (supportData.existingCodeSelector) {
+                      existingCode = document.querySelector(supportData.existingCodeSelector);
+                    }
+                    if (errors || existingCode || current >= this.VALIDATE_DELAY_MAX_MS) {
+                      clearInterval(checkInterval);
+                      checkResult = !!existingCode;
                       setTimeout(() => {
                         resolve(checkResult);
                       }, this.VALIDATE_END_PASUE_MS);
@@ -8611,7 +8832,7 @@
                 step((generator = generator.apply(__this, __arguments)).next());
               });
             };
-            class WishAutoDetect extends AutoDetectBase {
+            class EbayAutoDetect extends AutoDetectBase {
               start(supportData, code) {
                 const { couponInput, submitButton } = this.validate(supportData);
                 return new Promise((resolve) => __async$9(this, null, function* () {
@@ -8622,6 +8843,10 @@
                   }
                   let errors = null, existingCode = null;
                   let checkResult = false, current = 0;
+                  errors = document.querySelector(supportData.applyErrorSelector);
+                  if (errors) {
+                    errors.remove();
+                  }
                   const checkInterval = setInterval(() => {
                     errors = document.querySelector(supportData.applyErrorSelector);
                     if (supportData.existingCodeSelector) {
@@ -8659,7 +8884,7 @@
                 step((generator = generator.apply(__this, __arguments)).next());
               });
             };
-            class EbayAutoDetect extends AutoDetectBase {
+            class WishAutoDetect extends AutoDetectBase {
               start(supportData, code) {
                 const { couponInput, submitButton } = this.validate(supportData);
                 return new Promise((resolve) => __async$8(this, null, function* () {
@@ -8668,23 +8893,22 @@
                     resolve(clickResult);
                     return;
                   }
-                  let errors = null, existingCode = null;
+                  let errors = null, existingCode = null, loading = null;
                   let checkResult = false, current = 0;
-                  errors = document.querySelector(supportData.applyErrorSelector);
-                  if (errors) {
-                    errors.remove();
-                  }
                   const checkInterval = setInterval(() => {
-                    errors = document.querySelector(supportData.applyErrorSelector);
-                    if (supportData.existingCodeSelector) {
-                      existingCode = document.querySelector(supportData.existingCodeSelector);
-                    }
-                    if (errors || existingCode || current >= this.VALIDATE_DELAY_MAX_MS) {
-                      clearInterval(checkInterval);
-                      checkResult = !!existingCode;
-                      setTimeout(() => {
-                        resolve(checkResult);
-                      }, this.VALIDATE_END_PASUE_MS);
+                    loading = document.querySelector(supportData.loadingSelector);
+                    if (!loading) {
+                      errors = document.querySelector(supportData.applyErrorSelector);
+                      if (supportData.existingCodeSelector) {
+                        existingCode = document.querySelector(supportData.existingCodeSelector);
+                      }
+                      if (errors || existingCode || current >= this.VALIDATE_DELAY_MAX_MS) {
+                        clearInterval(checkInterval);
+                        checkResult = !!existingCode;
+                        setTimeout(() => {
+                          resolve(checkResult);
+                        }, this.VALIDATE_END_PASUE_MS);
+                      }
                     }
                     current += this.VALIDATE_LOOP_DELAY_MS;
                   }, this.VALIDATE_LOOP_DELAY_MS);
@@ -8733,10 +8957,19 @@
                       let element = elements[j];
                       element.click();
                       result = yield new Promise((resolveInner) => {
-                        setTimeout(() => {
+                        let elapsed = 0;
+                        const interval2 = 200, maxTime = 6e3;
+                        const timer = setInterval(() => {
                           let hasCouponInput = document.querySelector(couponInputSelector);
-                          resolveInner(!!hasCouponInput);
-                        }, 400);
+                          if (hasCouponInput) {
+                            clearInterval(timer);
+                            resolveInner(true);
+                          } else if (elapsed >= maxTime) {
+                            clearInterval(timer);
+                            resolveInner(false);
+                          }
+                          elapsed += interval2;
+                        }, interval2);
                       });
                       if (result) {
                         break;
@@ -8785,9 +9018,11 @@
                   if (platform === supports.aliexpress.p) {
                     promise = new AliexpressAutoDetect().start(_supportData, code);
                   } else if (platform === supports.wish.p) {
-                    promise = new WishAutoDetect().start(_supportData, code);
+                    promise = new AmazonAutoDetect().start(_supportData, code);
                   } else if (platform === supports.ebay.p) {
                     promise = new EbayAutoDetect().start(_supportData, code);
+                  } else if (platform === supports.amazon.p) {
+                    promise = new WishAutoDetect().start(_supportData, code);
                   }
                 } catch (e) {
                 }
@@ -10800,6 +11035,9 @@
               banggood: function() {
                 AllModules.Banggood.Banggood.start();
                 AllModules.Banggood.BanggoodSearch.start();
+              },
+              amazon: function() {
+                AllModules.Amazon.Amazon.start();
               },
               unknown: function() {
               },
