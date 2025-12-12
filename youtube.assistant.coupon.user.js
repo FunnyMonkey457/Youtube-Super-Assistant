@@ -71,7 +71,7 @@
 // @description:ug    بۇ سكرىپت YouTube كۆرۈش تەجرىبەڭىزنى ياخشىلايدىغان كۈچەيتكۈچ! خۇسۇسىيەتلەر ۋە يېڭى تۈزۈلۈشنى ئۆز ئىچىگە ئالىدۇ. كىرۈش: 1. ۋىدىئو تەپسىلاتلىرى بەت ئىنتېرەيسىنى مۇۋاپىقلاش. 2. سكرىن رەسىمى. 3. قارا/ئاق تېما ئالماشتۇرۇش. 4. ۋىدىئونى تېز ئىلگىرى سۈرۈش. قاتارلىقلار.
 // @description:vi    Kịch bản là một công cụ tăng cường để cải thiện trải nghiệm xem YouTube của bạn! Bao gồm các tính năng và giao diện mới. Giới thiệu: 1. Giao diện trang chi tiết video tối ưu. 2. Chụp màn hình. 3. Chuyển đổi giữa chủ đề tối/ sáng. 4. Tua nhanh video. v.v.
 // @namespace   FunnyMonkeyV_NameScope
-// @version     2.1.12
+// @version     2.1.13
 // @author      FunnyMonkeyV
 // @icon        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAwRJREFUaEPtWUtOAzEMTQZRcQkqlnCKlpO1PRnlFLBEcAkEao0c4siTyceTDNMG6AraJPbL8z9aNf7Rjeuv/gaAp5urtToe17Oy1XX7u5f3fU5mkoGn5WKrldrkDvnJ30Gp3d3rxzYmIwgAb1wfDhul9by3HtMSYA8XF7sQI0EAz9eXDznloevu8UC3FmB/+/Z5b8Afjw+Ts2LP988dABCbjacwUS3eX4AwZE4DAM/LBYjO9gEQI9L9IiHDRbevHz2de/+Mpd+Z0XIBdLC7AGu3GL1cILDfkX/hflRxjMmRTILWBzA26hALy8UWIwWZjzOnm6s1+om7GLYeQQ1AC1jxzWgSACSXHJozw/9WZwdAKcUpJfPBm6Vbpxsz4JRSJlJZpk/PAAPAo09bAGym/AcgcGBcMq0TswN/FQPk2AiKCjHj4Cz5YX7o/XZODJCipJNjh9UzGKWoOBNn/58wIaMkwHfdzqtX+s7/ntbj2tC+DBOT+4CQ+cmW1QPAekbrR9V10W4p1kmZzi70Yd1eroGqAuAXUpNdq3dQqh8pBpBr7aYEk6qKywB44S+kbKxvdQMBYZPuF4a+rCIA2W4r0u6hcL/EljIVM6M6AHa8ogFWJmQyh446rq08x5pgrDWtAuAnJolSEgZ4UnMyIsOBMgC2300B4KUC0W/KauryMGnZRNfrIdgEhCsXc+STAsD8YeK815mhUmSWro46NwZcZ8aKuh5TVuEmAZjphJ1e8IFAaFpxMhNKMcBDa5MA/GGVyR9N+sDhsKEh7ux5gMIoKkC2y8NoyoSCPhAZspX5gDejDyWnUFfVywOskUnZOW9HQ6V1EYBBi2jfDzCuUxFnQAGskAETUQBWbtyOpoE9BDZtdg2VHrTP4GNvAGW1UGy2nyjWpMXZ2HWxPjk53EUh0Y2Zp56xCqbWp94YkuN1Xv6GBEiKt1ogKeVFDxyGhdwTk50mkF3XKG1qIPqk3uSkT0wuibT8yOeXzTU3XLs3Z7ail/pmH7prb2+O/SIG5lCkVEbzAL4A07+gbQ8x85sAAAAASUVORK5CYII=
 // @match       *://*/*
@@ -130,7 +130,7 @@
   */
 
 
-  var css_248z$1 = "@keyframes relatedElementProvided{0%{background-position-x:3px}to{background-position-x:4px}}html[tabview-loaded=icp] #related.ytd-watch-flexy{animation:relatedElementProvided 1ms linear 0s 1 normal forwards}html[tabview-loaded=icp] #right-tabs #related.ytd-watch-flexy,html[tabview-loaded=icp] #right-tabs ytd-expander#expander,html[tabview-loaded=icp] [hidden] #related.ytd-watch-flexy,html[tabview-loaded=icp] [hidden] ytd-expander#expander,html[tabview-loaded=icp] ytd-comments ytd-expander#expander{animation:initial}#secondary.ytd-watch-flexy{position:relative}#secondary-inner.style-scope.ytd-watch-flexy{height:100%}secondary-wrapper{border:0;box-sizing:border-box;contain:strict;flex-wrap:nowrap;height:100%;left:0;max-height:calc(100vh - var(--ytd-toolbar-height, 56px));padding:0;padding-bottom:var(--ytd-margin-6x);padding-right:var(--ytd-margin-6x);padding-top:var(--ytd-margin-6x);position:absolute;right:0;top:0}#right-tabs,secondary-wrapper{display:flex;flex-direction:column;margin:0}#right-tabs{flex-grow:1;padding:0;position:relative}[tyt-tab=\"\"] #right-tabs{flex-grow:0}[tyt-tab=\"\"] #right-tabs .tab-content{border:0}#right-tabs .tab-content{flex-grow:1}ytd-watch-flexy[hide-default-text-inline-expander] #primary.style-scope.ytd-watch-flexy ytd-text-inline-expander{display:none}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden{--comment-pre-load-sizing:90px;border:0;contain:strict;display:block!important;height:var(--comment-pre-load-sizing)!important;left:2px;margin:0;overflow:hidden;padding:0;pointer-events:none!important;position:fixed!important;top:2px;visibility:collapse;width:var(--comment-pre-load-sizing)!important;z-index:-1}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections{border:0;contain:strict;display:block!important;height:var(--comment-pre-load-sizing);margin:0;overflow:hidden;padding:0;width:var(--comment-pre-load-sizing)}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections>#contents{border:0;contain:strict;display:flex!important;flex-direction:row;gap:60px;height:var(--comment-pre-load-sizing);margin:0;overflow:hidden;padding:0;width:var(--comment-pre-load-sizing)}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents{--comment-pre-load-display:none}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents>:last-child,ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents>:only-of-type{--comment-pre-load-display:block}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents>*{display:var(--comment-pre-load-display)!important}#right-tabs #material-tabs{border:1px solid var(--ytd-searchbox-legacy-border-color);display:flex;overflow:hidden;padding:0;position:relative}[tyt-tab] #right-tabs #material-tabs{border-radius:var(--tyt-rounded-a1) var(--tyt-rounded-a1) var(--tyt-rounded-a1) var(--tyt-rounded-a1)}[tyt-tab^=\"#\"] #right-tabs #material-tabs{border-radius:var(--tyt-rounded-a1) var(--tyt-rounded-a1) 0 0}ytd-watch-flexy:not([is-two-columns_]) #right-tabs #material-tabs{outline:0}#right-tabs #material-tabs a.tab-btn[tyt-tab-content]>*{pointer-events:none}#right-tabs #material-tabs a.tab-btn[tyt-tab-content]>.font-size-right{display:none;pointer-events:auto}ytd-watch-flexy #right-tabs .tab-content{border:1px solid var(--ytd-searchbox-legacy-border-color);border-radius:0 0 var(--tyt-rounded-a1) var(--tyt-rounded-a1);border-top:0;box-sizing:border-box;display:block;display:flex;flex-direction:row;overflow:hidden;padding:0;position:relative;top:0}ytd-watch-flexy:not([is-two-columns_]) #right-tabs .tab-content{height:100%}ytd-watch-flexy #right-tabs .tab-content-cld{--tab-content-padding:var(--ytd-margin-4x);box-sizing:border-box;contain:layout paint;display:block;overflow:auto;padding:var(--tab-content-padding);position:relative;width:100%}#right-tabs,.tab-content,.tab-content-cld{animation:none;transition:none}#right-tabs #emojis.ytd-commentbox{inset:auto 0 auto 0;width:auto}ytd-watch-flexy[is-two-columns_] #right-tabs .tab-content-cld{contain:size layout paint style;height:100%;position:absolute;width:100%}ytd-watch-flexy #right-tabs .tab-content-cld.tab-content-hidden{contain:size layout paint style;display:none;width:100%}@supports (color:var(--tabview-tab-btn-define )){ytd-watch-flexy #right-tabs .tab-btn{background:var(--yt-spec-general-background-a)}html{--tyt-tab-btn-flex-grow:1;--tyt-tab-btn-flex-basis:0%;--tyt-tab-bar-color-1-def:#ff4533;--tyt-tab-bar-color-2-def:var(--yt-brand-light-red);--tyt-tab-bar-color-1:var(--main-color,var(--tyt-tab-bar-color-1-def));--tyt-tab-bar-color-2:var(--main-color,var(--tyt-tab-bar-color-2-def))}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]{--tyt-tab-btn-color:var(--yt-spec-text-secondary);background-color:var(--ytd-searchbox-legacy-button-color);border:0;border-bottom:4px solid transparent;color:var(--tyt-tab-btn-color);cursor:pointer;display:inline-block;flex-basis:0%;flex-basis:var(--tyt-tab-btn-flex-basis);flex-grow:1;flex-grow:var(--tyt-tab-btn-flex-grow);flex-shrink:1;font-size:12px;font-weight:500;line-height:18px;overflow:hidden;padding:14px 8px 10px;position:relative;text-align:center;text-decoration:none;text-overflow:clip;text-transform:uppercase;text-transform:var(--yt-button-text-transform,inherit);transition:border .2s linear .1s;white-space:nowrap}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]>svg{fill:var(--iron-icon-fill-color,currentcolor);stroke:var(--iron-icon-stroke-color,none);color:var(--yt-button-color,inherit);height:18px;margin-right:0;opacity:.5;padding-right:0;vertical-align:bottom}ytd-watch-flexy #right-tabs .tab-btn{--tabview-btn-txt-ml:8px}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"]{--tabview-btn-txt-ml:0px}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]>svg+span{margin-left:var(--tabview-btn-txt-ml)}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content] svg{pointer-events:none}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].active{--tyt-tab-btn-color:var(--yt-spec-text-primary);background-color:var(--ytd-searchbox-legacy-button-focus-color);border-bottom-color:var(--tyt-tab-bar-color-1);border-bottom:2px solid var(--tyt-tab-bar-color-2);font-weight:500;outline:0}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].active svg{opacity:.9}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]:not(.active):hover{--tyt-tab-btn-color:var(--yt-spec-text-primary);background-color:var(--ytd-searchbox-legacy-button-hover-color)}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]:not(.active):hover svg{opacity:.9}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]{user-select:none!important}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].tab-btn-hidden{display:none}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"],ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"]:hover{--tyt-tab-btn-color:var(--yt-spec-icon-disabled)}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"] span#tyt-cm-count:empty{display:none}ytd-watch-flexy #right-tabs .tab-btn span#tyt-cm-count:empty:after{color:currentColor;display:inline-block;font-size:inherit;text-align:left;transform:scaleX(.8);width:4em}}@supports (color:var(--tyt-cm-count-define )){ytd-watch-flexy{--tyt-x-loading-content-letter-spacing:2px}html{--tabview-text-loading:\"Loading\";--tabview-text-fetching:\"Fetching\";--tabview-panel-loading:var(--tabview-text-loading)}html:lang(ja){--tabview-text-loading:\"読み込み中\";--tabview-text-fetching:\"フェッチ..\"}html:lang(ko){--tabview-text-loading:\"로딩..\";--tabview-text-fetching:\"가져오기..\"}html:lang(zh-Hant){--tabview-text-loading:\"載入中\";--tabview-text-fetching:\"擷取中\"}html:lang(zh-Hans){--tabview-text-loading:\"加载中\";--tabview-text-fetching:\"抓取中\"}html:lang(ru){--tabview-text-loading:\"Загрузка\";--tabview-text-fetching:\"Получение\"}ytd-watch-flexy #right-tabs .tab-btn span#tyt-cm-count:empty:after{content:var(--tabview-text-loading);letter-spacing:var(--tyt-x-loading-content-letter-spacing)}}@supports (color:var(--tabview-font-size-btn-define )){.font-size-right{align-content:space-evenly;bottom:0;display:inline-flex;flex-direction:column;justify-content:space-evenly;padding:4px 0;pointer-events:none;position:absolute;right:0;top:0;width:16px}html body ytd-watch-flexy.style-scope .font-size-btn{user-select:none!important}.font-size-btn{--tyt-font-size-btn-display:none;background-color:var(--yt-spec-badge-chip-background);box-sizing:border-box;color:var(--yt-spec-text-secondary);cursor:pointer;display:var(--tyt-font-size-btn-display,none);font-family:Menlo,Lucida Console,Monaco,Consolas,monospace;font-weight:900;height:12px;line-height:100%;margin:0;padding:0;pointer-events:all;position:relative;transform-origin:left top;transition:background-color 90ms linear,color 90ms linear;width:12px}.font-size-btn:hover{background-color:var(--yt-spec-text-primary);color:var(--yt-spec-general-background-a)}@supports (zoom:0.5){.tab-btn .font-size-btn{--tyt-font-size-btn-display:none}.tab-btn.active:hover .font-size-btn{--tyt-font-size-btn-display:inline-block}}}body ytd-watch-flexy:not([is-two-columns_]) #columns.ytd-watch-flexy{flex-direction:column}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy{box-sizing:border-box;display:block;width:100%}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy secondary-wrapper{contain:content;height:auto;padding-left:var(--ytd-margin-6x)}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy secondary-wrapper #right-tabs{overflow:auto}[tyt-chat=\"+\"]{--tyt-chat-grow:1}[tyt-chat=\"+\"] secondary-wrapper>[tyt-chat-container]{display:flex;flex-direction:column;flex-grow:var(--tyt-chat-grow);flex-shrink:0}[tyt-chat=\"+\"] secondary-wrapper>[tyt-chat-container]>#chat{flex-grow:var(--tyt-chat-grow)}ytd-watch-flexy[is-two-columns_]:not([theater]) #columns.style-scope.ytd-watch-flexy{min-height:calc(100vh - var(--ytd-toolbar-height, 56px))}ytd-watch-flexy[is-two-columns_]:not([full-bleed-player]) ytd-live-chat-frame#chat{height:auto!important;min-height:auto!important}ytd-watch-flexy[tyt-tab^=\"#\"]:not([is-two-columns_]):not([tyt-chat=\"+\"]) #right-tabs{min-height:var(--ytd-watch-flexy-chat-max-height)}body ytd-watch-flexy:not([is-two-columns_]) #chat.ytd-watch-flexy{margin-top:0}body ytd-watch-flexy:not([is-two-columns_]) ytd-watch-metadata.ytd-watch-flexy{margin-bottom:0}ytd-watch-metadata.ytd-watch-flexy ytd-metadata-row-container-renderer{display:none}#tab-info [show-expand-button] #expand-sizer.ytd-text-inline-expander{visibility:initial}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#left-arrow-container.ytd-video-description-infocards-section-renderer>#left-arrow,#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#right-arrow-container.ytd-video-description-infocards-section-renderer>#right-arrow{border:6px solid transparent;opacity:.65}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#left-arrow-container.ytd-video-description-infocards-section-renderer>#left-arrow:hover,#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#right-arrow-container.ytd-video-description-infocards-section-renderer>#right-arrow:hover{opacity:1}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>div#left-arrow-container:before{background:transparent;content:\"\";display:block;height:40px;left:-20px;position:absolute;top:0;width:40px;z-index:-1}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>div#right-arrow-container:before{background:transparent;content:\"\";display:block;height:40px;position:absolute;right:-20px;top:0;width:40px;z-index:-1}body ytd-watch-flexy[is-two-columns_][tyt-egm-panel_] #columns.style-scope.ytd-watch-flexy #panels.style-scope.ytd-watch-flexy{display:flex;flex-direction:column;flex-grow:1;flex-shrink:0}body ytd-watch-flexy[is-two-columns_][tyt-egm-panel_] #columns.style-scope.ytd-watch-flexy #panels.style-scope.ytd-watch-flexy ytd-engagement-panel-section-list-renderer[target-id][visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED]{display:flex;flex-direction:column;flex-grow:1;flex-shrink:0;height:auto;max-height:none;min-height:auto}secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] #body.ytd-transcript-renderer:not(:empty),secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] #content.ytd-transcript-renderer:not(:empty),secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] ytd-transcript-renderer:not(:empty){flex-grow:1;height:auto;max-height:none;min-height:auto}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer{position:relative}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer>[panel-target-id]:only-child{contain:style size}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-list-renderer.ytd-transcript-search-panel-renderer{contain:strict;flex-grow:1}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-renderer.style-scope.ytd-transcript-segment-list-renderer,secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-renderer.style-scope.ytd-transcript-segment-list-renderer>.segment{contain:layout paint style}body ytd-watch-flexy[theater] #secondary.ytd-watch-flexy{margin-top:var(--ytd-margin-3x);padding-top:0}body ytd-watch-flexy[theater] secondary-wrapper{margin-top:0;padding-top:0}body ytd-watch-flexy[theater] #chat.ytd-watch-flexy{margin-bottom:var(--ytd-margin-2x)}#tab-comments ytd-comments#comments [field-of-cm-count]{margin-top:0}#tab-info>ytd-expandable-video-description-body-renderer{margin-bottom:var(--ytd-margin-3x)}#tab-info [class]:last-child{margin-bottom:0;padding-bottom:0}#tab-info ytd-rich-metadata-row-renderer ytd-rich-metadata-renderer{max-width:none}ytd-watch-flexy[is-two-columns_] secondary-wrapper #chat.ytd-watch-flexy{margin-bottom:var(--ytd-margin-3x)}ytd-watch-flexy[tyt-tab] tp-yt-paper-tooltip{contain:content;white-space:nowrap}ytd-watch-info-text tp-yt-paper-tooltip.style-scope.ytd-watch-info-text{margin-bottom:-300px;margin-top:-96px}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata{font-size:1.2rem;line-height:1.8rem}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata yt-animated-rolling-number{font-size:inherit}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata #info-container.style-scope.ytd-watch-info-text{align-items:center}ytd-watch-flexy[hide-default-text-inline-expander]{--tyt-bottom-watch-metadata-margin:6px}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata>#description-inner.ytd-watch-metadata{margin:6px 12px}[hide-default-text-inline-expander] ytd-watch-metadata[title-headline-xs] h1.ytd-watch-metadata{font-size:1.8rem}ytd-watch-flexy[is-two-columns_][hide-default-text-inline-expander] #below.style-scope.ytd-watch-flexy ytd-merch-shelf-renderer{border:0;margin:0;padding:0}ytd-watch-flexy[is-two-columns_][hide-default-text-inline-expander] #below.style-scope.ytd-watch-flexy ytd-watch-metadata.ytd-watch-flexy{margin-bottom:6px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--horizontal .yt-video-attribute-view-model__link-container .yt-video-attribute-view-model__hero-section{flex-shrink:0}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model__overflow-menu{background:var(--yt-emoji-picker-category-background-color);border-radius:99px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--image-square.yt-video-attribute-view-model--image-large .yt-video-attribute-view-model__hero-section{max-height:128px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--image-large .yt-video-attribute-view-model__hero-section{max-width:128px}#tab-info ytd-reel-shelf-renderer #items.yt-horizontal-list-renderer ytd-reel-item-renderer.yt-horizontal-list-renderer{max-width:142px}ytd-watch-info-text#ytd-watch-info-text.style-scope.ytd-watch-metadata #date-text.style-scope.ytd-watch-info-text,ytd-watch-info-text#ytd-watch-info-text.style-scope.ytd-watch-metadata #view-count.style-scope.ytd-watch-info-text{align-items:center}ytd-watch-info-text:not([detailed]) #info.ytd-watch-info-text a.yt-simple-endpoint.yt-formatted-string{pointer-events:none}body ytd-app>ytd-popup-container>tp-yt-iron-dropdown>#contentWrapper>[slot=dropdown-content]{backdrop-filter:none}#tab-info [tyt-clone-refresh-count]{overflow:visible!important}#tab-info #items.ytd-horizontal-card-list-renderer yt-video-attribute-view-model.ytd-horizontal-card-list-renderer{contain:layout}#tab-info #thumbnail-container.ytd-structured-description-channel-lockup-renderer,#tab-info ytd-media-lockup-renderer[is-compact] #thumbnail-container.ytd-media-lockup-renderer{flex-shrink:0}secondary-wrapper ytd-donation-unavailable-renderer{--ytd-margin-6x:var(--ytd-margin-2x);--ytd-margin-5x:var(--ytd-margin-2x);--ytd-margin-4x:var(--ytd-margin-2x);--ytd-margin-3x:var(--ytd-margin-2x)}[tyt-no-less-btn] #less{display:none}.tyt-metadata-hover-resized #analytics-button,.tyt-metadata-hover-resized #purchase-button,.tyt-metadata-hover-resized #sponsor-button,.tyt-metadata-hover-resized #subscribe-button{display:none!important}.tyt-metadata-hover #upload-info{flex-basis:100vw;flex-shrink:0;max-width:max-content;min-width:max-content}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #playlist-thumbnail.style-scope.ytd-structured-description-playlist-lockup-renderer{max-width:100%}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #lockup-container.ytd-structured-description-playlist-lockup-renderer{padding:1px}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #thumbnail.ytd-structured-description-playlist-lockup-renderer{outline:1px solid hsla(0,0%,50%,.5)}ytd-live-chat-frame#chat[collapsed] ytd-message-renderer~#show-hide-button.ytd-live-chat-frame>ytd-toggle-button-renderer.ytd-live-chat-frame{padding:0}.tyt-info-invisible{display:none}[tyt-playlist-expanded] secondary-wrapper>ytd-playlist-panel-renderer#playlist{flex-grow:1;flex-shrink:1;max-height:unset!important;overflow:auto}[tyt-playlist-expanded] secondary-wrapper>ytd-playlist-panel-renderer#playlist>#container{max-height:unset!important}secondary-wrapper ytd-playlist-panel-renderer{--ytd-margin-6x:var(--ytd-margin-3x)}ytd-watch-flexy[theater] ytd-playlist-panel-renderer[collapsible][collapsed] .header.ytd-playlist-panel-renderer{padding:6px 8px}ytd-watch-flexy[theater] #playlist.ytd-watch-flexy{margin-bottom:var(--ytd-margin-2x)}ytd-watch-flexy[theater] #right-tabs .tab-btn[tyt-tab-content]{border-bottom:0 solid transparent;padding:8px 4px 6px}ytd-watch-flexy{--tyt-bottom-watch-metadata-margin:12px}ytd-watch-flexy[rounded-info-panel],ytd-watch-flexy[rounded-player-large]{--tyt-rounded-a1:${VAL_ROUNDED_A1}px}#bottom-row.style-scope.ytd-watch-metadata .item.ytd-watch-metadata{margin-right:var(--tyt-bottom-watch-metadata-margin,12px);margin-top:var(--tyt-bottom-watch-metadata-margin,12px)}#cinematics{contain:layout style size}body[data-ytlstm-theater-mode] #secondary-inner[class]>secondary-wrapper[class]:not(#chat-container):not(#chat){display:flex!important}body[data-ytlstm-theater-mode] secondary-wrapper{all:unset;height:100vh}body[data-ytlstm-theater-mode] #right-tabs{display:none}body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] [tyt-chat=\"+\"]{--tyt-chat-grow:unset}body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #chat-container.style-scope,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #columns.style-scope.ytd-watch-flexy,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #secondary-inner.style-scope.ytd-watch-flexy,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #secondary.style-scope.ytd-watch-flexy,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] [tyt-chat-container].style-scope,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] secondary-wrapper{pointer-events:none}body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #chat[class]{pointer-events:auto}@supports (color:var(--tyt-fix-20251124 )){#below ytd-watch-metadata .ytTextCarouselItemViewModelImageType{height:16px;width:16px}#below ytd-watch-metadata yt-text-carousel-item-view-model{column-gap:6px}#below ytd-watch-metadata ytd-watch-info-text#ytd-watch-info-text{font-size:inherit;line-height:inherit}}";
+  var css_248z$1 = "@keyframes relatedElementProvided{0%{background-position-x:3px}to{background-position-x:4px}}html[tabview-loaded=icp] #related.ytd-watch-flexy{animation:relatedElementProvided 1ms linear 0s 1 normal forwards}html[tabview-loaded=icp] #right-tabs #related.ytd-watch-flexy,html[tabview-loaded=icp] #right-tabs ytd-expander#expander,html[tabview-loaded=icp] [hidden] #related.ytd-watch-flexy,html[tabview-loaded=icp] [hidden] ytd-expander#expander,html[tabview-loaded=icp] ytd-comments ytd-expander#expander{animation:initial}#secondary.ytd-watch-flexy{position:relative}#secondary-inner.style-scope.ytd-watch-flexy{height:100%}secondary-wrapper{border:0;box-sizing:border-box;contain:strict;flex-wrap:nowrap;height:100%;left:0;max-height:calc(100vh - var(--ytd-toolbar-height, 56px));padding:0;padding-bottom:var(--ytd-margin-6x);padding-right:var(--ytd-margin-6x);padding-top:var(--ytd-margin-6x);position:absolute;right:0;top:0}#right-tabs,secondary-wrapper{display:flex;flex-direction:column;margin:0}#right-tabs{flex-grow:1;padding:0;position:relative}[tyt-tab=\"\"] #right-tabs{flex-grow:0}[tyt-tab=\"\"] #right-tabs .tab-content{border:0}#right-tabs .tab-content{flex-grow:1}ytd-watch-flexy[hide-default-text-inline-expander] #primary.style-scope.ytd-watch-flexy ytd-text-inline-expander{display:none}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden{--comment-pre-load-sizing:90px;border:0;contain:strict;display:block!important;height:var(--comment-pre-load-sizing)!important;left:2px;margin:0;overflow:hidden;padding:0;pointer-events:none!important;position:fixed!important;top:2px;visibility:collapse;width:var(--comment-pre-load-sizing)!important;z-index:-1}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections{border:0;contain:strict;display:block!important;height:var(--comment-pre-load-sizing);margin:0;overflow:hidden;padding:0;width:var(--comment-pre-load-sizing)}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments>ytd-item-section-renderer#sections>#contents{border:0;contain:strict;display:flex!important;flex-direction:row;gap:60px;height:var(--comment-pre-load-sizing);margin:0;overflow:hidden;padding:0;width:var(--comment-pre-load-sizing)}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents{--comment-pre-load-display:none}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents>:last-child,ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents>:only-of-type{--comment-pre-load-display:block}ytd-watch-flexy:not([keep-comments-scroller]) #tab-comments.tab-content-hidden ytd-comments#comments #contents>*{display:var(--comment-pre-load-display)!important}#right-tabs #material-tabs{border:1px solid var(--ytd-searchbox-legacy-border-color);display:flex;overflow:hidden;padding:0;position:relative}[tyt-tab] #right-tabs #material-tabs{border-radius:var(--tyt-rounded-a1) var(--tyt-rounded-a1) var(--tyt-rounded-a1) var(--tyt-rounded-a1)}[tyt-tab^=\"#\"] #right-tabs #material-tabs{border-radius:var(--tyt-rounded-a1) var(--tyt-rounded-a1) 0 0}ytd-watch-flexy:not([is-two-columns_]) #right-tabs #material-tabs{outline:0}#right-tabs #material-tabs a.tab-btn[tyt-tab-content]>*{pointer-events:none}#right-tabs #material-tabs a.tab-btn[tyt-tab-content]>.font-size-right{display:none;pointer-events:auto}ytd-watch-flexy #right-tabs .tab-content{border:1px solid var(--ytd-searchbox-legacy-border-color);border-radius:0 0 var(--tyt-rounded-a1) var(--tyt-rounded-a1);border-top:0;box-sizing:border-box;display:block;display:flex;flex-direction:row;overflow:hidden;padding:0;position:relative;top:0}ytd-watch-flexy:not([is-two-columns_]) #right-tabs .tab-content{height:100%}ytd-watch-flexy #right-tabs .tab-content-cld{--tab-content-padding:var(--ytd-margin-4x);box-sizing:border-box;contain:layout paint;display:block;overflow:auto;padding:var(--tab-content-padding);position:relative;width:100%}#right-tabs,.tab-content,.tab-content-cld{animation:none;transition:none}#right-tabs #emojis.ytd-commentbox{inset:auto 0 auto 0;width:auto}ytd-watch-flexy[is-two-columns_] #right-tabs .tab-content-cld{contain:size layout paint style;height:100%;position:absolute;width:100%}ytd-watch-flexy #right-tabs .tab-content-cld.tab-content-hidden{contain:size layout paint style;display:none;width:100%}@supports (color:var(--tabview-tab-btn-define )){ytd-watch-flexy #right-tabs .tab-btn{background:var(--yt-spec-general-background-a)}html{--tyt-tab-btn-flex-grow:1;--tyt-tab-btn-flex-basis:0%;--tyt-tab-bar-color-1-def:#ff4533;--tyt-tab-bar-color-2-def:var(--yt-brand-light-red);--tyt-tab-bar-color-1:var(--main-color,var(--tyt-tab-bar-color-1-def));--tyt-tab-bar-color-2:var(--main-color,var(--tyt-tab-bar-color-2-def))}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]{--tyt-tab-btn-color:var(--yt-spec-text-secondary);background-color:var(--ytd-searchbox-legacy-button-color);border:0;border-bottom:4px solid transparent;color:var(--tyt-tab-btn-color);cursor:pointer;display:inline-block;flex-basis:0%;flex-basis:var(--tyt-tab-btn-flex-basis);flex-grow:1;flex-grow:var(--tyt-tab-btn-flex-grow);flex-shrink:1;font-size:12px;font-weight:500;line-height:18px;overflow:hidden;padding:14px 8px 10px;position:relative;text-align:center;text-decoration:none;text-overflow:clip;text-transform:uppercase;text-transform:var(--yt-button-text-transform,inherit);transition:border .2s linear .1s;white-space:nowrap}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]>svg{fill:var(--iron-icon-fill-color,currentcolor);stroke:var(--iron-icon-stroke-color,none);color:var(--yt-button-color,inherit);height:18px;margin-right:0;opacity:.5;padding-right:0;vertical-align:bottom}ytd-watch-flexy #right-tabs .tab-btn{--tabview-btn-txt-ml:8px}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"]{--tabview-btn-txt-ml:0px}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]>svg+span{margin-left:var(--tabview-btn-txt-ml)}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content] svg{pointer-events:none}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].active{--tyt-tab-btn-color:var(--yt-spec-text-primary);background-color:var(--ytd-searchbox-legacy-button-focus-color);border-bottom-color:var(--tyt-tab-bar-color-1);border-bottom:2px solid var(--tyt-tab-bar-color-2);font-weight:500;outline:0}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].active svg{opacity:.9}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]:not(.active):hover{--tyt-tab-btn-color:var(--yt-spec-text-primary);background-color:var(--ytd-searchbox-legacy-button-hover-color)}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]:not(.active):hover svg{opacity:.9}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content]{user-select:none!important}ytd-watch-flexy #right-tabs .tab-btn[tyt-tab-content].tab-btn-hidden{display:none}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"],ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"]:hover{--tyt-tab-btn-color:var(--yt-spec-icon-disabled)}ytd-watch-flexy[tyt-comment-disabled] #right-tabs .tab-btn[tyt-tab-content=\"#tab-comments\"] span#tyt-cm-count:empty{display:none}ytd-watch-flexy #right-tabs .tab-btn span#tyt-cm-count:empty:after{color:currentColor;display:inline-block;font-size:inherit;text-align:left;transform:scaleX(.8);width:4em}}@supports (color:var(--tyt-cm-count-define )){ytd-watch-flexy{--tyt-x-loading-content-letter-spacing:2px}html{--tabview-text-loading:\"Loading\";--tabview-text-fetching:\"Fetching\";--tabview-panel-loading:var(--tabview-text-loading)}html:lang(ja){--tabview-text-loading:\"読み込み中\";--tabview-text-fetching:\"フェッチ..\"}html:lang(ko){--tabview-text-loading:\"로딩..\";--tabview-text-fetching:\"가져오기..\"}html:lang(zh-Hant){--tabview-text-loading:\"載入中\";--tabview-text-fetching:\"擷取中\"}html:lang(zh-Hans){--tabview-text-loading:\"加载中\";--tabview-text-fetching:\"抓取中\"}html:lang(ru){--tabview-text-loading:\"Загрузка\";--tabview-text-fetching:\"Получение\"}ytd-watch-flexy #right-tabs .tab-btn span#tyt-cm-count:empty:after{content:var(--tabview-text-loading);letter-spacing:var(--tyt-x-loading-content-letter-spacing)}}@supports (color:var(--tabview-font-size-btn-define )){.font-size-right{align-content:space-evenly;bottom:0;display:inline-flex;flex-direction:column;justify-content:space-evenly;padding:4px 0;pointer-events:none;position:absolute;right:0;top:0;width:16px}html body ytd-watch-flexy.style-scope .font-size-btn{user-select:none!important}.font-size-btn{--tyt-font-size-btn-display:none;background-color:var(--yt-spec-badge-chip-background);box-sizing:border-box;color:var(--yt-spec-text-secondary);cursor:pointer;display:var(--tyt-font-size-btn-display,none);font-family:Menlo,Lucida Console,Monaco,Consolas,monospace;font-weight:900;height:12px;line-height:100%;margin:0;padding:0;pointer-events:all;position:relative;transform-origin:left top;transition:background-color 90ms linear,color 90ms linear;width:12px}.font-size-btn:hover{background-color:var(--yt-spec-text-primary);color:var(--yt-spec-general-background-a)}@supports (zoom:0.5){.tab-btn .font-size-btn{--tyt-font-size-btn-display:none}.tab-btn.active:hover .font-size-btn{--tyt-font-size-btn-display:inline-block}}}body ytd-watch-flexy:not([is-two-columns_]) #columns.ytd-watch-flexy{flex-direction:column}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy{box-sizing:border-box;display:block;width:100%}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy secondary-wrapper{contain:content;height:auto;padding-left:var(--ytd-margin-6x)}body ytd-watch-flexy:not([is-two-columns_]) #secondary.ytd-watch-flexy secondary-wrapper #right-tabs{overflow:auto}[tyt-chat=\"+\"]{--tyt-chat-grow:1}[tyt-chat=\"+\"] secondary-wrapper>[tyt-chat-container]{display:flex;flex-direction:column;flex-grow:var(--tyt-chat-grow);flex-shrink:0}[tyt-chat=\"+\"] secondary-wrapper>[tyt-chat-container]>#chat{flex-grow:var(--tyt-chat-grow)}ytd-watch-flexy[is-two-columns_]:not([theater]) #columns.style-scope.ytd-watch-flexy{min-height:calc(100vh - var(--ytd-toolbar-height, 56px))}ytd-watch-flexy[is-two-columns_]:not([full-bleed-player]) ytd-live-chat-frame#chat{height:auto!important;min-height:auto!important}ytd-watch-flexy[tyt-tab^=\"#\"]:not([is-two-columns_]):not([tyt-chat=\"+\"]) #right-tabs{min-height:var(--ytd-watch-flexy-chat-max-height)}body ytd-watch-flexy:not([is-two-columns_]) #chat.ytd-watch-flexy{margin-top:0}body ytd-watch-flexy:not([is-two-columns_]) ytd-watch-metadata.ytd-watch-flexy{margin-bottom:0}ytd-watch-metadata.ytd-watch-flexy ytd-metadata-row-container-renderer{display:none}#tab-info [show-expand-button] #expand-sizer.ytd-text-inline-expander{visibility:initial}#collapse.button.ytd-text-inline-expander{display:none}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#left-arrow-container.ytd-video-description-infocards-section-renderer>#left-arrow,#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#right-arrow-container.ytd-video-description-infocards-section-renderer>#right-arrow{border:6px solid transparent;opacity:.65}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#left-arrow-container.ytd-video-description-infocards-section-renderer>#left-arrow:hover,#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>#right-arrow-container.ytd-video-description-infocards-section-renderer>#right-arrow:hover{opacity:1}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>div#left-arrow-container:before{background:transparent;content:\"\";display:block;height:40px;left:-20px;position:absolute;top:0;width:40px;z-index:-1}#tab-info #social-links.style-scope.ytd-video-description-infocards-section-renderer>div#right-arrow-container:before{background:transparent;content:\"\";display:block;height:40px;position:absolute;right:-20px;top:0;width:40px;z-index:-1}body ytd-watch-flexy[is-two-columns_][tyt-egm-panel_] #columns.style-scope.ytd-watch-flexy #panels.style-scope.ytd-watch-flexy{display:flex;flex-direction:column;flex-grow:1;flex-shrink:0}body ytd-watch-flexy[is-two-columns_][tyt-egm-panel_] #columns.style-scope.ytd-watch-flexy #panels.style-scope.ytd-watch-flexy ytd-engagement-panel-section-list-renderer[target-id][visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED]{display:flex;flex-direction:column;flex-grow:1;flex-shrink:0;height:auto;max-height:none;min-height:auto}secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] #body.ytd-transcript-renderer:not(:empty),secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] #content.ytd-transcript-renderer:not(:empty),secondary-wrapper [visibility=ENGAGEMENT_PANEL_VISIBILITY_EXPANDED] ytd-transcript-renderer:not(:empty){flex-grow:1;height:auto;max-height:none;min-height:auto}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer{position:relative}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer>[panel-target-id]:only-child{contain:style size}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-list-renderer.ytd-transcript-search-panel-renderer{contain:strict;flex-grow:1}secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-renderer.style-scope.ytd-transcript-segment-list-renderer,secondary-wrapper #content.ytd-engagement-panel-section-list-renderer ytd-transcript-segment-renderer.style-scope.ytd-transcript-segment-list-renderer>.segment{contain:layout paint style}body ytd-watch-flexy[theater] #secondary.ytd-watch-flexy{margin-top:var(--ytd-margin-3x);padding-top:0}body ytd-watch-flexy[theater] secondary-wrapper{margin-top:0;padding-top:0}body ytd-watch-flexy[theater] #chat.ytd-watch-flexy{margin-bottom:var(--ytd-margin-2x)}#tab-comments ytd-comments#comments [field-of-cm-count]{margin-top:0}#tab-info>ytd-expandable-video-description-body-renderer{margin-bottom:var(--ytd-margin-3x)}#tab-info [class]:last-child{margin-bottom:0;padding-bottom:0}#tab-info ytd-rich-metadata-row-renderer ytd-rich-metadata-renderer{max-width:none}ytd-watch-flexy[is-two-columns_] secondary-wrapper #chat.ytd-watch-flexy{margin-bottom:var(--ytd-margin-3x)}ytd-watch-flexy[tyt-tab] tp-yt-paper-tooltip{contain:content;white-space:nowrap}ytd-watch-info-text tp-yt-paper-tooltip.style-scope.ytd-watch-info-text{margin-bottom:-300px;margin-top:-96px}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata{font-size:1.2rem;line-height:1.8rem}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata yt-animated-rolling-number{font-size:inherit}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata #info-container.style-scope.ytd-watch-info-text{align-items:center}ytd-watch-flexy[hide-default-text-inline-expander]{--tyt-bottom-watch-metadata-margin:6px}[hide-default-text-inline-expander] #bottom-row #description.ytd-watch-metadata>#description-inner.ytd-watch-metadata{margin:6px 12px}[hide-default-text-inline-expander] ytd-watch-metadata[title-headline-xs] h1.ytd-watch-metadata{font-size:1.8rem}ytd-watch-flexy[is-two-columns_][hide-default-text-inline-expander] #below.style-scope.ytd-watch-flexy ytd-merch-shelf-renderer{border:0;margin:0;padding:0}ytd-watch-flexy[is-two-columns_][hide-default-text-inline-expander] #below.style-scope.ytd-watch-flexy ytd-watch-metadata.ytd-watch-flexy{margin-bottom:6px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--horizontal .yt-video-attribute-view-model__link-container .yt-video-attribute-view-model__hero-section{flex-shrink:0}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model__overflow-menu{background:var(--yt-emoji-picker-category-background-color);border-radius:99px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--image-square.yt-video-attribute-view-model--image-large .yt-video-attribute-view-model__hero-section{max-height:128px}#tab-info yt-video-attribute-view-model .yt-video-attribute-view-model--image-large .yt-video-attribute-view-model__hero-section{max-width:128px}#tab-info ytd-reel-shelf-renderer #items.yt-horizontal-list-renderer ytd-reel-item-renderer.yt-horizontal-list-renderer{max-width:142px}ytd-watch-info-text#ytd-watch-info-text.style-scope.ytd-watch-metadata #date-text.style-scope.ytd-watch-info-text,ytd-watch-info-text#ytd-watch-info-text.style-scope.ytd-watch-metadata #view-count.style-scope.ytd-watch-info-text{align-items:center}ytd-watch-info-text:not([detailed]) #info.ytd-watch-info-text a.yt-simple-endpoint.yt-formatted-string{pointer-events:none}body ytd-app>ytd-popup-container>tp-yt-iron-dropdown>#contentWrapper>[slot=dropdown-content]{backdrop-filter:none}#tab-info [tyt-clone-refresh-count]{overflow:visible!important}#tab-info #items.ytd-horizontal-card-list-renderer yt-video-attribute-view-model.ytd-horizontal-card-list-renderer{contain:layout}#tab-info #thumbnail-container.ytd-structured-description-channel-lockup-renderer,#tab-info ytd-media-lockup-renderer[is-compact] #thumbnail-container.ytd-media-lockup-renderer{flex-shrink:0}secondary-wrapper ytd-donation-unavailable-renderer{--ytd-margin-6x:var(--ytd-margin-2x);--ytd-margin-5x:var(--ytd-margin-2x);--ytd-margin-4x:var(--ytd-margin-2x);--ytd-margin-3x:var(--ytd-margin-2x)}[tyt-no-less-btn] #less{display:none}.tyt-metadata-hover-resized #analytics-button,.tyt-metadata-hover-resized #purchase-button,.tyt-metadata-hover-resized #sponsor-button,.tyt-metadata-hover-resized #subscribe-button{display:none!important}.tyt-metadata-hover #upload-info{flex-basis:100vw;flex-shrink:0;max-width:max-content;min-width:max-content}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #playlist-thumbnail.style-scope.ytd-structured-description-playlist-lockup-renderer{max-width:100%}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #lockup-container.ytd-structured-description-playlist-lockup-renderer{padding:1px}#tab-info ytd-structured-description-playlist-lockup-renderer[collections] #thumbnail.ytd-structured-description-playlist-lockup-renderer{outline:1px solid hsla(0,0%,50%,.5)}ytd-live-chat-frame#chat[collapsed] ytd-message-renderer~#show-hide-button.ytd-live-chat-frame>ytd-toggle-button-renderer.ytd-live-chat-frame{padding:0}.tyt-info-invisible{display:none}[tyt-playlist-expanded] secondary-wrapper>ytd-playlist-panel-renderer#playlist{flex-grow:1;flex-shrink:1;max-height:unset!important;overflow:auto}[tyt-playlist-expanded] secondary-wrapper>ytd-playlist-panel-renderer#playlist>#container{max-height:unset!important}secondary-wrapper ytd-playlist-panel-renderer{--ytd-margin-6x:var(--ytd-margin-3x)}ytd-watch-flexy[theater] ytd-playlist-panel-renderer[collapsible][collapsed] .header.ytd-playlist-panel-renderer{padding:6px 8px}ytd-watch-flexy[theater] #playlist.ytd-watch-flexy{margin-bottom:var(--ytd-margin-2x)}ytd-watch-flexy[theater] #right-tabs .tab-btn[tyt-tab-content]{border-bottom:0 solid transparent;padding:8px 4px 6px}ytd-watch-flexy{--tyt-bottom-watch-metadata-margin:12px}ytd-watch-flexy[rounded-info-panel],ytd-watch-flexy[rounded-player-large]{--tyt-rounded-a1:${VAL_ROUNDED_A1}px}#bottom-row.style-scope.ytd-watch-metadata .item.ytd-watch-metadata{margin-right:var(--tyt-bottom-watch-metadata-margin,12px);margin-top:var(--tyt-bottom-watch-metadata-margin,12px)}#cinematics{contain:layout style size}body[data-ytlstm-theater-mode] #secondary-inner[class]>secondary-wrapper[class]:not(#chat-container):not(#chat){display:flex!important}body[data-ytlstm-theater-mode] secondary-wrapper{all:unset;height:100vh}body[data-ytlstm-theater-mode] #right-tabs{display:none}body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] [tyt-chat=\"+\"]{--tyt-chat-grow:unset}body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #chat-container.style-scope,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #columns.style-scope.ytd-watch-flexy,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #secondary-inner.style-scope.ytd-watch-flexy,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #secondary.style-scope.ytd-watch-flexy,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] [tyt-chat-container].style-scope,body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] secondary-wrapper{pointer-events:none}body[data-ytlstm-theater-mode] [data-ytlstm-chat-over-video] #chat[class]{pointer-events:auto}@supports (color:var(--tyt-fix-20251124 )){#below ytd-watch-metadata .ytTextCarouselItemViewModelImageType{height:16px;width:16px}#below ytd-watch-metadata yt-text-carousel-item-view-model{column-gap:6px}#below ytd-watch-metadata ytd-watch-info-text#ytd-watch-info-text{font-size:inherit;line-height:inherit}}";
 
   const VAL_ROUNDED_A1 = 12;
   const styles = {
@@ -1953,12 +1953,55 @@
         } catch (e) {
         }
       };
+      const setExpand = (cnt) => {
+        if (typeof cnt.set === "function") {
+          cnt.set("isExpanded", true);
+          if (typeof cnt.isExpandedChanged === "function")
+            cnt.isExpandedChanged();
+        } else if (cnt.isExpanded === false) {
+          cnt.isExpanded = true;
+          if (typeof cnt.isExpandedChanged === "function")
+            cnt.isExpandedChanged();
+        }
+      };
+      const cloneMethods = {
+        updateTextOnSnippetTypeChange() {
+          if (this.isResetMutation === false)
+            this.isResetMutation = true;
+          if (this.isExpanded === true)
+            this.isExpanded = false;
+          setExpand(this, true);
+          if (this.isResetMutation === false)
+            this.isResetMutation = true;
+          try {
+          } catch (e) {
+          }
+        },
+        collapse() {
+        },
+        computeExpandButtonOffset() {
+          return 0;
+        },
+        dataChanged() {
+        }
+      };
       const fixInlineExpanderMethods = (inlineExpanderCnt) => {
         if (inlineExpanderCnt && !inlineExpanderCnt.__$idncjk8487$__) {
           inlineExpanderCnt.__$idncjk8487$__ = true;
-          inlineExpanderCnt.updateTextOnSnippetTypeChange = function() {
-          };
-          inlineExpanderCnt.isResetMutation = true;
+          inlineExpanderCnt.dataChanged = cloneMethods.dataChanged;
+          inlineExpanderCnt.updateTextOnSnippetTypeChange = cloneMethods.updateTextOnSnippetTypeChange;
+          if (typeof inlineExpanderCnt.collapse === "function") {
+            inlineExpanderCnt.collapse = cloneMethods.collapse;
+          }
+          if (typeof inlineExpanderCnt.computeExpandButtonOffset === "function") {
+            inlineExpanderCnt.computeExpandButtonOffset = cloneMethods.computeExpandButtonOffset;
+          }
+          if (typeof inlineExpanderCnt.isResetMutation === "boolean") {
+            inlineExpanderCnt.isResetMutation = true;
+          }
+          if (typeof inlineExpanderCnt.collapseLabel === "string") {
+            inlineExpanderCnt.collapseLabel = "";
+          }
           fixInlineExpanderDisplay(inlineExpanderCnt);
         }
       };
@@ -2022,8 +2065,7 @@
                 const inlineExpanderElm = mainInfo.querySelector("ytd-text-inline-expander");
                 const inlineExpanderCnt = insp(inlineExpanderElm);
                 if (inlineExpanderCnt && inlineExpanderCnt.isExpanded === false) {
-                  inlineExpanderCnt.isExpanded = true;
-                  inlineExpanderCnt.isExpandedChanged();
+                  setExpand(inlineExpanderCnt, true);
                 }
                 break;
             }
@@ -5675,15 +5717,10 @@
                 const style = window.getComputedStyle(element);
                 return style.display !== "none";
               },
-              calcRequestGroup: function(array) {
-                const itemsPerGroup = 8, len = array.length;
-                let groups = [];
-                for (let i = 0; i < len; i++) {
-                  const groupIndex = Math.floor(i / itemsPerGroup);
-                  if (!groups[groupIndex]) {
-                    groups[groupIndex] = [];
-                  }
-                  groups[groupIndex].push(array[i]);
+              calcRequestGroup: function(array, itemsPerGroup = 10) {
+                const groups = [];
+                for (let i = 0; i < array.length; i += itemsPerGroup) {
+                  groups.push(array.slice(i, i + itemsPerGroup));
                 }
                 return groups;
               }
@@ -6021,13 +6058,14 @@
             };
             const AliexpressSearch = {
               loopIsComplete: true,
+              cacheLinkDoms: {},
               isInbusinessPage: function() {
                 return /inbusiness\.aliexpress\.com\/web\/search-products/.test(ItemSearchBaseObj.visitUrl);
               },
               isItemLink: function(url) {
                 return SupportData.support.detail.test(url);
               },
-              pickUpWholesale: function(selectors, language, currency, marketplace) {
+              pickUpWholesale: function(selectors, language, currency, marketplace, couponExistPer) {
                 return __async$o(this, null, function* () {
                   const items = [];
                   try {
@@ -6038,10 +6076,11 @@
                         const findA = elementObj.findA;
                         elements.forEach((element) => {
                           if (element && ItemSearchBaseObj.isElementDisplayed(element) && !element.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                            const goodsLink = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
+                            const goodsLink2 = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
                             let id = null;
-                            if (this.isItemLink(goodsLink)) {
-                              id = Tools.getGoodsIdByLink(goodsLink.getAttribute("href"));
+                            if (this.isItemLink(goodsLink2)) {
+                              id = Tools.getGoodsIdByLink(goodsLink2.getAttribute("href"));
+                              this.cacheLinkDoms[id] = goodsLink2;
                             }
                             if (id) {
                               items.push({
@@ -6057,13 +6096,13 @@
                       }
                     });
                     if (items.length > 0) {
-                      yield this.search(items, language, currency, marketplace);
+                      yield this.search(items, language, currency, marketplace, couponExistPer);
                     }
                   } catch (e) {
                   }
                 });
               },
-              pickUpInbusiness: function(language, currency, marketplace) {
+              pickUpInbusiness: function(language, currency, marketplace, couponExistPer) {
                 return __async$o(this, null, function* () {
                   const validate = this.isInbusinessPage();
                   if (!validate)
@@ -6086,18 +6125,19 @@
                                 "handler": child,
                                 "from": "inbusiness"
                               });
+                              this.cacheLinkDoms[id] = goodsLink;
                             }
                           }
                         });
                       }
-                      yield this.search(array, language, currency, marketplace);
+                      yield this.search(array, language, currency, marketplace, couponExistPer);
                     }
                   } catch (e) {
                   }
                 });
               },
-              search: function(array, language, currency, marketplace) {
-                const groups = ItemSearchBaseObj.calcRequestGroup(array);
+              search: function(array, language, currency, marketplace, couponExistPer) {
+                const groups = ItemSearchBaseObj.calcRequestGroup(array, couponExistPer);
                 const len = groups.length;
                 return new Promise((resolve, reject) => {
                   if (len <= 0) {
@@ -6127,6 +6167,7 @@
                         continue;
                       }
                       reqId += group[i].id + ",";
+                      group[i].handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
                     }
                     if (reqId.endsWith(",")) {
                       reqId = reqId.slice(0, -1);
@@ -6181,17 +6222,14 @@
                           isBroken = true;
                           break;
                         } else {
-                          if (!handler.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                            handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
-                            if (tip) {
-                              handler.style.position = "relative";
-                              handler.insertAdjacentHTML("beforeend", tip);
-                              Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
-                            }
-                            if (decryptUrl) {
-                              this.relativeJ(handler, decryptUrl);
-                              Logger.log("info", "good job >>>>>>>>>>>>>", key);
-                            }
+                          if (tip) {
+                            handler.style.position = "relative";
+                            handler.insertAdjacentHTML("beforeend", tip);
+                            Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
+                          }
+                          if (decryptUrl) {
+                            this.relativeJ(handler, decryptUrl);
+                            Logger.log("info", "good job >>>>>>>>>>>>>", key);
                           }
                         }
                       }
@@ -6251,13 +6289,63 @@
                 }
                 return run;
               },
+              changePageEvent: function() {
+                let hookDivTimer = null, removeTagIsComplete = true;
+                const onInitDom = () => {
+                  if (!removeTagIsComplete)
+                    return;
+                  removeTagIsComplete = false;
+                  const attr = ItemSearchBaseObj.searchAttribute;
+                  document.querySelectorAll(`*[${attr}='true']`).forEach((el) => {
+                    el.removeAttribute(attr);
+                    const tip = el.querySelector("*[name^='ali-gogo-coupon-']");
+                    if (tip) {
+                      tip.remove();
+                    }
+                  });
+                  removeTagIsComplete = true;
+                  this.cacheLinkDoms = {};
+                };
+                const checkObjectValues = () => {
+                  const obj = this.cacheLinkDoms;
+                  const keys = Object.keys(obj);
+                  let notContain = 0;
+                  for (let i = 0; i < keys.length; i++) {
+                    const key = keys[i];
+                    const el = obj[key];
+                    try {
+                      const href = el.getAttribute("href");
+                      if (!href.includes(key)) {
+                        if (++notContain > 2)
+                          return true;
+                      }
+                    } catch (e) {
+                    }
+                  }
+                  return false;
+                };
+                const observer = new MutationObserver((mutations) => {
+                  const hasDelete = mutations.some(
+                    (m) => m.target === document.body && m.removedNodes.length > 0
+                  );
+                  if (!hasDelete)
+                    return;
+                  if (hookDivTimer)
+                    clearTimeout(hookDivTimer);
+                  hookDivTimer = setTimeout(() => {
+                    hookDivTimer = null;
+                    if (checkObjectValues())
+                      onInitDom();
+                  }, 500);
+                });
+                observer.observe(document.body, { childList: true, subtree: false });
+              },
               start: function() {
                 return __async$o(this, null, function* () {
                   const { support } = SupportData;
                   if (!this.isRun()) {
                     return;
                   }
-                  let removeTagIsComplete = true;
                   const language = Aliexpress.getLang();
                   const currency = yield Aliexpress.getCurrency();
                   const marketplace = yield Aliexpress.getMarketplace(support.marketplace);
@@ -6265,35 +6353,18 @@
                   if (!confString) {
                     return;
                   }
+                  const couponExistPer = support.couponExistPer || 10;
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
                   setInterval(() => __async$o(this, null, function* () {
-                    if (removeTagIsComplete && this.loopIsComplete) {
+                    if (this.loopIsComplete) {
                       this.loopIsComplete = false;
-                      yield this.pickUpInbusiness(language, currency, marketplace);
-                      yield this.pickUpWholesale(selectors, language, currency, marketplace);
+                      yield this.pickUpInbusiness(language, currency, marketplace, couponExistPer);
+                      yield this.pickUpWholesale(selectors, language, currency, marketplace, couponExistPer);
                       this.loopIsComplete = true;
                     }
                   }), 1700);
                   if (selectors.length != 0 && window.location.pathname != "/") {
-                    let oldUrl = window.location.href;
-                    setInterval(() => {
-                      if (oldUrl != window.location.href && removeTagIsComplete) {
-                        removeTagIsComplete = false;
-                        Object.keys(ItemSearchBaseObj.cacheRequestMap).forEach((key) => {
-                          ItemSearchBaseObj.cacheRequestMap[key].abort();
-                        });
-                        ItemSearchBaseObj.cacheRequestMap = {};
-                        document.querySelectorAll("*[" + ItemSearchBaseObj.searchAttribute + "='true']").forEach((element) => {
-                          element.removeAttribute(ItemSearchBaseObj.searchAttribute);
-                          const tipElement = element.querySelector("*[name^='ali-gogo-coupon-']");
-                          if (tipElement) {
-                            tipElement.remove();
-                          }
-                        });
-                        oldUrl = window.location.href;
-                        removeTagIsComplete = true;
-                      }
-                    }, 777);
+                    this.changePageEvent();
                   }
                 });
               }
@@ -6495,7 +6566,7 @@
               isItemLink: function(url) {
                 return SupportData.support.detail.test(url);
               },
-              pickUpItems: function(selectors, marketplace) {
+              pickUpItems: function(selectors, marketplace, couponExistPer) {
                 return __async$m(this, null, function* () {
                   const items = [];
                   try {
@@ -6506,14 +6577,14 @@
                         const findA = elementObj.findA;
                         elements.forEach((element) => {
                           if (element && ItemSearchBaseObj.isElementDisplayed(element) && !element.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                            const goodsLink = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
+                            const goodsLink2 = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
                             const priceQuery = elementObj.price;
                             Logger.log("info", "search price elements======>", element, priceQuery);
                             const price = ItemSearchBaseObj.getGoodsPriceByElement(element, priceQuery);
                             Logger.log("info", "search price======>", price);
                             let id = null, varG = null;
-                            if (this.isItemLink(goodsLink)) {
-                              const goodsLinkHref = goodsLink.getAttribute("href");
+                            if (this.isItemLink(goodsLink2)) {
+                              const goodsLinkHref = goodsLink2.getAttribute("href");
                               id = Tools.getGoodsIdByLink(goodsLinkHref);
                               varG = Tools.getParamterBySearch(goodsLinkHref, "var");
                             }
@@ -6534,15 +6605,15 @@
                     });
                     Logger.log("info", items);
                     if (items.length > 0) {
-                      yield this.search(items, marketplace);
+                      yield this.search(items, marketplace, couponExistPer);
                     }
                   } catch (e) {
                   }
                 });
               },
-              search: function(array, marketplace) {
+              search: function(array, marketplace, couponExistPer) {
                 return __async$m(this, null, function* () {
-                  const groups = ItemSearchBaseObj.calcRequestGroup(array);
+                  const groups = ItemSearchBaseObj.calcRequestGroup(array, couponExistPer);
                   const len = groups.length;
                   return new Promise((resolve, reject) => {
                     if (len <= 0) {
@@ -6577,6 +6648,7 @@
                         reqId += "@" + group[i].varG;
                       }
                       reqId += ":" + group[i].price + ",";
+                      group[i].handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
                     }
                     if (reqId.endsWith(",")) {
                       reqId = reqId.slice(0, -1);
@@ -6615,17 +6687,14 @@
                           }
                         }
                         const elementA = ItemSearchBaseObj.getGoodsLinkByElement(handler, findA);
-                        if (!handler.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                          handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
-                          if (tip) {
-                            handler.style.position = "relative";
-                            handler.insertAdjacentHTML("beforeend", tip);
-                            Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
-                          }
-                          if (decryptUrl) {
-                            this.relativeJ(handler, decryptUrl);
-                            Logger.log("info", "good job >>>>>>>>>>>>>", key);
-                          }
+                        if (tip) {
+                          handler.style.position = "relative";
+                          handler.insertAdjacentHTML("beforeend", tip);
+                          Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
+                        }
+                        if (decryptUrl) {
+                          this.relativeJ(handler, decryptUrl);
+                          Logger.log("info", "good job >>>>>>>>>>>>>", key);
                         }
                       }
                       resolve("complete");
@@ -6679,6 +6748,7 @@
               },
               start: function() {
                 return __async$m(this, null, function* () {
+                  const { support } = SupportData;
                   if (!this.isRun()) {
                     return;
                   }
@@ -6687,11 +6757,12 @@
                   if (!confString) {
                     return;
                   }
+                  const couponExistPer = support.couponExistPer || 10;
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
                   setInterval(() => __async$m(this, null, function* () {
                     if (this.loopIsComplete) {
                       this.loopIsComplete = false;
-                      yield this.pickUpItems(selectors, marketplace);
+                      yield this.pickUpItems(selectors, marketplace, couponExistPer);
                       this.loopIsComplete = true;
                     }
                   }), 1700);
@@ -6843,7 +6914,7 @@
               isItemLink: function(url) {
                 return SupportData.support.detail.test(url);
               },
-              pickUpItems: function(selectors, marketplace) {
+              pickUpItems: function(selectors, marketplace, couponExistPer) {
                 return __async$k(this, null, function* () {
                   const items = [];
                   try {
@@ -6854,11 +6925,11 @@
                         const findA = elementObj.findA;
                         elements.forEach((element) => {
                           if (element && ItemSearchBaseObj.isElementDisplayed(element) && !element.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                            const goodsLink = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
+                            const goodsLink2 = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
                             const price = ItemSearchBaseObj.getGoodsPrice(element.innerText);
                             let id = null;
-                            if (this.isItemLink(goodsLink)) {
-                              id = Tools.getGoodsIdByLink(goodsLink.getAttribute("href"));
+                            if (this.isItemLink(goodsLink2)) {
+                              id = Tools.getGoodsIdByLink(goodsLink2.getAttribute("href"));
                             }
                             if (id) {
                               items.push({
@@ -6876,15 +6947,15 @@
                     });
                     Logger.log("info", items);
                     if (items.length > 0) {
-                      yield this.search(items, marketplace);
+                      yield this.search(items, marketplace, couponExistPer);
                     }
                   } catch (e) {
                   }
                 });
               },
-              search: function(array, marketplace) {
+              search: function(array, marketplace, couponExistPer) {
                 return __async$k(this, null, function* () {
-                  const groups = ItemSearchBaseObj.calcRequestGroup(array);
+                  const groups = ItemSearchBaseObj.calcRequestGroup(array, couponExistPer);
                   const len = groups.length;
                   return new Promise((resolve, reject) => {
                     if (len <= 0) {
@@ -6915,6 +6986,7 @@
                         continue;
                       }
                       reqId += group[i].id + ":" + group[i].price + ",";
+                      group[i].handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
                     }
                     if (reqId.endsWith(",")) {
                       reqId = reqId.slice(0, -1);
@@ -6943,17 +7015,14 @@
                           }
                         }
                         const elementA = ItemSearchBaseObj.getGoodsLinkByElement(handler, findA);
-                        if (!handler.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                          handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
-                          if (tip) {
-                            handler.style.position = "relative";
-                            handler.insertAdjacentHTML("beforeend", tip);
-                            Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
-                          }
-                          if (decryptUrl) {
-                            this.relativeJ(handler, decryptUrl);
-                            Logger.log("info", "good job >>>>>>>>>>>>>", key);
-                          }
+                        if (tip) {
+                          handler.style.position = "relative";
+                          handler.insertAdjacentHTML("beforeend", tip);
+                          Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
+                        }
+                        if (decryptUrl) {
+                          this.relativeJ(handler, decryptUrl);
+                          Logger.log("info", "good job >>>>>>>>>>>>>", key);
                         }
                       }
                       resolve("complete");
@@ -6982,6 +7051,7 @@
               },
               start: function() {
                 return __async$k(this, null, function* () {
+                  const { support } = SupportData;
                   if (!this.isRun()) {
                     return;
                   }
@@ -6990,11 +7060,12 @@
                   if (!confString) {
                     return;
                   }
+                  const couponExistPer = support.couponExistPer || 10;
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
                   setInterval(() => __async$k(this, null, function* () {
                     if (this.loopIsComplete) {
                       this.loopIsComplete = false;
-                      yield this.pickUpItems(selectors, marketplace);
+                      yield this.pickUpItems(selectors, marketplace, couponExistPer);
                       this.loopIsComplete = true;
                     }
                   }), 1700);
@@ -7167,7 +7238,7 @@
             };
             const BestbuySearch = {
               loopIsComplete: true,
-              pickUpItems: function(selectors, marketplace) {
+              pickUpItems: function(selectors, marketplace, couponExistPer) {
                 return __async$i(this, null, function* () {
                   const items = [];
                   try {
@@ -7178,7 +7249,7 @@
                         const findA = elementObj.findA;
                         elements.forEach((element) => {
                           if (element && ItemSearchBaseObj.isElementDisplayed(element) && !element.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                            const goodsLink = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
+                            const goodsLink2 = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
                             const priceQuery = elementObj.price;
                             Logger.log("info", "search price elements======>", element, priceQuery);
                             const price = ItemSearchBaseObj.getGoodsPrice(
@@ -7186,8 +7257,8 @@
                             );
                             Logger.log("info", "search price======>", price);
                             let id = null;
-                            if (this.isItemLink(goodsLink)) {
-                              id = Tools.getGoodsIdByLink(goodsLink.getAttribute("href"));
+                            if (this.isItemLink(goodsLink2)) {
+                              id = Tools.getGoodsIdByLink(goodsLink2.getAttribute("href"));
                             }
                             if (id) {
                               items.push({
@@ -7205,15 +7276,15 @@
                     });
                     Logger.log("info", items);
                     if (items.length > 0) {
-                      yield this.search(items, marketplace);
+                      yield this.search(items, marketplace, couponExistPer);
                     }
                   } catch (e) {
                   }
                 });
               },
-              search: function(array, marketplace) {
+              search: function(array, marketplace, couponExistPer) {
                 return __async$i(this, null, function* () {
-                  const groups = ItemSearchBaseObj.calcRequestGroup(array);
+                  const groups = ItemSearchBaseObj.calcRequestGroup(array, couponExistPer);
                   const len = groups.length;
                   return new Promise((resolve, reject) => {
                     if (len <= 0) {
@@ -7244,6 +7315,7 @@
                         continue;
                       }
                       reqId += group[i].id + ":" + group[i].price + ",";
+                      group[i].handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
                     }
                     if (reqId.endsWith(",")) {
                       reqId = reqId.slice(0, -1);
@@ -7282,17 +7354,14 @@
                           }
                         }
                         const elementA = ItemSearchBaseObj.getGoodsLinkByElement(handler, findA);
-                        if (!handler.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                          handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
-                          if (tip) {
-                            handler.style.position = "relative";
-                            handler.insertAdjacentHTML("beforeend", tip);
-                            Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
-                          }
-                          if (decryptUrl) {
-                            this.relativeJ(handler, decryptUrl);
-                            Logger.log("info", "good job >>>>>>>>>>>>>", key);
-                          }
+                        if (tip) {
+                          handler.style.position = "relative";
+                          handler.insertAdjacentHTML("beforeend", tip);
+                          Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
+                        }
+                        if (decryptUrl) {
+                          this.relativeJ(handler, decryptUrl);
+                          Logger.log("info", "good job >>>>>>>>>>>>>", key);
                         }
                       }
                       resolve("complete");
@@ -7352,6 +7421,7 @@
               },
               start: function() {
                 return __async$i(this, null, function* () {
+                  const { support } = SupportData;
                   if (!this.isRun()) {
                     return;
                   }
@@ -7360,11 +7430,12 @@
                   if (!confString) {
                     return;
                   }
+                  const couponExistPer = support.couponExistPer || 10;
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
                   setInterval(() => __async$i(this, null, function* () {
                     if (this.loopIsComplete) {
                       this.loopIsComplete = false;
-                      yield this.pickUpItems(selectors, marketplace);
+                      yield this.pickUpItems(selectors, marketplace, couponExistPer);
                       this.loopIsComplete = true;
                     }
                   }), 1700);
@@ -7580,7 +7651,7 @@
             };
             const BanggoodSearch = {
               loopIsComplete: true,
-              pickUpItems: function(selectors, marketplace, lang, currency) {
+              pickUpItems: function(selectors, marketplace, lang, currency, couponExistPer) {
                 return __async$g(this, null, function* () {
                   const items = [];
                   try {
@@ -7591,14 +7662,14 @@
                         const findA = elementObj.findA;
                         elements.forEach((element) => {
                           if (element && ItemSearchBaseObj.isElementDisplayed(element) && !element.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                            const goodsLink = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
+                            const goodsLink2 = ItemSearchBaseObj.getGoodsLinkByElement(element, findA);
                             const priceQuery = elementObj.price;
                             Logger.log("info", "search price elements======>", element, priceQuery);
                             const price = ItemSearchBaseObj.getGoodsPriceByElement(element, priceQuery);
                             Logger.log("info", "search price======>", price);
                             let id = null;
-                            if (SupportData.support.detail.test(goodsLink)) {
-                              const goodsLinkHref = goodsLink.getAttribute("href");
+                            if (SupportData.support.detail.test(goodsLink2)) {
+                              const goodsLinkHref = goodsLink2.getAttribute("href");
                               id = Tools.getGoodsIdByLink(goodsLinkHref);
                             }
                             if (id) {
@@ -7617,15 +7688,15 @@
                     });
                     Logger.log("info", items);
                     if (items.length > 0) {
-                      yield this.search(items, marketplace, lang, currency);
+                      yield this.search(items, marketplace, lang, currency, couponExistPer);
                     }
                   } catch (e) {
                   }
                 });
               },
-              search: function(array, marketplace, lang, currency) {
+              search: function(array, marketplace, lang, currency, couponExistPer) {
                 return __async$g(this, null, function* () {
-                  const groups = ItemSearchBaseObj.calcRequestGroup(array);
+                  const groups = ItemSearchBaseObj.calcRequestGroup(array, couponExistPer);
                   const len = groups.length;
                   return new Promise((resolve, reject) => {
                     if (len <= 0) {
@@ -7656,6 +7727,7 @@
                         continue;
                       }
                       reqId += group[i].id + ":" + group[i].price + ",";
+                      group[i].handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
                     }
                     if (reqId.endsWith(",")) {
                       reqId = reqId.slice(0, -1);
@@ -7694,17 +7766,14 @@
                           }
                         }
                         const elementA = ItemSearchBaseObj.getGoodsLinkByElement(handler, findA);
-                        if (!handler.getAttribute(ItemSearchBaseObj.searchAttribute)) {
-                          handler.setAttribute(ItemSearchBaseObj.searchAttribute, "true");
-                          if (tip) {
-                            handler.style.position = "relative";
-                            handler.insertAdjacentHTML("beforeend", tip);
-                            Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
-                          }
-                          if (decryptUrl) {
-                            this.relativeJ(handler, decryptUrl);
-                            Logger.log("info", "good job >>>>>>>>>>>>>", key);
-                          }
+                        if (tip) {
+                          handler.style.position = "relative";
+                          handler.insertAdjacentHTML("beforeend", tip);
+                          Logger.log("info", "exist coupon >>>>>>>>>>>>>", key);
+                        }
+                        if (decryptUrl) {
+                          this.relativeJ(handler, decryptUrl);
+                          Logger.log("info", "good job >>>>>>>>>>>>>", key);
                         }
                       }
                       resolve("complete");
@@ -7763,12 +7832,13 @@
                   if (!confString) {
                     return;
                   }
+                  const couponExistPer = support.couponExistPer || 10;
                   const selectors = ItemSearchBaseObj.pickupGoodsItem(SupportData.support.p, confString);
                   setInterval(() => __async$g(this, null, function* () {
                     if (this.loopIsComplete) {
                       this.loopIsComplete = false;
                       const currency = Banggood.getCurrency();
-                      yield this.pickUpItems(selectors, marketplace, lang, currency);
+                      yield this.pickUpItems(selectors, marketplace, lang, currency, couponExistPer);
                       this.loopIsComplete = true;
                     }
                   }), 1700);
